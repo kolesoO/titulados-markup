@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Work5 - Условия сотрудничества</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi, width=device-width, user-scalable=no">
+
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico">
+
+    <link href="./libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext">
+    <link rel="stylesheet" href="./css/redesign/fontello.css">
+    <link href="./css/last/bootstrap.css" rel="stylesheet">
+    <link href="./css/last/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="./css/fonts/stylesheet.css" rel="stylesheet">
+    <link href="./css/last/style.css" rel="stylesheet">
+    <link href="./css/last/select2.css" rel="stylesheet">
+    <link href="./css/layout/validationEngine.jquery.css" rel="stylesheet">
+    <link href="./css/inline/personal.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./js/last/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/last/jquery-ui/jquery-ui.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/moment.js"></script>
+    <script type="text/javascript" src="./js/layout/jquery.validationEngine.js" charset="utf-8"></script>
+
+    <script defer type="text/javascript" src="./js/last/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="./js/layout/jquery.validationEngine-ru.js" charset="utf-8"></script>
+    <script defer type="text/javascript" src="./js/moment-timezone-with-data-2010-2020.js"></script>
+    <script defer type="text/javascript" src="./js/last/jquery-ui/datepicker-ru.js" charset="utf-8"></script>
+    <script defer type="text/javascript" src="./js/last/jquery.rateyo.js"></script>
+    <script defer type="text/javascript" src="./js/last/jquery.maskedinput.min.js"></script>
+    <script defer type="text/javascript" src="./js/inputmask-multi/jquery.inputmask.js"></script>
+    <script defer type="text/javascript" src="./js/last/select2.full.min.js"></script>
+    <script defer type="text/javascript" src="./js/last/slick.min.js"></script>
+    <script defer type="text/javascript" src="./js/last/jquery.main.js"></script>
+    <script defer type="text/javascript" src="./js/layout/jquery.cookie.js" charset="utf-8"></script>
+    <script defer type="text/javascript" src="./js/last/social-auth.js"></script>
+
+    <!--[if lte IE 8]><script defer type="text/javascript" src="./js/last/ie.js"></script><![endif]-->
+    <script defer src="./libs/intl-tel-input/14.0.7/intlTelInput-jquery.min.js"></script>
+</head>
+<body>
+<!--modals -->
+<div class="modal fade" id="modal_popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end modals -->
+<div id="wrapper">
+    <header id="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="logo-wrap">
+                    <div class="logo__img">
+                        <img src="./img/logo.svg" alt="">
+                        <a href="#"><strong>Work5</strong></a>
+                    </div>
+                    <div class="logo__slogan">Эксперт в учебе</div>
+                </div>
+                <div class="header__top-right">
+                    <div class="header__contacts">
+                        <noindex>
+                            <div class="contacts-top">
+                                <button data-toggle="modal" data-target="#cityModal" class="contacts-top__city">
+                                    <span>Санкт-Петербург</span>
+                                </button>
+                                <a class="contacts-top__phone" href="tel:+7 (812) 425-30-36">+7 (812) 425-30-36</a>
+                            </div>
+                            <div class="contacts-bottom">Банковский переулок, д. 3, офис 2.7, этаж 2. Офисный центр Нордбург</div>
+                        </noindex>
+                    </div>
+                </div>
+            </div>
+            <div class="header-btm">
+                <div class="row">
+                    <!-- mobile burger -->
+                    <div class="col-xs-1 col-sm-1 hidden-lg hidden-md">
+                        <button class="collapse-btn arere-btn" role="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            <i class="icon-f icon-menu-1"></i>
+                        </button>
+                    </div>
+                    <!-- end -->
+                    <div class="col-sm-8 hidden-lg hidden-md col-xs-8 main-menu" style="margin-left: -15px; margin-right: -15px"></div>
+                    <div class="col-sm-3 col-xs-3 hidden-md hidden-lg profile-menu" style="float: right;padding-right: 6px;">
+                        <ul class="hed-menu nav nav-pills hed-menu-dop " style="float: right">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Профиль</a>
+                                <ul class="dropdown-menu hed-menu-dop">
+                                    <li><a href="#">Мои данные</a></li>
+                                    <li><a href="#">Мои заказы</a></li>
+                                    <li><a href="#">Готовые работы</a></li>
+                                    <li><a href="#">Баланс</a></li>
+                                    <li><a href="#">Выйти</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="icon-f icon-briefcase"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 thisclass" >
+                        <div class="navbar-collapse collapse" id="collapse1">
+                            <!-- main menu -->
+                            <ul class="hed-menu nav nav-pills nav-justified hed-menu-dop">
+                                <li class="">
+                                    <a  href="#" >Заказать&nbsp;работу</a>
+                                </li>
+                                <li class=""><a href="#" >Контакты</a></li>
+                                <li class=""><a href="#" >О&nbsp;компании</a></li>
+                                <li class="">
+                                    <a href="#" class="dropdown-link"><span>Услуги</span></a>
+                                    <ul class="submenu">
+                                        <li><a href="#" >Курсовая работа</a></li>
+                                        <li><a href="#" >Дипломная работа</a></li>
+                                        <li><a href="#" >Магистерская диссертация</a></li>
+                                        <li><a href="#" >Контрольная работа</a></li>
+                                        <li><a href="#" >Реферат</a></li>
+                                        <li><a href="#" >Отчет по практике</a></li>
+                                        <li><a href="#" >Практическое задание</a></li>
+                                        <li><a href="#" >Решение задач</a></li>
+                                        <li><a href="#" >Кандидатская диссертация</a></li>
+                                        <li><a href="#" >Докторская диссертация</a></li>
+                                        <li><a href="#" >Презентация</a></li>
+                                        <li><a href="#" >Доклад</a></li>
+                                        <li><a href="#" >Эссе, сочинение</a></li>
+                                        <li><a href="#" >Ответы на билеты</a></li>
+                                        <li><a href="#" >Бизнес-план</a></li>
+                                        <li><a href="#" >Аспирантский реферат</a></li>
+                                        <li><a href="#" >Чертеж</a></li>
+                                        <li><a href="#" >Копирайтинг</a></li>
+                                    </ul>
+                                </li>
+                                <li class=""><a href="#" >Гарантии</a></li>
+                                <li class=""><a href="#" >FAQ</a></li>
+                                <li class="hidden-lg hidden-md">&nbsp;</li>
+                                <li class="hidden-lg hidden-md"><span class="nav-item__subtitle">Авторам</span></li>
+                                <li class="hidden-lg hidden-md"><a href="#" >Условия работы </a></li>
+                                <li class="hidden-lg hidden-md"><a href="#" data-toggle="modal" data-target="#loginModal" onclick="$('#loginModal #link_to_register_client').hide(); $('#loginModal #link_to_register_author').show();" rel="nofollow">Войти</a></li>
+                                <li class="hidden-lg hidden-md"><a href="#" >Регистрация</a></li>
+                            </ul>
+                            <!-- end -->
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-9 "></div>
+                    <div class="col-md-3 col-sm-3 col-xs-3 text-right hidden-sm hidden-xs">
+                        <ul class="hed-menu nav nav-pills hed-menu-dop" style="float: right">
+                            <li class="dropdown">
+                                <a class="" data-toggle="dropdown" href="#">Профиль</a>
+                                <ul class="dropdown-menu hed-menu-dop">
+                                    <li><a href="#">Мои данные</a></li>
+                                    <li><a href="#">Мои заказы</a></li>
+                                    <li><a href="#">Готовые работы</a></li>
+                                    <li><a href="#">Баланс</a></li>
+                                    <li><a href="#">Выйти</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#">
+                                    <span class="icon-f icon-briefcase"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="breadcrumb-wrap">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <ol class="breadcrumb"></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <div class="container">
+            <div class="user-header">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="user-header__name">Здравствуйте, <a href="#"  title="Алексей Колесниченко">Алексей Колесниченко</a></div>
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-5 col-md-5 ">
+                        <div class="user-header__tools">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="tool-item message">
+                                        <p><a href="/slk_orders.php?only_new_msg=1" class="messagesd" id="">0 новых сообщений</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="tool-item balance">
+                                        <p>Баланс 0 Р</p>
+                                        <a href="/slk_balance_history.php">История</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 col-xs-12">
+                    <div class="side-menu">
+                        <a href="#" class="side-menu__opener">
+                            <span></span>
+                        </a>
+                        <ul class="side-menu__list">
+                            <li class="">
+                                <a href="#">Мои данные</a>
+                            </li>
+                            <li class="">
+                                <a href="#">Пройти тестирование</a>
+                            </li>
+                            <li class="">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li class="">
+                                <a href="#">Рассылки</a>
+                            </li>
+                            <li class="active">
+                                <a href="#" class="">Условия сотрудничества</a>
+                            </li>
+                            <li>
+                                <a href="#" class="">Сообщить об ошибке</a>
+                            </li>
+                        </ul>
+                        <ul class="side-menu__help">
+                            <li class="">
+                                <a class="manual_menu_section" href="#">Инструкции по работе с&nbsp;сайтом <span style="color:red; font-size: 14px"> New</span></a>
+                            </li>
+                            <li class="">
+                                <a class="manual_menu_section" href="#">Как стать Экспертом <span style="color:red; font-size: 14px"> New</span></a>
+                            </li>
+                            <li class="">
+                                <a class="manual_menu_section" href="#">Методичка для авторов <span style="color:red; font-size: 14px"> New</span></a>
+                            </li>
+                            <li class="">
+                                <a class="manual_menu_section" href="#">Новости</a>
+                            </li>
+                            <li class="">
+                                <a class="manual_menu_section" href="#">Оплата Авторам <span style="color:red; font-size: 14px"> New</span></a>
+                            </li>
+                            <li class="">
+                                <a class="manual_menu_section" href="#">Проверка текста на оригинальность<span style="color:red; font-size: 14px"> New</span></a>
+                            </li>
+                            <li class="">
+                                <a class="manual_menu_section" href="#">Самозанятым</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-md-10 col-xs-12">
+                    <div class="cabinet-header clearfix">
+                        <div class="cabinet-header__title">
+                            <div class="title">Правила работы с ресурсом</div>
+                        </div>
+                    </div>
+                    <div class="border-block">
+                        <div class="form-block">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;"><strong> Правила работы с ресурсом&nbsp;</strong></span><span style="font-family: Arial, serif;">&nbsp;</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;"><span>Для сотрудничества с ресурсом автору необязательно иметь ИП. Если же у автора есть ИП, ресурс готов заключить с ним договор после 10 выполненных работ.</span><br></span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">&nbsp;</span></span><span style="font-family: Arial, serif;">п.1<strong> Автор</strong></span><span style="font-family: Arial, serif;">&nbsp;принимает на себя обязательства по выполнению рефератов, контрольных, курсовых и дипломных работ, ресурс обязуется принять и оплатить указанные работы.</span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">п.2<strong> Ресурс обязуется<br></strong></span><span style="font-family: Arial, serif;">Доводить в полном объеме требования по выполнению работы до сведения автора до начала выполнения работы.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Ресурс обязан принять результаты выполненных работ и оплатить их.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Ресурс вправе проверять ход и качество работ, выполняемых автором.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Ресурс имеет право передавать автору свои комментарии и пожелания о ходе и качестве выполнения работ по настоящему соглашению.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Ресурс имеет право использовать переданные ему автором результаты работ.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">п.3<strong> Права и обязанности автора</strong></span><span style="font-family: Arial, serif;">&nbsp;</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Автор обязан:</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">- выполнить работы в соответствии с выдаваемыми ресурсом заданиями и передать ресурсу результаты в заранее определенные сроки;</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">- своими силами и за свой счет устранять допущенные недостатки в выполненных работах;</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">- незамедлительно информировать ресурс об обнаруженных объективных препятствий для выполнения работы;</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">- соблюдать требования ресурса по оригинальности текста, согласно которым оригинальность работ проверяется по программе antiplagiat.ru и </span><span style="font-family: Arial, serif;"><span lang="en-US">Etxt</span></span><span style="font-family: Arial, serif;">.</span><span style="font-family: Arial, serif;"><span lang="en-US">ru</span></span><span style="font-family: Arial, serif;">, и должна составлять не менее указанной клиентом в требованиях к заказу. В случае низкой оригинальности текста, работа будет отправлена на доработку.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">В случае нахождения части работы или целой работы в интернете работа не будет засчитана.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Загрузка автора работой по преимуществу определяется ресурсом с учетом квалификации и специализации автора и общей загруженности автора.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">п.4<strong> Стоимость работ</strong></span><span style="font-family: Arial, serif;"><br>Сумма оплаты по соглашению определяется следующими примерными расценками:</span></span>&nbsp;</p>
+                                    <ul>
+                                        <li>
+                                            <p><span style="color: #000000;"><span style="font-family: Arial, serif;">контрольная, 	курсовая работа теоретическая –&nbsp;от 	10 руб./лист.</span></span></p>
+                                        </li>
+                                        <li>
+                                            <p><span style="color: #000000;"><span style="font-family: Arial, serif;">контрольная, 	курсовая работа практическая –&nbsp;от 	17 руб./лист.</span></span></p>
+                                        </li>
+                                        <li>
+                                            <p><span style="color: #000000;"><span style="font-family: Arial, serif;">дипломная 	работа – от 3100 руб.</span></span></p>
+                                        </li>
+                                    </ul>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Оплата по работам, не подходящим под типовые расценки, обсуждается индивидуально. НДС не облагается.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">п.5<strong> Оплата</strong></span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Оплата производится на R или Z кошелек WebMoney, или QIWI-кошелёк Автора два раза в месяц.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">*За заказы, выполненные и прошедшие проверку отделом технического контроля (ОТК) с 01 до 15-го числа включительно, выплата будет произведена с 01 до 15-го числа следующего месяца. </span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Если заказ был переведен в статус «Доработка» или «Претензия» хотя бы один раз в течение 15 рабочих дней после 16-го числа, то выплата по заказу автоматически переносится на следующий платежный период.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">* За заказы, выполненные и прошедшие проверку отделом технического контроля (ОТК) с 16-го числа до конца месяца, выплата будет произведена с 16-го числа до конца следующего месяца.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Если заказ был переведен в статус «Доработка» или «Претензия» хотя бы один раз в течение 15 рабочих дней после выполнения заказа, то выплата по заказу автоматически переносится на следующий платежный период.</span></span></p>
+                                    <p><span style="font-family: Arial, serif;">Если на момент перевода денежных средств на WebMoney, QIWI у Вас возникли проблемы с кошельком (превышен лимит, кошелек не найден, Вы не сообщили нам номер кошелька), то оплата переносится на следующий расчетный период.</span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">п.6<strong> Порядок расчетов</strong></span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">В случае обнаружения ресурсом после подписания акта приемки-сдачи недостатков, которые не могли быть установлены при обычном способе приемки (скрытые недостатки), а также недостатков, которые выявлены впоследствии (замечания, рецензия преподавателя), автор обязан своими силами и за свой счет устранить допущенные недостатки в течение 2 суток с момента выявления недостатков или вернуть деньги ресурсу за данные работы в полном объеме в течение одного календарного месяца с момента выявления недостатков.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">В случае задержки возврата автором ресурсу денежных средств за выявленные недостатки ресурс вправе потребовать от автора дополнительных выплат в размере 0,2 % от суммы за каждый день просрочки.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">Наша организация вправе расторгнуть с Вами договор в одностороннем  порядке, в письменной форме предупредив Вас об этом, при невыполнении  Вами своих обязательств. Договор будет расторгнут в течение 2х месяцев.  За это время Вам необходимо выполнять доработки по Вашим заказам. Оплата  будет произведена после окончания гарантийного срока по Вашим заказам. В  случае невыполнения доработок, компания наложит на Вас штраф в размере  стоимости заказов.<br></span></span></p>
+                                    <p><span style="color: #000000;"><a name="_GoBack"></a>&nbsp;п.7&nbsp;<span style="font-family: Arial, serif;"><strong>Штрафные санкции&nbsp;</strong></span><span style="font-family: Arial, serif;"><br>В случае задержки оплаты автор вправе потребовать от ресурса дополнительных выплат в размере 0,2% от суммы оплаты за каждый день просрочки, начиная с третьего.<br>В случае невыполнения работы в заранее определенный срок оплата за работу уменьшается на 20%, в случае если время просрочки не более 12 часов.<br>Если работа предоставлена в требуемый срок, но не соответствует требованиям, доведенным до автора, оплата уменьшается на 10 %, если время на приведение работы в соответствие с требованиями не более 12 часов, иначе оплата не производится (для заказов сроком выполнения 2 дня и менее срок доработки составляет 2 часа).<br>В случае, когда клиент возвращает ресурс работу с оценкой «неудовлетворительно» и т.п., и не требуется переработка работы, оплата не производится.</span></span></p>
+                                    <p><span style="color: #000000;"><span style="font-family: Arial, serif;">п.8<strong> Конфиденциальность&nbsp;<br></strong></span><span style="font-family: Arial, serif;">Автор гарантирует сохранение конфиденциальности информации, полученной от ресурса. Информация, предоставляемая ресурсом в соответствии с настоящим соглашением, предназначена исключительно для него и не может передаваться третьим лицам или использоваться каким-либо иным способом с участием третьих лиц полностью или частично.</span></span></p>                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-xs-12">
+                    <div class="footer-subscribe">
+                        <h5 class="footer-subscribe__title">Подписаться на акции и бонусы</h5>
+                        <form name="subscribe_footer_form" method="post">
+                            <div class=" row">
+                                <div class="form-row input-wrap col-sm-8">
+                                    <input id="sffemailid" class="form-control input-sm dark" name="email" type="text" placeholder="Ваш email">
+                                </div>
+                                <div class="form-row btn-holder col-sm-4">
+                                    <button class="btn btn-sm btn-block btn-dark send-btn" data-container="body" data-placement="left" id="btn_subscribe_action"  type="submit">Подписаться</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="alert text" id="sffinfoid" role="alert" style="display: none; position: absolute">
+                            <p>
+                                <span></span>
+                                <button type="button" class="close" onclick="info.hide();">&times;</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row hidden-xs">
+                        <div class="col-sm-4">
+                            <ul class="footer-nav">
+                                <li><a  href="#" rel="nofollow">Способы оплаты</a></li>
+                                <li><a href="#" rel="nofollow">Наши гарантии</a></li>
+                                <li><a href="#" rel="nofollow">Агентствам</a></li>
+                                <li><a href="#" >Скидки</a></li>
+                                <li><a href="#" >Отзывы</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="footer-nav">
+                                <li><a href="#" rel="nofollow">Вопросы и ответы</a></li>
+                                <li><a href="#" rel="nofollow">Как это работает</a></li>
+                                <li><a href="#" rel="nofollow">Контакты</a></li>
+                                <li><a href="#" >Статьи</a></li>
+                                <li><a href="#" >Предметы</a></li>
+                                <li><a href="#" >Готовые работы</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="footer-nav">
+                                <li><a href="#" data-toggle="modal" data-target="#loginModal" onclick="$('#loginModal #link_to_register_client').hide(); $('#loginModal #link_to_register_author').show();" rel="nofollow">Вход для авторов</a></li>
+                                <li><a href="#" rel="nofollow">Условия работы</a></li>
+                                <li><a href="#" rel="nofollow">Регистрация авторов</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1 col-xs-12">
+                    <div class="footer-wrap clearfix">
+                        <div class="footer-download"></div>
+                        <div class="footer-contacts">
+                            <h5>Санкт-Петербург: <a href="tel:+7 (812) 425-30-36">+7 (812) 425-30-36</a></h5>
+                            <div class="text">
+                                <p>Банковский переулок, д. 3, офис 2.7, этаж 2. Офисный центр Нордбург По будням пн-пт c 10:00 до 19:00. Выходной суббота, воскресенье.</p>
+                                <a href="mailto:spb@work5.ru">spb@work5.ru</a>
+                            </div>
+                            <ul class="footer-social">
+                                <li><a target="_blank" href="#"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

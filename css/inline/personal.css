@@ -1,0 +1,27 @@
+.added em {
+    display: inline-block;
+    cursor: pointer;
+    background: url('../../img/layout/ico67.gif') no-repeat;
+    width: 15px;
+    height: 15px;
+    /*position: absolute;*/
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.jcf-file .jcf-upload-button {
+    float: left;
+    margin-top: 0px;
+}
+.jcf-fake-input {
+    display: none!important;
+}
+.file-input__input{
+    z-index:-1;
+}
+.info input, .info select, .info textarea{
+    width: 50%;
+}
+.modal-backdrop {
+    /*z-index: -1;*/
+}

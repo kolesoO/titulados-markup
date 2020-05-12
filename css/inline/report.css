@@ -1,0 +1,8 @@
+#main .required:before {
+    content: '*';
+    color: red;
+}
+
+#main label {
+    margin-top: 15px;
+}

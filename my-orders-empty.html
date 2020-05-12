@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Work5 - Мои заказы</title>
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi, width=device-width, user-scalable=no">
+
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico">
+
+    <link href="./libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic-ext">
+    <link rel="stylesheet" href="./css/redesign/fontello.css">
+    <link href="./css/last/bootstrap.css" rel="stylesheet">
+    <link href="./css/last/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="./css/fonts/stylesheet.css" rel="stylesheet">
+    <link href="./css/last/style.css" rel="stylesheet">
+    <link href="./css/last/select2.css" rel="stylesheet">
+    <link href="./css/layout/validationEngine.jquery.css" rel="stylesheet">
+    <link href="./css/inline/personal.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./js/last/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/last/jquery-ui/jquery-ui.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/moment.js"></script>
+    <script type="text/javascript" src="./js/layout/jquery.validationEngine.js" charset="utf-8"></script>
+
+    <script defer type="text/javascript" src="./js/last/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="./js/layout/jquery.validationEngine-ru.js" charset="utf-8"></script>
+    <script defer type="text/javascript" src="./js/moment-timezone-with-data-2010-2020.js"></script>
+    <script defer type="text/javascript" src="./js/last/jquery-ui/datepicker-ru.js" charset="utf-8"></script>
+    <script defer type="text/javascript" src="./js/last/jquery.rateyo.js"></script>
+    <script defer type="text/javascript" src="./js/last/jquery.maskedinput.min.js"></script>
+    <script defer type="text/javascript" src="./js/inputmask-multi/jquery.inputmask.js"></script>
+    <script defer type="text/javascript" src="./js/last/select2.full.min.js"></script>
+    <script defer type="text/javascript" src="./js/last/slick.min.js"></script>
+    <script defer type="text/javascript" src="./js/last/jquery.main.js"></script>
+    <script defer type="text/javascript" src="./js/layout/jquery.cookie.js" charset="utf-8"></script>
+    <script defer type="text/javascript" src="./js/last/social-auth.js"></script>
+
+    <!--[if lte IE 8]><script defer type="text/javascript" src="./js/last/ie.js"></script><![endif]-->
+    <script defer src="./libs/intl-tel-input/14.0.7/intlTelInput-jquery.min.js"></script>
+</head>
+<body>
+<!--modals -->
+<div class="modal fade" id="modal_popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end modals -->
+<div id="wrapper">
+    <header id="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="logo-wrap">
+                    <div class="logo__img">
+                        <img src="./img/logo.svg" alt="">
+                        <a href="#"><strong>Work5</strong></a>
+                    </div>
+                    <div class="logo__slogan">Эксперт в учебе</div>
+                </div>
+                <div class="header__top-right">
+                    <div class="header__contacts">
+                        <noindex>
+                            <div class="contacts-top">
+                                <button data-toggle="modal" data-target="#cityModal" class="contacts-top__city">
+                                    <span>Санкт-Петербург</span>
+                                </button>
+                                <a class="contacts-top__phone" href="tel:+7 (812) 425-30-36">+7 (812) 425-30-36</a>
+                            </div>
+                            <div class="contacts-bottom">Банковский переулок, д. 3, офис 2.7, этаж 2. Офисный центр Нордбург</div>
+                        </noindex>
+                    </div>
+                </div>
+            </div>
+            <div class="header-btm">
+                <div class="row">
+                    <!-- mobile burger -->
+                    <div class="col-xs-1 col-sm-1 hidden-lg hidden-md">
+                        <button class="collapse-btn arere-btn" role="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            <i class="icon-f icon-menu-1"></i>
+                        </button>
+                    </div>
+                    <!-- end -->
+                    <div class="col-sm-8 hidden-lg hidden-md col-xs-8 main-menu" style="margin-left: -15px; margin-right: -15px"></div>
+                    <div class="col-sm-3 col-xs-3 hidden-md hidden-lg profile-menu" style="float: right;padding-right: 6px;">
+                        <ul class="hed-menu nav nav-pills hed-menu-dop " style="float: right">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Профиль</a>
+                                <ul class="dropdown-menu hed-menu-dop">
+                                    <li><a href="#">Мои данные</a></li>
+                                    <li><a href="#">Мои заказы</a></li>
+                                    <li><a href="#">Готовые работы</a></li>
+                                    <li><a href="#">Баланс</a></li>
+                                    <li><a href="#">Выйти</a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="icon-f icon-briefcase"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12 thisclass" >
+                        <div class="navbar-collapse collapse" id="collapse1">
+                            <!-- main menu -->
+                            <ul class="hed-menu nav nav-pills nav-justified hed-menu-dop">
+                                <li class="">
+                                    <a  href="#" >Заказать&nbsp;работу</a>
+                                </li>
+                                <li class=""><a href="#" >Контакты</a></li>
+                                <li class=""><a href="#" >О&nbsp;компании</a></li>
+                                <li class="">
+                                    <a href="#" class="dropdown-link"><span>Услуги</span></a>
+                                    <ul class="submenu">
+                                        <li><a href="#" >Курсовая работа</a></li>
+                                        <li><a href="#" >Дипломная работа</a></li>
+                                        <li><a href="#" >Магистерская диссертация</a></li>
+                                        <li><a href="#" >Контрольная работа</a></li>
+                                        <li><a href="#" >Реферат</a></li>
+                                        <li><a href="#" >Отчет по практике</a></li>
+                                        <li><a href="#" >Практическое задание</a></li>
+                                        <li><a href="#" >Решение задач</a></li>
+                                        <li><a href="#" >Кандидатская диссертация</a></li>
+                                        <li><a href="#" >Докторская диссертация</a></li>
+                                        <li><a href="#" >Презентация</a></li>
+                                        <li><a href="#" >Доклад</a></li>
+                                        <li><a href="#" >Эссе, сочинение</a></li>
+                                        <li><a href="#" >Ответы на билеты</a></li>
+                                        <li><a href="#" >Бизнес-план</a></li>
+                                        <li><a href="#" >Аспирантский реферат</a></li>
+                                        <li><a href="#" >Чертеж</a></li>
+                                        <li><a href="#" >Копирайтинг</a></li>
+                                    </ul>
+                                </li>
+                                <li class=""><a href="#" >Гарантии</a></li>
+                                <li class=""><a href="#" >FAQ</a></li>
+                                <li class="hidden-lg hidden-md">&nbsp;</li>
+                                <li class="hidden-lg hidden-md"><span class="nav-item__subtitle">Авторам</span></li>
+                                <li class="hidden-lg hidden-md"><a href="#" >Условия работы </a></li>
+                                <li class="hidden-lg hidden-md"><a href="#" data-toggle="modal" data-target="#loginModal" onclick="$('#loginModal #link_to_register_client').hide(); $('#loginModal #link_to_register_author').show();" rel="nofollow">Войти</a></li>
+                                <li class="hidden-lg hidden-md"><a href="#" >Регистрация</a></li>
+                            </ul>
+                            <!-- end -->
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-2 col-xs-9 "></div>
+                    <div class="col-md-3 col-sm-3 col-xs-3 text-right hidden-sm hidden-xs">
+                        <ul class="hed-menu nav nav-pills hed-menu-dop" style="float: right">
+                            <li class="dropdown">
+                                <a class="" data-toggle="dropdown" href="#">Профиль</a>
+                                <ul class="dropdown-menu hed-menu-dop">
+                                    <li><a href="#">Мои данные</a></li>
+                                    <li><a href="#">Мои заказы</a></li>
+                                    <li><a href="#">Готовые работы</a></li>
+                                    <li><a href="#">Баланс</a></li>
+                                    <li><a href="#">Выйти</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#">
+                                    <span class="icon-f icon-briefcase"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="breadcrumb-wrap">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <ol class="breadcrumb"></ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <div class="container">
+            <div class="user-header">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="user-header__name">Здравствуйте, <a href="#"  title="Алексей Колесниченко">Алексей Колесниченко</a></div>
+                    </div>
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-5 col-md-5 ">
+                        <div class="user-header__tools">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="tool-item message">
+                                        <p><a href="/slk_orders.php?only_new_msg=1" class="messagesd" id="">0 новых сообщений</a></p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="tool-item balance">
+                                        <p>Баланс 0 Р</p>
+                                        <a href="/slk_balance_history.php">История</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-2 col-xs-12">
+                    <div class="side-menu">
+                        <a href="#" class="side-menu__opener">
+                            <span></span>
+                        </a>
+                        <ul class="side-menu__list">
+                            <li class="">
+                                <a href="#">Мои данные</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">Мои заказы</a>
+                                <ul style="padding-bottom: 0px">
+                                    <li>
+                                        <a href="#">Все заказы (<b>1</b>)</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="0 новых сообщений в 0 заказах">Новые сообщения (<b>0</b>)</a>
+                                    </li>
+                                    <li >
+                                        <a class="active"  href='#'>Активные <strong>0</strong></a>
+                                    </li>
+                                    <li >
+                                        <a class="active"  href='#'>Уточнение <strong>0</strong></a>
+                                    </li>
+                                    <li >
+                                        <a class="active"  href='#'>Не оплачен <strong>0</strong></a>
+                                    </li>
+                                    <li >
+                                        <a class="active"  href='#'>В работе <strong>0</strong></a>
+                                    </li>
+                                    <li >
+                                        <a class="active"  href='#'>Выполненные <strong>0</strong></a>
+                                    </li>
+                                    <li >
+                                        <a class="active"  href='#'>Доработка <strong>0</strong></a>
+                                    </li>
+                                    <li >
+                                        <a class="active"  href='#'>Архив <strong>1</strong></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#">Готовые работы <strong>0</strong></a>
+                            </li>
+                            <li class="">
+                                <a href="#">Заказать работу</a>
+                            </li>
+                            <li class="">
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li>
+                                <a class="tooltip-2" href="#">Акция "Приведи друга"</a>
+                            </li>
+                            <li>Баланс
+                                <ul>
+                                    <li class="">
+                                        <a href="#">Передать другу</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">История</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">Начисление на баланс</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">Списание с баланса</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-9 col-md-10 col-xs-12">
+                    <div class="cabinet-header clearfix">
+                        <div class="cabinet-header__title">
+                            <div class="title">Мои заказы</div>
+                        </div>
+                        <div class="cabinet-header__side">
+                            <div class="inline-text">Общая сумма неоплаченных заказов 0 Р</div>
+                            <a href="#" class="btn btn-success">Заказать еще</a>
+                        </div>
+                    </div>
+                    <div class="order-items">
+                        <div class="block">
+                            <div class="wrap">
+                                <div style="text-align: center; font-size: 20px;"><br><br><br><br>У Вас еще нет ни одного заказа<br><br><br><br></div>
+                            </div>
+                        </div>
+                        <div class="wrap">
+                            <a href="#" class="btn btn-success btn-order">Заказать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-xs-12">
+                    <div class="footer-subscribe">
+                        <h5 class="footer-subscribe__title">Подписаться на акции и бонусы</h5>
+                        <form name="subscribe_footer_form" method="post">
+                            <div class=" row">
+                                <div class="form-row input-wrap col-sm-8">
+                                    <input id="sffemailid" class="form-control input-sm dark" name="email" type="text" placeholder="Ваш email">
+                                </div>
+                                <div class="form-row btn-holder col-sm-4">
+                                    <button class="btn btn-sm btn-block btn-dark send-btn" data-container="body" data-placement="left" id="btn_subscribe_action"  type="submit">Подписаться</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="alert text" id="sffinfoid" role="alert" style="display: none; position: absolute">
+                            <p>
+                                <span></span>
+                                <button type="button" class="close" onclick="info.hide();">&times;</button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row hidden-xs">
+                        <div class="col-sm-4">
+                            <ul class="footer-nav">
+                                <li><a  href="#" rel="nofollow">Способы оплаты</a></li>
+                                <li><a href="#" rel="nofollow">Наши гарантии</a></li>
+                                <li><a href="#" rel="nofollow">Агентствам</a></li>
+                                <li><a href="#" >Скидки</a></li>
+                                <li><a href="#" >Отзывы</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="footer-nav">
+                                <li><a href="#" rel="nofollow">Вопросы и ответы</a></li>
+                                <li><a href="#" rel="nofollow">Как это работает</a></li>
+                                <li><a href="#" rel="nofollow">Контакты</a></li>
+                                <li><a href="#" >Статьи</a></li>
+                                <li><a href="#" >Предметы</a></li>
+                                <li><a href="#" >Готовые работы</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="footer-nav">
+                                <li><a href="#" data-toggle="modal" data-target="#loginModal" onclick="$('#loginModal #link_to_register_client').hide(); $('#loginModal #link_to_register_author').show();" rel="nofollow">Вход для авторов</a></li>
+                                <li><a href="#" rel="nofollow">Условия работы</a></li>
+                                <li><a href="#" rel="nofollow">Регистрация авторов</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1 col-xs-12">
+                    <div class="footer-wrap clearfix">
+                        <div class="footer-download"></div>
+                        <div class="footer-contacts">
+                            <h5>Санкт-Петербург: <a href="tel:+7 (812) 425-30-36">+7 (812) 425-30-36</a></h5>
+                            <div class="text">
+                                <p>Банковский переулок, д. 3, офис 2.7, этаж 2. Офисный центр Нордбург По будням пн-пт c 10:00 до 19:00. Выходной суббота, воскресенье.</p>
+                                <a href="mailto:spb@work5.ru">spb@work5.ru</a>
+                            </div>
+                            <ul class="footer-social">
+                                <li><a target="_blank" href="#"><i class="fa fa-vk"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a target="_blank" href="#"><i class="fa fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
