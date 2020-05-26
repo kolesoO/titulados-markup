@@ -3,12 +3,12 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   entry: {
-    app: './new/js/index.js'
+    app: './src/index.js'
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, './new/dist'),
-    publicPath: '/new/dist'
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist'
   },
   devServer: {
     overlay: true
