@@ -12,12 +12,12 @@
 <body>
     <header class="header">
             <div class="container">
-              <div class="col-24 row flex-wrap">
-                <div class="logo">
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="logo col-3 p-0">
                       <img class="" src="img/logo.png">
                 </div>
-                <div class="d-flex align-items-end col-8">
-                  <nav class="header-menu row justify-content-between col-8">
+                <div class="d-flex align-items-end col-9 p-0 justify-content-between">
+                  <nav class="header-menu d-flex justify-content-between col-9 p-0">
                       <a href="#" class="header-menu-item">Encargar el trabajo</a>
                       <a href="#" class="header-menu-item">Contactos</a>
                       <a href="#" class="header-menu-item">Acerca de la empresa</a>
@@ -25,16 +25,159 @@
                       <a href="#" class="header-menu-item">Garantía</a>
                       <a href="#" class="header-menu-item">FAQ</a>
                   </nav>
-                  <div class="header-login col-4">
-                      <i class="icon icon-user"></i>
-                      <span>Nikita</span>
+                  <div class="header-login col-2">
+                    <span class="mr-2">Nikita</span>
+                    <i class="icon icon-user"></i>
                   </div>
                 </div>
               </div>
             </div>
     </header>
     <main>
+      <div class="container d-flex flex-wrap justify-content-between">
+        <ul class="nav-list p-0">
+          <li>Главная</li>
+          <li>Сделать заказ</li>
+          <li class="d-flex justify-content-between align-items-center"><span>В обработке</span><i class="icon icon-counter">3</i></li>
+          <li class="d-flex justify-content-between align-items-center">
+            <span>Активные</span>
+            <div class="col-6 d-flex p-0 justify-content-between">
+              <i class="icon icon-counter-active">
+                <span class="icon icon-msg"></span>
+                10
+              </i>
+              <i class="icon icon-counter">3</i>
+            </div>
+          </li>
+          <li>Уточнения</li>
+          <li>Оплата</li>
+          <li>Выполненные работы</li>
+          <li>Мои данные</li>
+        </ul>
+        <div class="col-9 p-0 d-flex flex-wrap justify-content-between">
+          <div
+                class="main_slider clearfix js-slider col-5 p-0"
+                data-autoplay="false"
+                data-autoplaySpeed="5000"
+                data-infinite="false"
+                data-speed="1000"
+                data-arrows="false"
+                data-dots="true"
+          >
+            <div class="main_slider-item" style="background-image: url('img/slider-image.png')">
+              <div class="col-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
+                  <div class="title-1 col-12 p-0">
+                      ¿Cómo<br>funciona?
+                  </div>
+                  <div class="main_slider-footer col-12 p-0 d-flex flex-wrap">
+                      <div class="title-1 col-2 p-0">1</div>
+                      <div class="col-10 p-0">
+                        <p class="title-4 m-0">Создайте заказ</p>
+                        <p class="m-0">Obtenga sugerencias de autores en cuestión de minutos</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="main_slider-item" style="background-image: url('img/slider-image.png')">
+            <div class="col-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
+                <div class="title-1 col-12 p-0">
+                    ¿Cómo<br>funciona?
+                </div>
+                <div class="main_slider-footer col-12 p-0 d-flex flex-wrap">
+                    <div class="title-1 col-2 p-0">2</div>
+                    <div class="col-10 p-0">
+                      <p class="title-4 m-0">Создайте заказ</p>
+                      <p>Obtenga sugerencias de autores en cuestión de minutos</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="main_slider-item" style="background-image: url('img/slider-image.png')">
+            <div class="col-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
+                <div class="title-1 col-12 p-0">
+                    ¿Cómo<br>funciona?
+                </div>
+                <div class="main_slider-footer col-12 d-flex flex-wrap">
+                    <div class="title-1 col-2 p-0">3</div>
+                    <div class="col-10 p-0">
+                      <p class="title-4 m-0">Создайте заказ</p>
+                      <p>Obtenga sugerencias de autores en cuestión de minutos</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-block col-6 d-flex flex-wrap align-content-between">
+          <div class="col-12 p-0">
+            <div class="title-1 col-12 mb-3 p-0">¡Haga su primer<br>pedido!</div>
+            <div>3802 artistas ahora en línea y listo<br>para responder</div>
+          </div>
+          <div class="col-12 d-flex flex-wrap p-0 align-items-center">
+            <button class="btn btn-primary mr-3" type="button" name="button">Сделать заказ</button>
+            <p class="m-0">— es gratis</p>
+          </div>
+        </div>
+        <div class="descr-block col-12 p-0 d-flex flex-wrap justify-content-between">
+          <div class="descr-block-item col-3 text-center">
+            <img src="img/hat.png">
+            <p class="col-12 mt-3">Пригласи друга и получи 500 рублей за первый оплаченный заказ друга!</p>
+          </div>
+          <div class="descr-block-item col-3 text-center">
+            <img src="img/like.png">
+            <p class="col-12 mt-3">Después de recibir el trabajo, durante el período de garantía, el autor realiza ajustes gratuitos en el pedido realizado.</p>
+          </div>
+          <div class="descr-block-item col-3 text-center">
+            <img src="img/euro.png">
+            <p class="col-12 mt-3">Envita a tu amigo a recibe 10€ en la cuenta de Titulados</p>
+            <button class="btn btn-warning mt-3" type="button" name="button">Detallado</button>
+          </div>
+        </div>
+      </div>
     </main>
-  <script type="text/javascript" src="dist/app.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <div class="col-9 p-0">
+          <form action="" class="d-flex flex-wrap col-8 p-0">
+            <label class="col-12 pl-4">Suscríbete a promociones y bonos</label>
+            <input class="col-8 border-0 mr-3" type="text" placeholder="email">
+            <button class="btn btn-warning" type="button" name="button">Отправить</button>
+          </form>
+          <div class="col-12 p-0 d-flex flex-wrap justify-content-between">
+            <ul class="col-3">
+              <li><a href="#">Modo de remuneración</a></li>
+              <li><a href="#">Nuestras garantías</a></li>
+              <li><a href="#">Agencias</a></li>
+              <li><a href="#">Descuentos</a></li>
+              <li><a href="#">Comentarios</a></li>
+              <li><a href="#">Preguntas y respuestas</a></li>
+              <li><a href="#">Nuestras garantías</a></li>
+            </ul>
+            <ul class="col-3">
+              <li><a href="#">Cómo funciona</a></li>
+              <li><a href="#">Contactos</a></li>
+              <li><a href="#">Artículos</a></li>
+              <li><a href="#">Objetos</a></li>
+              <li><a href="#">Trabajos terminados</a></li>
+              <li><a href="#">Entrada para autores</a></li>
+            </ul>
+            <div class="col-3">
+              <ul class="col-12 p-0">
+                <li><a href="#">Condiciones de trabajo</a></li>
+                <li><a href="#">Registro de autores</a></li>
+              </ul>
+              <div class="socials col-11 p-0 d-flex flex-wrap justify-content-between">
+                <i class="icon icon-fb"></i>
+                <i class="icon icon-vk"></i>
+                <i class="icon icon-inst"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="libs/jquery1.12.4/script.js"></script>
+    <script src="libs/slick/script.js"></script>
+    <script src="js/modules/slider/script.js"></script>
+    <script type="text/javascript" src="dist/app.js"></script>
   </body>
 </html>

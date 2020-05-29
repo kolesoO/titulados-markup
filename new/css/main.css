@@ -1,17 +1,234 @@
-a {
-  text-decoration: none;
+.icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.3s opacity;
+}
+.icon.icon-user {
+  width: 18px;
+  height: 20px;
+  background-image: url('../img/icons/user.png');
+}
+.icon.icon-counter {
+  color: #0074fb;
+  font-family: 'Proxima Nova Lt';
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #f5f5f5;
+  padding: 10px 13px;
+  border-radius: 10px;
+}
+.icon.icon-counter-active {
+  color: #fff;
+  font-family: 'Proxima Nova Lt';
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #0074fb;
+  padding: 10px 13px;
+  border-radius: 10px;
+}
+.icon.icon-counter-active .icon-msg {
+  width: 18px;
+  height: 15px;
+  background-image: url('../img/icons/msg.png');
+}
+.icon.icon-fb {
+  width: 18px;
+  height: 18px;
+  background-image: url('../img/icons/fb.png');
+}
+.icon.icon-vk {
+  width: 25px;
+  height: 14px;
+  background-image: url('../img/icons/vk.png');
+}
+.icon.icon-inst {
+  width: 16px;
+  height: 16px;
+  background-image: url('../img/icons/inst.png');
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Proxima Nova Lt' !important;
+  font-size: 16px!important;
+  font-weight: 300!important;
+  font-style: normal;
+}
+a:hover {
+  text-decoration: none!important;
+  opacity: 0.5;
 }
 .container {
-  max-width: 1165px;
+  max-width: 1165px!important;
   margin: 0 auto;
+}
+.title-1 {
+  font-family: 'Proxima Nova Lt';
+  font-size: 44px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1;
+}
+.title-4 {
+  font-family: 'Proxima Nova Rg';
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  margin-top: 50px;
+  margin-bottom: 75px;
 }
 .header .logo {
   width: 152px;
   height: 115px;
-  margin-right: 140px;
 }
 .header .header-menu .header-menu-item {
   font-family: 'Proxima Nova Extrabold';
   font-size: 14px;
+  font-weight: 800;
   color: #0078fb;
+}
+.header .header-login {
+  font-family: 'Proxima Nova Rg';
+  font-size: 16px;
+  margin-bottom: -13px;
+  padding: 13px 20px;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+}
+.nav-list {
+  width: 215px;
+  list-style: none;
+}
+.nav-list li + li {
+  margin-top: 35px;
+}
+.nav-list li:hover {
+  cursor: pointer;
+  color: #0078fb;
+}
+.clearfix:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+.main_slider {
+  position: relative;
+  overflow-x: hidden;
+}
+.main_slider .slick-track {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main_slider .slick-dots {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+.main_slider .slick-dots li {
+  flex-grow: 1;
+  list-style: none;
+}
+.main_slider .slick-dots li button {
+  display: block;
+  padding: 0;
+  border: 0;
+  text-indent: -999px;
+  height: 1px;
+  background: #f5f5f5;
+  width: 100%;
+}
+.main_slider .slick-dots li.slick-active button {
+  background: #0078fb;
+}
+.main_slider .main_slider-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  height: 370px;
+  position: relative;
+  outline: none;
+}
+.main_slider .main_slider-item .main_slider-description {
+  position: absolute;
+  height: 100%;
+}
+.right-block {
+  height: 370px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 45px 60px!important;
+}
+.right-block button {
+  font-family: 'Proxima Nova Lt';
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  padding: 20px 25px;
+  border-radius: 30px;
+}
+.descr-block {
+  margin-top: 85px;
+  margin-bottom: 65px;
+}
+.descr-block .descr-block-item img {
+  width: 41px;
+  height: 41px;
+}
+.descr-block .descr-block-item button {
+  font-family: 'Proxima Nova Lt';
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  padding: 20px 25px;
+  border-radius: 30px;
+}
+.footer {
+  background-color: #f5f5f5;
+}
+.footer form {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.footer form label {
+  font-family: 'Proxima Nova Rg';
+  font-size: 16px;
+}
+.footer form input {
+  outline: none;
+  border-radius: 30px;
+  padding: 20px 30px;
+}
+.footer form button {
+  font-family: 'Proxima Nova Lt';
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  padding: 20px 25px;
+  border-radius: 30px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul a {
+  color: #000;
+}
+.footer ul li + li {
+  margin-top: 25px;
+}
+.footer .socials {
+  margin-top: 60px;
 }
