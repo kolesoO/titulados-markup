@@ -200,12 +200,12 @@ a:hover {
   background-color: #f5f5f5;
 }
 .footer form {
-  margin-top: 60px;
   margin-bottom: 60px;
 }
 .footer form label {
   font-family: 'Proxima Nova Rg';
   font-size: 16px;
+  margin-top: 60px;
 }
 .footer form input {
   outline: none;

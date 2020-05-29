@@ -1,3 +1,5 @@
 import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 
-obSlider.init();
+$(document).ready(function() {
+  obSlider.init();
+});
