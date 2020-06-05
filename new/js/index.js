@@ -1,6 +1,13 @@
 import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 $(document).ready(function() {
-  obSlider.init();
+  //modules
+  if(typeof(obSlider) == "object"){
+    obSlider.init();
+  }
+  if(typeof(obTabs) == "object"){
+    obTabs.init();
+  }
+  //end
 
   $( "body" ).on("click", ".js-toggle-down", function() {
     let target = $(this).parents(".js-toggle-wrapper").first().find(".js-toggle-target");

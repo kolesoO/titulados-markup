@@ -95,12 +95,14 @@ input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
 input[type=number]:focus,
+input[type=tel]:focus,
 [type=text].form-control:focus,
 [type=password].form-control:focus,
 [type=email].form-control:focus,
 [type=tel].form-control:focus,
 [contenteditable].form-control:focus {
   box-shadow: inset 0 -1px 0 #ddd;
+  outline: none;
 }
 .container {
   max-width: 1165px!important;
@@ -229,7 +231,7 @@ input[type=number]:focus,
   font-weight: 600;
   font-style: normal;
   padding: 20px 25px;
-  border-radius: 30px;
+  border-radius: 50px;
 }
 .descr-block {
   margin-top: 85px;
@@ -245,7 +247,7 @@ input[type=number]:focus,
   font-weight: 600;
   font-style: normal;
   padding: 20px 25px;
-  border-radius: 30px;
+  border-radius: 50px;
 }
 .content {
   min-height: 735px;
@@ -358,7 +360,51 @@ input[type=number]:focus,
   margin-bottom: 15px;
 }
 .chat-wrapper .input-msg {
-  padding: 15px;
+  padding: 25px;
+}
+.tabs .tab {
+  color: #acacac;
+}
+.tabs .tab.active {
+  color: #000;
+  font-family: 'Proxima Nova Rg';
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+}
+.tabs .tab + .tab {
+  margin-left: 65px;
+}
+.tabs .tab-data {
+  margin-top: 45px;
+}
+.tabs .tab-data input {
+  margin-bottom: 45px;
+  border: none;
+  border-bottom: 1px solid #f5f5f5;
+}
+.tabs .tab-data input[disabled] {
+  border: none;
+  background: transparent;
+}
+.tabs .tab-data i {
+  font-size: 23px;
+  color: #0078fb;
+}
+.tabs .tab-data button {
+  font-family: 'Proxima Nova Lt';
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+  padding: 20px 35px;
+  border-radius: 50px;
+}
+.tabs .tab-data .fa-toggle-off {
+  color: #cecece;
+}
+.tabs .tab-data #password button {
+  margin-top: 45px;
 }
 .footer {
   background-color: #f5f5f5;
@@ -373,7 +419,7 @@ input[type=number]:focus,
   margin-top: 60px;
 }
 .footer form input {
-  border-radius: 30px;
+  border-radius: 50px;
   padding: 20px 30px;
 }
 .footer form button {
@@ -382,7 +428,7 @@ input[type=number]:focus,
   font-weight: 600;
   font-style: normal;
   padding: 20px 25px;
-  border-radius: 30px;
+  border-radius: 50px;
 }
 .footer ul {
   list-style: none;
