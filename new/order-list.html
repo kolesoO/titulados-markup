@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>Главная</title>
+    <title>Список заказов</title>
     <link rel="stylesheet" charset="utf-8" type="text/css" href="css/main.css">
     <link rel="stylesheet" charset="utf-8" type="text/css" href="css/fonts/proxima_nova/stylesheet.css">
-    <link rel="stylesheet" charset="utf-8" type="text/css" href="libs/fontawesome/css/fontawesome-all.min.css">
+  <link rel="stylesheet" charset="utf-8" type="text/css" href="libs/fontawesome/css/fontawesome-all.min.css">
 </head>
 <body>
     <header class="header">
@@ -45,8 +45,8 @@
             <span>Активные</span>
             <div class="col-6 d-flex p-0 justify-content-between">
               <i class="icon icon-counter-active">
-<!--                <span class="icon icon-msg"></span>-->
                 <i class="fas fa-comment"></i>
+<!--                <span class="icon icon-msg"></span>-->
                 10
               </i>
               <i class="icon icon-counter">3</i>
@@ -57,82 +57,66 @@
           <li>Выполненные работы</li>
           <li>Мои данные</li>
         </ul>
-        <div class="content col-9 p-0 d-flex flex-wrap justify-content-between">
-          <div
-                class="main_slider clearfix js-slider col-5 p-0"
-                data-autoplay="false"
-                data-autoplaySpeed="5000"
-                data-infinite="false"
-                data-speed="1000"
-                data-arrows="false"
-                data-dots="true"
-          >
-            <div class="main_slider-item" style="background-image: url('img/slider-image.png')">
-              <div class="col-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
-                  <div class="title-1 col-12 p-0">
-                      ¿Cómo<br>funciona?
-                  </div>
-                  <div class="main_slider-footer col-12 p-0 d-flex flex-wrap">
-                      <div class="title-1 col-2 p-0">1</div>
-                      <div class="col-10 p-0">
-                        <p class="title-4 m-0">Создайте заказ</p>
-                        <p class="m-0 mb-3">Obtenga sugerencias de autores en cuestión de minutos</p>
+        <div class="content col-9 p-0">
+          <div class="order-list-item col-12">
+            <hr style="width: 74%">
+            <div class="d-flex flex-wrap justify-content-between order-list-item_descr js-toggle-wrapper">
+              <p class="title-2 col-4 p-0">Заказ первый</p>
+              <p class="title-2 col-1 p-0 text-right">74%</p>
+              <p class="title-3 col-12 p-0">Реферат</p>
+              <p class="order-list-item_txt">Сдать до 12.08.2020</p>
+              <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0">
+                <i class="fas fa-comment mr-2"></i>
+<!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
+                <span class="messages mr-3 col-5 p-0">сообщения</span>
+                <i class="counter col-1 p-0">3</i>
+              </a>
+              <div class="js-toggle-target col-12 p-0" style="display: none;">
+                <div class="chat-wrapper d-flex flex-wrap align-items-center justify-content-end">
+                  <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center">
+                    <span class="col-12 p-0">Свернуть чат</span>
+                    <i class="fas fa-chevron-up"></i>
+                  </a>
+                  <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
+                  <i class="fas fa-search"></i>
+                  <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
+                    <p class="chat-date col-2 text-center">1 июня</p>
+                    <div class="performer-block d-flex flex-wrap col-12 align-items-end">
+                      <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
+                      <div class="ml-3">
+                        <label class="ml-4">David 19:41</label>
+                        <div class="performer-msg">Привет! Начал работу!</div>
                       </div>
+                    </div>
+                    <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
+                      <label class="mr-4 col-12 p-0">Никита 19:41</label>
+                      <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
+                    </div>
+                    <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
                   </div>
+                  <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
+                    <input type="text" class="col-11 form-control a">
+                    <i class="far fa-smile"></i>
+                    <i class="icon icon-send col-1 p-0"></i>
+                  </div>
+                </div>
               </div>
-          </div>
-          <div class="main_slider-item" style="background-image: url('img/slider-image.png')">
-            <div class="col-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
-                <div class="title-1 col-12 p-0">
-                    ¿Cómo<br>funciona?
-                </div>
-                <div class="main_slider-footer col-12 p-0 d-flex flex-wrap">
-                    <div class="title-1 col-2 p-0">2</div>
-                    <div class="col-10 p-0">
-                      <p class="title-4 m-0">Создайте заказ</p>
-                      <p>Obtenga sugerencias de autores en cuestión de minutos</p>
-                    </div>
-                </div>
             </div>
           </div>
-          <div class="main_slider-item" style="background-image: url('img/slider-image.png')">
-            <div class="col-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
-                <div class="title-1 col-12 p-0">
-                    ¿Cómo<br>funciona?
-                </div>
-                <div class="main_slider-footer col-12 d-flex flex-wrap">
-                    <div class="title-1 col-2 p-0">3</div>
-                    <div class="col-10 p-0">
-                      <p class="title-4 m-0">Создайте заказ</p>
-                      <p>Obtenga sugerencias de autores en cuestión de minutos</p>
-                    </div>
-                </div>
+          <div class="order-list-item col-12">
+            <hr style="width: 74%">
+            <div class="d-flex flex-wrap justify-content-between order-list-item_descr">
+              <p class="title-2 col-4 p-0">Заказ первый</p>
+              <p class="title-2 col-1 p-0 text-right">74%</p>
+              <p class="title-3 col-12 p-0">Реферат</p>
+              <p class="order-list-item_txt">Сдать до 12.08.2020</p>
+              <a href="javascript:void(0)" class="d-flex flex-wrap justify-content-end align-items-center col-3 p-0">
+                <i class="fas fa-comment mr-2"></i>
+<!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
+                <span class="mr-3 col-5 p-0">сообщения</span>
+                <i class="counter col-1 p-0">3</i>
+              </a>
             </div>
-          </div>
-        </div>
-        <div class="right-block col-6 d-flex flex-wrap align-content-between">
-          <div class="col-12 p-0">
-            <div class="title-1 col-12 mb-3 p-0">¡Haga su primer<br>pedido!</div>
-            <div>3802 artistas ahora en línea y listo<br>para responder</div>
-          </div>
-          <div class="col-12 d-flex flex-wrap p-0 align-items-center">
-            <button class="btn btn-primary mr-3" type="button" name="button">Сделать заказ</button>
-            <p class="m-0">— es gratis</p>
-          </div>
-        </div>
-        <div class="descr-block col-12 p-0 d-flex flex-wrap justify-content-between">
-          <div class="descr-block-item col-3 text-center">
-            <img src="img/hat.png">
-            <p class="col-12 mt-3">Пригласи друга и получи 500 рублей за первый оплаченный заказ друга!</p>
-          </div>
-          <div class="descr-block-item col-3 text-center">
-            <img src="img/like.png">
-            <p class="col-12 mt-3">Después de recibir el trabajo, durante el período de garantía, el autor realiza ajustes gratuitos en el pedido realizado.</p>
-          </div>
-          <div class="descr-block-item col-3 text-center">
-            <img src="img/euro.png">
-            <p class="col-12 mt-3">Envita a tu amigo a recibe 10€ en la cuenta de Titulados</p>
-            <button class="btn btn-warning mt-3" type="button" name="button">Detallado</button>
           </div>
         </div>
       </div>
@@ -179,8 +163,6 @@
       </div>
     </footer>
     <script src="libs/jquery1.12.4/script.js"></script>
-    <script src="libs/slick/script.js"></script>
-    <script src="js/modules/slider/script.js"></script>
     <script type="text/javascript" src="dist/app.js"></script>
   </body>
 </html>
