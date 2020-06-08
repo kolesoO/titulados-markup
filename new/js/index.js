@@ -10,16 +10,16 @@ $(document).ready(function() {
   //end
 
   $( "body" ).on("click", ".js-toggle-down", function() {
-    let target = $(this).parents(".js-toggle-wrapper").first().find(".js-toggle-target");
-    target.slideToggle( "fast");
-      if (target.css("display") !== "none") {
+    let target = $(this).parents(".js-toggle-wrapper").first().find($(this).attr("data-target"));
+    target.slideDown( "fast");
+      if (target.css("display") !== "none" && $(this).attr("data-static") != "true") {
         $(this).addClass("d-none");
         $(this).removeClass("d-flex");
       }
   });
   $( "body" ).on("click", ".js-toggle-up", function() {
-    let target = $(this).parents(".js-toggle-wrapper").first().find(".js-toggle-target");
-    target.slideToggle( "fast" );
+    let target = $(this).parents(".js-toggle-wrapper").first().find($(this).attr("data-target"));
+    target.slideUp( "fast" );
     $(this).parents(".js-toggle-wrapper").first().find(".js-toggle-down")
       .addClass("d-flex")
       .removeClass("d-none");

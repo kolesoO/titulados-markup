@@ -68,7 +68,15 @@ input[type=tel]:focus,
   font-weight: normal;
   font-style: normal;
 }
-
+.button-round {
+  font-family: 'Proxima Nova Lt'!important;
+  font-size: 18px!important;
+  font-weight: 600!important;
+  font-style: normal!important;
+  padding: 20px 25px!important;
+  border-radius: 50px!important;
+  line-height: 1!important;
+}
 .header {
   margin-top: 50px;
   margin-bottom: 75px;
@@ -182,15 +190,6 @@ input[type=tel]:focus,
   background-color: @base-color;
   border-radius: 20px;
   padding: 45px 60px!important;
-
-  button {
-    font-family: 'Proxima Nova Lt';
-    font-size: 18px;
-    font-weight: 600;
-    font-style: normal;
-    padding: 20px 25px;
-    border-radius: 50px;
-  }
 }
 .descr-block {
   margin-top: 85px;
@@ -201,14 +200,6 @@ input[type=tel]:focus,
       width: auto;
       height: 41px;
     }
-    button {
-      font-family: 'Proxima Nova Lt';
-      font-size: 18px;
-      font-weight: 600;
-      font-style: normal;
-      padding: 20px 25px;
-      border-radius: 50px;
-    }
   }
 }
 
@@ -217,8 +208,8 @@ input[type=tel]:focus,
   hr {
     margin: 0;
     height: 4px;
-    background-color: @main-color;
     border-radius: 40px 0 0 0;
+    border: none;
   }
   .order-list-item + .order-list-item {
     margin-top: 15px;
@@ -255,10 +246,67 @@ input[type=tel]:focus,
       font-size: 18px;
       font-weight: 600;
     }
+    .parts-block {
+      overflow-x: auto;
+      .part {
+        hr {
+          height: 2px;
+          border-radius: 0;
+          margin-bottom: 10px;
+        }
+        .part-txt {
+          font-size: 14px;
+        }
+        .fa-paperclip {
+          font-size: 25px;
+          color: #34495e;
+        }
+        .fa-file-alt + .fa-file-alt {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
 
+  .doclist-block {
+    background-color: @base-color;
+    padding: 35px 45px;
+    margin-bottom: 90px;
+    border-radius: 15px;
+
+    .doc-list-item {
+      padding: 15px 20px;
+    }
+    .doc-list-item + .doc-list-item {
+      border-top: 1px solid #dddddd;
+    }
+  }
+
+  .add-block {
+    background-color: @base-color;
+    padding: 35px 45px;
+    border-radius: 10px;
+
+    .added-doc {
+      margin-top: 30px;
+    }
+  }
+  .chat {
+    margin-top: 15px;
+    margin-bottom: 235px;
+    input {
+      position: relative;
+      background-color: @base-color;
+      border: none;
+      border-radius: 10px;
+    }
+    .fa-smile{
+      position: absolute;
+      right: 17px;
+    }
   }
 }
-.js-toggle-target {
+.js-content {
   overflow: unset!important;
 
   a {
@@ -386,14 +434,6 @@ input[type=tel]:focus,
       font-size: 30px;
       color: @main-color;
     }
-    button {
-      font-family: 'Proxima Nova Lt';
-      font-size: 18px;
-      font-weight: 600;
-      font-style: normal;
-      padding: 20px 35px;
-      border-radius: 50px;
-    }
 
     .fa-toggle-off {
       color: @base-text-color;
@@ -422,14 +462,7 @@ input[type=tel]:focus,
       border-radius: 50px;
       padding: 20px 30px;
     }
-    button {
-      font-family: 'Proxima Nova Lt';
-      font-size: 18px;
-      font-weight: 600;
-      font-style: normal;
-      padding: 20px 25px;
-      border-radius: 50px;
-    }
+
   }
   ul {
     list-style: none;
