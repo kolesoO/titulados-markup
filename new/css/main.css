@@ -20,6 +20,7 @@
   background-color: #f5f5f5;
   padding: 10px 13px;
   border-radius: 10px;
+  line-height: 1;
 }
 .icon.icon-counter-active {
   color: #fff;
@@ -30,6 +31,7 @@
   background-color: #0074fb;
   padding: 10px 13px;
   border-radius: 10px;
+  line-height: 1;
 }
 .icon.icon-counter-active .icon-msg {
   width: 18px;
@@ -162,7 +164,7 @@ input[type=tel]:focus,
   list-style: none;
 }
 .nav-list li + li {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 .nav-list li:hover {
   cursor: pointer;
@@ -275,6 +277,7 @@ input[type=tel]:focus,
   padding: 10px 15px;
   border-radius: 30px;
   margin-left: -15px;
+  line-height: 1;
 }
 .content .order-list-item_descr .fa-comment {
   color: #d9d9d9;
@@ -382,14 +385,15 @@ input[type=tel]:focus,
 .tabs .tab-data input {
   margin-bottom: 45px;
   border: none;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 5px;
 }
 .tabs .tab-data input[disabled] {
   border: none;
   background: transparent;
 }
 .tabs .tab-data i {
-  font-size: 23px;
+  font-size: 30px;
   color: #0078fb;
 }
 .tabs .tab-data button {
