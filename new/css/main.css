@@ -94,13 +94,7 @@ a:hover {
   opacity: 0.5;
 }
 textarea:focus,
-textarea.form-control:focus,
-input.form-control:focus,
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus,
-input[type=number]:focus,
-input[type=tel]:focus,
+input:focus,
 [type=text].form-control:focus,
 [type=password].form-control:focus,
 [type=email].form-control:focus,
@@ -336,6 +330,41 @@ input[type=tel]:focus,
 .content .chat .fa-smile {
   position: absolute;
   right: 17px;
+}
+.content .input-push {
+  border: none;
+  margin-top: 40px;
+}
+.content .btn-primary + .btn-primary {
+  margin-left: 10px;
+}
+.content .check-list {
+  margin-top: 35px;
+}
+.content .check-list .check {
+  position: relative;
+}
+.content .check-list .check input {
+  position: relative;
+  border: none!important;
+  -webkit-appearance: none;
+  width: 34px;
+  height: 34px;
+  z-index: 2;
+  border-radius: 5px;
+  background-color: #f5f5f5 !important;
+}
+.content .check-list .check input:checked {
+  background-image: url("../img/icons/check.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.content .check-list .check input:checked + label {
+  color: #000;
+  transition: color 0.3s;
+}
+.content .check-list .check label {
+  color: #cecece;
 }
 .js-content {
   overflow: unset!important;
