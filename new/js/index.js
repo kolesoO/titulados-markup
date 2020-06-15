@@ -24,5 +24,9 @@ $(document).ready(function() {
       .addClass("d-flex")
       .removeClass("d-none");
   });
-
+  $( "body" ).on("click", ".js-toggle", function() {
+    let target = $(this).parents(".js-toggle-wrapper").first().find($(this).attr("data-target"));
+    target.slideToggle( "fast");
+    $(this).toggleClass("active");
+  });
 });

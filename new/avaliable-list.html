@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Список заказов</title>
+    <link rel="stylesheet" charset="utf-8" type="text/css" href="css/main.css">
+    <link rel="stylesheet" charset="utf-8" type="text/css" href="css/fonts/proxima_nova/stylesheet.css">
+  <link rel="stylesheet" charset="utf-8" type="text/css" href="libs/fontawesome/css/fontawesome-all.min.css">
+</head>
+<body>
+    <header class="header">
+            <div class="container">
+              <div class="d-flex flex-wrap justify-content-between">
+                <div class="logo col-3 p-0">
+                      <img class="" src="img/logo.png">
+                </div>
+                <div class="d-flex align-items-end col-9 p-0 justify-content-between">
+                  <nav class="header-menu d-flex justify-content-between col-9 p-0">
+                      <a href="#" class="header-menu-item">Encargar el trabajo</a>
+                      <a href="#" class="header-menu-item">Contactos</a>
+                      <a href="#" class="header-menu-item">Acerca de la empresa</a>
+                      <a href="#" class="header-menu-item">Servicios</a>
+                      <a href="#" class="header-menu-item">Garantía</a>
+                      <a href="#" class="header-menu-item">FAQ</a>
+                  </nav>
+                  <div class="header-login col-2 text-center">
+                    <span class="mr-2">Nikita</span>
+<!--                    <i class="icon icon-user"></i>-->
+                    <i class="far fa-user"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </header>
+    <main>
+      <div class="container d-flex flex-wrap justify-content-between">
+        <ul class="nav-list p-0">
+          <li>Главная</li>
+          <li>Сделать заказ</li>
+          <li class="d-flex justify-content-between align-items-center"><span>В обработке</span><i class="icon icon-counter">3</i></li>
+          <li class="d-flex justify-content-between align-items-center">
+            <span>Активные</span>
+            <div class="col-6 d-flex p-0 justify-content-between">
+              <i class="icon icon-counter-active">
+                <i class="fas fa-comment"></i>
+<!--                <span class="icon icon-msg"></span>-->
+                10
+              </i>
+              <i class="icon icon-counter">3</i>
+            </div>
+          </li>
+          <li>Уточнения</li>
+          <li>Оплата</li>
+          <li>Выполненные работы</li>
+          <li>Мои данные</li>
+        </ul>
+        <div class="content col-9 p-0">
+          <div class="order-list-header mb-3">
+            <span class="title-1-2 mr-2">Найдено 1289 заказов</span>
+            <span class="text-grey ">Чтобы видеть заказы по вашей тематике — заполните <a href="#">рассылки</a></span>
+          </div>
+          <div class="order-list col-12 p-0">
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <div class="d-flex flex-wrap justify-content-between avaliable order-list-item_descr" >
+                <p class="order-list-item_txt text-light bg-primary"><i class="fas fa-clock mr-2"></i>Сдать до 12.08.2020</p>
+                <p class="title-2 col-12 p-0 mb-0">Предмет. Тема работы</p>
+                <div class="budget col-12 p-0 pb-3 d-flex flex-wrap justify-content-between  align-items-center">
+                  <p class="title-3 m-0 col-5 p-0">Тип работы</p>
+                  <div class="col-6 p-0 d-flex flex-wrap justify-content-end align-items-center">
+                    <p class="mr-4 mb-0">Бюджет:</p>
+                    <div class="order-list-item_txt button-round mr-3">500&#8364;</div>
+                    <button class="col-6 btn button-round button-grey js-toggle" data-target=".js-details">
+                      <span class="toggle-down"><i class="fas fa-chevron-down mr-2"></i>Подробнее</span>
+                      <span class="toggle-up"><i class="fas fa-chevron-up mr-2"></i>Свернуть</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 pt-5 border-top row justify-content-between" style="display: none;">
+                  <div class="col-8 p-0 mb-3">
+                    <p class="title-3 col-12 p-0">Описание</p>
+                    <div class="col-12 p-0">Нужно провести факторный анализ себестоимости Сравнить в динамике, план/факт, проанализировать ее структуру и изменения и тд Есть калькуляция за один период, остальные данные надо будет придумать, но в соответствии с финансовой отчётностью организации, чтобы всё было логично + Предложения по исправлению выявленных недостатков (сжато)</div>
+                  </div>
+                  <div class="col-3 p-0 mb-3 text-right">
+                    <button class="btn btn-primary button-round">Принять</button>
+                    <button class="btn button-grey button-round">Отклонить</button>
+                  </div>
+                  <div class="col-6 row align-items-center">
+                    <i class="fas fa-paperclip mr-3 text-grey"></i>
+                    <span class="part-txt mr-2">Файлы</span>
+                    <i class="icon icon-counter p-0 mr-2">3</i>
+                    <a href="#">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <div class="d-flex flex-wrap justify-content-between avaliable order-list-item_descr" >
+                <p class="order-list-item_txt text-light bg-primary"><i class="fas fa-clock mr-2"></i>Сдать до 12.08.2020</p>
+                <p class="title-2 col-12 p-0 mb-0">Предмет. Тема работы</p>
+                <div class="budget col-12 p-0 pb-3 d-flex flex-wrap justify-content-between  align-items-center">
+                  <p class="title-3 m-0 col-5 p-0">Тип работы</p>
+                  <div class="col-6 p-0 d-flex flex-wrap justify-content-end align-items-center">
+                    <p class="mr-4 mb-0">Бюджет:</p>
+                    <div class="order-list-item_txt button-round mr-3">500&#8364;</div>
+                    <button class="col-6 btn button-round button-grey js-toggle" data-target=".js-details">
+                      <span class="toggle-down"><i class="fas fa-chevron-down mr-2"></i>Подробнее</span>
+                      <span class="toggle-up"><i class="fas fa-chevron-up mr-2"></i>Свернуть</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 pt-5 border-top row justify-content-between" style="display: none;">
+                  <div class="col-8 p-0 mb-3">
+                    <p class="title-3 col-12 p-0">Описание</p>
+                    <div class="col-12 p-0">Нужно провести факторный анализ себестоимости Сравнить в динамике, план/факт, проанализировать ее структуру и изменения и тд Есть калькуляция за один период, остальные данные надо будет придумать, но в соответствии с финансовой отчётностью организации, чтобы всё было логично + Предложения по исправлению выявленных недостатков (сжато)</div>
+                  </div>
+                  <div class="col-3 p-0 mb-3 text-right">
+                    <button class="btn btn-primary button-round">Принять</button>
+                    <button class="btn button-grey button-round">Отклонить</button>
+                  </div>
+                  <div class="col-6 row align-items-center">
+                    <i class="fas fa-paperclip mr-3 text-grey"></i>
+                    <span class="part-txt mr-2">Файлы</span>
+                    <i class="icon icon-counter p-0 mr-2">3</i>
+                    <a href="#">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <div class="d-flex flex-wrap justify-content-between avaliable order-list-item_descr" >
+                <p class="order-list-item_txt text-light bg-primary"><i class="fas fa-clock mr-2"></i>Сдать до 12.08.2020</p>
+                <p class="title-2 col-12 p-0 mb-0">Предмет. Тема работы</p>
+                <div class="budget col-12 p-0 pb-3 d-flex flex-wrap justify-content-between  align-items-center">
+                  <p class="title-3 m-0 col-5 p-0">Тип работы</p>
+                  <div class="col-6 p-0 d-flex flex-wrap justify-content-end align-items-center">
+                    <p class="mr-4 mb-0">Бюджет:</p>
+                    <div class="order-list-item_txt button-round mr-3">500&#8364;</div>
+                    <button class="col-6 btn button-round button-grey js-toggle" data-target=".js-details">
+                      <span class="toggle-down"><i class="fas fa-chevron-down mr-2"></i>Подробнее</span>
+                      <span class="toggle-up"><i class="fas fa-chevron-up mr-2"></i>Свернуть</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 pt-5 border-top row justify-content-between" style="display: none;">
+                  <div class="col-8 p-0 mb-3">
+                    <p class="title-3 col-12 p-0">Описание</p>
+                    <div class="col-12 p-0">Нужно провести факторный анализ себестоимости Сравнить в динамике, план/факт, проанализировать ее структуру и изменения и тд Есть калькуляция за один период, остальные данные надо будет придумать, но в соответствии с финансовой отчётностью организации, чтобы всё было логично + Предложения по исправлению выявленных недостатков (сжато)</div>
+                  </div>
+                  <div class="col-3 p-0 mb-3 text-right">
+                    <button class="btn btn-primary button-round">Принять</button>
+                    <button class="btn button-grey button-round">Отклонить</button>
+                  </div>
+                  <div class="col-6 row align-items-center">
+                    <i class="fas fa-paperclip mr-3 text-grey"></i>
+                    <span class="part-txt mr-2">Файлы</span>
+                    <i class="icon icon-counter p-0 mr-2">3</i>
+                    <a href="#">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <div class="d-flex flex-wrap justify-content-between avaliable order-list-item_descr" >
+                <p class="order-list-item_txt text-light bg-primary"><i class="fas fa-clock mr-2"></i>Сдать до 12.08.2020</p>
+                <p class="title-2 col-12 p-0 mb-0">Предмет. Тема работы</p>
+                <div class="budget col-12 p-0 pb-3 d-flex flex-wrap justify-content-between  align-items-center">
+                  <p class="title-3 m-0 col-5 p-0">Тип работы</p>
+                  <div class="col-6 p-0 d-flex flex-wrap justify-content-end align-items-center">
+                    <p class="mr-4 mb-0">Бюджет:</p>
+                    <div class="order-list-item_txt button-round mr-3">500&#8364;</div>
+                    <button class="col-6 btn button-round button-grey js-toggle" data-target=".js-details">
+                      <span class="toggle-down"><i class="fas fa-chevron-down mr-2"></i>Подробнее</span>
+                      <span class="toggle-up"><i class="fas fa-chevron-up mr-2"></i>Свернуть</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 pt-5 border-top row justify-content-between" style="display: none;">
+                  <div class="col-8 p-0 mb-3">
+                    <p class="title-3 col-12 p-0">Описание</p>
+                    <div class="col-12 p-0">Нужно провести факторный анализ себестоимости Сравнить в динамике, план/факт, проанализировать ее структуру и изменения и тд Есть калькуляция за один период, остальные данные надо будет придумать, но в соответствии с финансовой отчётностью организации, чтобы всё было логично + Предложения по исправлению выявленных недостатков (сжато)</div>
+                  </div>
+                  <div class="col-3 p-0 mb-3 text-right">
+                    <button class="btn btn-primary button-round">Принять</button>
+                    <button class="btn button-grey button-round">Отклонить</button>
+                  </div>
+                  <div class="col-6 row align-items-center">
+                    <i class="fas fa-paperclip mr-3 text-grey"></i>
+                    <span class="part-txt mr-2">Файлы</span>
+                    <i class="icon icon-counter p-0 mr-2">3</i>
+                    <a href="#">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <div class="d-flex flex-wrap justify-content-between avaliable order-list-item_descr" >
+                <p class="order-list-item_txt text-light bg-primary"><i class="fas fa-clock mr-2"></i>Сдать до 12.08.2020</p>
+                <p class="title-2 col-12 p-0 mb-0">Предмет. Тема работы</p>
+                <div class="budget col-12 p-0 pb-3 d-flex flex-wrap justify-content-between  align-items-center">
+                  <p class="title-3 m-0 col-5 p-0">Тип работы</p>
+                  <div class="col-6 p-0 d-flex flex-wrap justify-content-end align-items-center">
+                    <p class="mr-4 mb-0">Бюджет:</p>
+                    <div class="order-list-item_txt button-round mr-3">500&#8364;</div>
+                    <button class="col-6 btn button-round button-grey js-toggle" data-target=".js-details">
+                      <span class="toggle-down"><i class="fas fa-chevron-down mr-2"></i>Подробнее</span>
+                      <span class="toggle-up"><i class="fas fa-chevron-up mr-2"></i>Свернуть</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 pt-5 border-top row justify-content-between" style="display: none;">
+                  <div class="col-8 p-0 mb-3">
+                    <p class="title-3 col-12 p-0">Описание</p>
+                    <div class="col-12 p-0">Нужно провести факторный анализ себестоимости Сравнить в динамике, план/факт, проанализировать ее структуру и изменения и тд Есть калькуляция за один период, остальные данные надо будет придумать, но в соответствии с финансовой отчётностью организации, чтобы всё было логично + Предложения по исправлению выявленных недостатков (сжато)</div>
+                  </div>
+                  <div class="col-3 p-0 mb-3 text-right">
+                    <button class="btn btn-primary button-round">Принять</button>
+                    <button class="btn button-grey button-round">Отклонить</button>
+                  </div>
+                  <div class="col-6 row align-items-center">
+                    <i class="fas fa-paperclip mr-3 text-grey"></i>
+                    <span class="part-txt mr-2">Файлы</span>
+                    <i class="icon icon-counter p-0 mr-2">3</i>
+                    <a href="#">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <div class="d-flex flex-wrap justify-content-between avaliable order-list-item_descr" >
+                <p class="order-list-item_txt text-light bg-primary"><i class="fas fa-clock mr-2"></i>Сдать до 12.08.2020</p>
+                <p class="title-2 col-12 p-0 mb-0">Предмет. Тема работы</p>
+                <div class="budget col-12 p-0 pb-3 d-flex flex-wrap justify-content-between  align-items-center">
+                  <p class="title-3 m-0 col-5 p-0">Тип работы</p>
+                  <div class="col-6 p-0 d-flex flex-wrap justify-content-end align-items-center">
+                    <p class="mr-4 mb-0">Бюджет:</p>
+                    <div class="order-list-item_txt button-round mr-3">500&#8364;</div>
+                    <button class="col-6 btn button-round button-grey js-toggle" data-target=".js-details">
+                      <span class="toggle-down"><i class="fas fa-chevron-down mr-2"></i>Подробнее</span>
+                      <span class="toggle-up"><i class="fas fa-chevron-up mr-2"></i>Свернуть</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 pt-5 border-top row justify-content-between" style="display: none;">
+                  <div class="col-8 p-0 mb-3">
+                    <p class="title-3 col-12 p-0">Описание</p>
+                    <div class="col-12 p-0">Нужно провести факторный анализ себестоимости Сравнить в динамике, план/факт, проанализировать ее структуру и изменения и тд Есть калькуляция за один период, остальные данные надо будет придумать, но в соответствии с финансовой отчётностью организации, чтобы всё было логично + Предложения по исправлению выявленных недостатков (сжато)</div>
+                  </div>
+                  <div class="col-3 p-0 mb-3 text-right">
+                    <button class="btn btn-primary button-round">Принять</button>
+                    <button class="btn button-grey button-round">Отклонить</button>
+                  </div>
+                  <div class="col-6 row align-items-center">
+                    <i class="fas fa-paperclip mr-3 text-grey"></i>
+                    <span class="part-txt mr-2">Файлы</span>
+                    <i class="icon icon-counter p-0 mr-2">3</i>
+                    <a href="#">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <div class="d-flex flex-wrap justify-content-between avaliable order-list-item_descr" >
+                <p class="order-list-item_txt text-light bg-primary"><i class="fas fa-clock mr-2"></i>Сдать до 12.08.2020</p>
+                <p class="title-2 col-12 p-0 mb-0">Предмет. Тема работы</p>
+                <div class="budget col-12 p-0 pb-3 d-flex flex-wrap justify-content-between  align-items-center">
+                  <p class="title-3 m-0 col-5 p-0">Тип работы</p>
+                  <div class="col-6 p-0 d-flex flex-wrap justify-content-end align-items-center">
+                    <p class="mr-4 mb-0">Бюджет:</p>
+                    <div class="order-list-item_txt button-round mr-3">500&#8364;</div>
+                    <button class="col-6 btn button-round button-grey js-toggle" data-target=".js-details">
+                      <span class="toggle-down"><i class="fas fa-chevron-down mr-2"></i>Подробнее</span>
+                      <span class="toggle-up"><i class="fas fa-chevron-up mr-2"></i>Свернуть</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 pt-5 border-top row justify-content-between" style="display: none;">
+                  <div class="col-8 p-0 mb-3">
+                    <p class="title-3 col-12 p-0">Описание</p>
+                    <div class="col-12 p-0">Нужно провести факторный анализ себестоимости Сравнить в динамике, план/факт, проанализировать ее структуру и изменения и тд Есть калькуляция за один период, остальные данные надо будет придумать, но в соответствии с финансовой отчётностью организации, чтобы всё было логично + Предложения по исправлению выявленных недостатков (сжато)</div>
+                  </div>
+                  <div class="col-3 p-0 mb-3 text-right">
+                    <button class="btn btn-primary button-round">Принять</button>
+                    <button class="btn button-grey button-round">Отклонить</button>
+                  </div>
+                  <div class="col-6 row align-items-center">
+                    <i class="fas fa-paperclip mr-3 text-grey"></i>
+                    <span class="part-txt mr-2">Файлы</span>
+                    <i class="icon icon-counter p-0 mr-2">3</i>
+                    <a href="#">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="col-9 p-0">
+          <form action="" class="d-flex flex-wrap col-8 p-0">
+            <label class="col-12 pl-4">Suscríbete a promociones y bonos</label>
+            <input class="col-8 border-0 mr-3" type="text" placeholder="email">
+            <button class="btn btn-warning button-round" type="button" name="button">Отправить</button>
+          </form>
+          <div class="col-12 p-0 d-flex flex-wrap justify-content-between">
+            <ul class="col-3">
+              <li><a href="#">Modo de remuneración</a></li>
+              <li><a href="#">Nuestras garantías</a></li>
+              <li><a href="#">Agencias</a></li>
+              <li><a href="#">Descuentos</a></li>
+              <li><a href="#">Comentarios</a></li>
+              <li><a href="#">Preguntas y respuestas</a></li>
+              <li><a href="#">Nuestras garantías</a></li>
+            </ul>
+            <ul class="col-3">
+              <li><a href="#">Cómo funciona</a></li>
+              <li><a href="#">Contactos</a></li>
+              <li><a href="#">Artículos</a></li>
+              <li><a href="#">Objetos</a></li>
+              <li><a href="#">Trabajos terminados</a></li>
+              <li><a href="#">Entrada para autores</a></li>
+            </ul>
+            <div class="col-3">
+              <ul class="col-12 p-0">
+                <li><a href="#">Condiciones de trabajo</a></li>
+                <li><a href="#">Registro de autores</a></li>
+              </ul>
+              <div class="socials col-11 p-0 d-flex flex-wrap justify-content-between align-items-center">
+                <i class="icon icon-fb"></i>
+                <i class="icon icon-vk"></i>
+                <i class="icon icon-inst"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="libs/jquery1.12.4/script.js"></script>
+    <script type="text/javascript" src="dist/app.js"></script>
+  </body>
+</html>
