@@ -494,7 +494,7 @@ input:focus,
   z-index: 10;
 }
 .chat-wrapper {
-  margin-top: -50px;
+  margin-top: -36px;
   margin-left: -15px;
 }
 .chat-wrapper .js-toggle-up {
