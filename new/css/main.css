@@ -322,14 +322,14 @@ input:focus,
 }
 .content .order-list-item_descr .order-list-item_txt.bg-primary,
 .content .order-list-item_descr .order-list-item_txt.bg-danger,
-.content .order-list-item_descr .order-list-item_txt.text-grey {
+.content .order-list-item_descr .order-list-item_txt.time-grey {
   padding: 2px 3px;
   padding-right: 15px;
   margin-left: 0;
 }
 .content .order-list-item_descr .order-list-item_txt.bg-primary i,
 .content .order-list-item_descr .order-list-item_txt.bg-danger i,
-.content .order-list-item_descr .order-list-item_txt.text-grey i {
+.content .order-list-item_descr .order-list-item_txt.time-grey i {
   font-size: 21px;
 }
 .content .order-list-item_descr .fa-comment {
@@ -563,8 +563,10 @@ input:focus,
 .tabs .tab-data {
   margin-top: 45px;
 }
-.tabs .tab-data input {
+.tabs .tab-data .form-item {
   margin-bottom: 45px;
+}
+.tabs .tab-data input {
   border: none;
   border-bottom: 1px solid #cecece;
   padding-bottom: 5px;
