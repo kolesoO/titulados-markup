@@ -316,12 +316,25 @@ input:focus,
 }
 .content .order-list-item_descr .order-list-item_txt {
   background-color: #fff;
-  padding: 10px 15px;
+  padding: 6px 15px;
   border-radius: 30px;
   margin-left: -15px;
 }
+.content .order-list-item_descr .order-list-item_txt.bg-primary,
+.content .order-list-item_descr .order-list-item_txt.bg-danger,
+.content .order-list-item_descr .order-list-item_txt.text-grey {
+  padding: 2px 3px;
+  padding-right: 15px;
+  margin-left: 0;
+}
+.content .order-list-item_descr .order-list-item_txt.bg-primary i,
+.content .order-list-item_descr .order-list-item_txt.bg-danger i,
+.content .order-list-item_descr .order-list-item_txt.text-grey i {
+  font-size: 21px;
+}
 .content .order-list-item_descr .fa-comment {
   color: #d9d9d9;
+  font-size: 20px;
 }
 .content .order-list-item_descr .counter {
   color: #0074fb;
@@ -363,7 +376,6 @@ input:focus,
 .content .doclist-block {
   background-color: #f5f5f5;
   padding: 35px 45px;
-  margin-bottom: 90px;
   border-radius: 15px;
 }
 .content .doclist-block .doc-list-item {
@@ -380,9 +392,11 @@ input:focus,
 .content .add-block .added-doc {
   margin-top: 30px;
 }
+.content .input-chat {
+  padding: 26px;
+}
 .content .chat {
   margin-top: 15px;
-  margin-bottom: 235px;
 }
 .content .chat input {
   position: relative;
@@ -455,6 +469,9 @@ input:focus,
   top: -16%;
   right: 29%;
 }
+.js-content.js-details .fa-paperclip {
+  font-size: 24px;
+}
 .js-content a span {
   color: #cecece;
 }
@@ -477,11 +494,12 @@ input:focus,
   z-index: 10;
 }
 .chat-wrapper {
-  margin-top: -60px;
+  margin-top: -50px;
   margin-left: -15px;
 }
 .chat-wrapper .js-toggle-up {
   color: #cecece;
+  margin-bottom: -15px;
 }
 .chat-wrapper .js-toggle-up a:hover {
   color: #cecece;
@@ -515,13 +533,13 @@ input:focus,
 .chat-wrapper .chat-list .performer-block .performer-msg {
   background-color: #0078fb;
   color: #fff;
-  padding: 15px 20px;
+  padding: 11px 20px;
   border-radius: 30px;
 }
 .chat-wrapper .chat-list .self-block .self-msg {
   color: #000;
   background-color: #fff;
-  padding: 15px 20px;
+  padding: 11px 20px;
   border-radius: 30px;
   margin-bottom: 15px;
 }

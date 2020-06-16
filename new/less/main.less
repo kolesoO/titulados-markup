@@ -273,13 +273,26 @@ input:focus,
 
     .order-list-item_txt {
       background-color: #fff;
-      padding: 10px 15px;
+      padding: 6px 15px;
       border-radius: 30px;
       margin-left: -15px;
+
+      &.bg-primary,
+      &.bg-danger,
+      &.text-grey {
+        padding: 2px 3px;
+        padding-right: 15px;
+        margin-left: 0;
+
+        i {
+          font-size: 21px;
+        }
+      }
     }
 
     .fa-comment {
       color: #d9d9d9;
+      font-size: 20px;
     }
 
     .counter {
@@ -326,7 +339,6 @@ input:focus,
   .doclist-block {
     background-color: @base-color;
     padding: 35px 45px;
-    margin-bottom: 90px;
     border-radius: 15px;
 
     .doc-list-item {
@@ -346,9 +358,12 @@ input:focus,
       margin-top: 30px;
     }
   }
+  .input-chat {
+    padding: 26px;
+  }
   .chat {
     margin-top: 15px;
-    margin-bottom: 235px;
+
     input {
       position: relative;
       background-color: @base-color;
@@ -435,6 +450,9 @@ input:focus,
       top: -16%;
       right: 29%;
     }
+    .fa-paperclip {
+      font-size: 24px;
+    }
   }
 
   a {
@@ -465,11 +483,12 @@ input:focus,
 }
 
 .chat-wrapper {
-  margin-top: -60px;
+  margin-top: -50px;
   margin-left: -15px;
 
   .js-toggle-up {
     color: @base-text-color;
+    margin-bottom: -15px;
 
     a {
       &:hover {
@@ -509,7 +528,7 @@ input:focus,
       .performer-msg {
         background-color: @main-color;
         color: #fff;
-        padding: 15px 20px;
+        padding: 11px 20px;
         border-radius: 30px;
       }
     }
@@ -517,7 +536,7 @@ input:focus,
       .self-msg {
         color: #000;
         background-color: #fff;
-        padding: 15px 20px;
+        padding: 11px 20px;
         border-radius: 30px;
         margin-bottom: 15px;
       }
