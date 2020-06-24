@@ -29,4 +29,26 @@ $(document).ready(function() {
     target.slideToggle( "fast");
     $(this).toggleClass("active");
   });
+  //toggle class
+  $("body").on("click", ".js-toggle_class", function(e){
+    e.preventDefault();
+    let $target,
+        className = $(this).attr("data-class"),
+        $counter = $(this).find(".counter-red");
+    if ($(this).attr("data-is_parent") == "true") {
+      $target = $(this).parents($(this).attr("data-target")).first();
+    } else {
+      $target = $($(this).attr("data-target"));
+    }
+    if ($target.hasClass(className)) {
+      $target.removeClass(className);
+      $(this).removeClass(className);
+      $counter.removeClass("bg-primary");
+    } else {
+      $target.addClass(className);
+      $(this).addClass(className);
+      $counter.addClass("bg-primary");
+    }
+  })
+  //end§
 });
