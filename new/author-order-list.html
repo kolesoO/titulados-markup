@@ -11,7 +11,7 @@
   <link rel="stylesheet" charset="utf-8" type="text/css" href="libs/fontawesome/css/fontawesome-all.min.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header d-none d-sm-block">
             <div class="container">
               <div class="d-flex flex-wrap justify-content-between">
                 <div class="logo col-3 p-0">
@@ -35,9 +35,14 @@
               </div>
             </div>
     </header>
+    <header class="header-secondary d-block d-sm-none">
+      <div class="container">
+        <div class="header-title text-primary">Уточнения</div>
+      </div>
+    </header>
     <main>
       <div class="container d-flex flex-wrap justify-content-between">
-        <ul class="nav-list p-0">
+        <ul class="nav-list p-0 d-none d-sm-block">
           <li>Главная</li>
           <li>Сделать заказ</li>
           <li class="d-flex justify-content-between align-items-center"><span>В обработке</span><i class="icon icon-counter">3</i></li>
@@ -57,7 +62,7 @@
           <li>Выполненные работы</li>
           <li>Мои данные</li>
         </ul>
-        <div class="content col-9 p-0">
+        <div class="content col-12 col-lg-9 p-0">
           <div class="order-list">
             <div class="order-list-item col-12 p-0 js-toggle-wrapper">
               <hr class="bg-primary" style="width: 74%">
@@ -69,7 +74,7 @@
                 <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
                   <i class="fas fa-comment mr-2"></i>
                   <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
-                  <span class="messages mr-3 col-5 p-0">сообщения</span>
+                  <span class="messages mr-3 col-5 p-0 d-none d-sm-inline">сообщения</span>
                   <i class="counter col-1 p-0">3</i>
                 </a>
                 <div class="js-content js-chat col-12 p-0" style="display: none;">
@@ -102,12 +107,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="js-content js-details col-12 p-0" style="display: none;">
+                <div class="js-content js-details col-12 p-0 mt-5 mt-sm-0" style="display: none;">
                   <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
                     <i class="fas fa-chevron-up"></i>
                   </a>
-                  <div class="parts-block d-flex flex-nowrap col-12 align-items-baseline">
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                  <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-baseline">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">1 часть</label>
                       <hr class="bg-warning col-12 p-0">
                       <p class="mb-3">Ведется работа</p>
@@ -121,107 +126,19 @@
                         <p class="part-txt">Прикрепить документ</p>
                       </div>
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">2 часть</label>
                       <hr class="bg-primary col-12 p-0">
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">3 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">4 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
-              <hr class="bg-primary" style="width: 30%">
-              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
-                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down" data-target=".js-details" data-static="true">Заказ первый</a>
-                <p class="title-2 col-1 p-0 text-right">30%</p>
-                <p class="title-3 col-12 p-0">Реферат</p>
-                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
-                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
-                  <i class="fas fa-comment mr-2"></i>
-                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
-                  <span class="messages mr-3 col-5 p-0">сообщения</span>
-                  <i class="counter col-1 p-0">3</i>
-                </a>
-                <div class="js-content js-chat col-12 p-0" style="display: none;">
-                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
-                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
-                      <span class="col-12 p-0">Свернуть чат</span>
-                      <i class="fas fa-chevron-up"></i>
-                    </a>
-                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
-                    <i class="fas fa-search"></i>
-                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
-                      <p class="chat-date col-2 text-center">1 июня</p>
-                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
-                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
-                        <div class="ml-3">
-                          <label class="ml-4">David 19:41</label>
-                          <div class="performer-msg">Привет! Начал работу!</div>
-                        </div>
-                      </div>
-                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
-                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
-                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
-                      </div>
-                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
-                    </div>
-                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
-                      <input type="text" class="col-11 form-control">
-                      <i class="far fa-smile"></i>
-                      <i class="icon icon-send col-1 p-0"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="js-content js-details col-12 p-0" style="display: none;">
-                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
-                    <i class="fas fa-chevron-up"></i>
-                  </a>
-                  <div class="parts-block d-flex flex-nowrap col-12 align-items-baseline">
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Завершена</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Ведется работа</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 border-bottom col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
-                        <i class="fas fa-paperclip mr-2"></i>
-                        <p class="part-txt">Прикрепить документ</p>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">5 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
@@ -231,97 +148,15 @@
             </div>
             <div class="order-list-item col-12 p-0 js-toggle-wrapper">
               <hr class="bg-primary" style="width: 74%">
-              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
-                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down" data-target=".js-details" data-static="true">Заказ первый</a>
-                <p class="title-2 col-1 p-0 text-right">74%</p>
-                <p class="title-3 col-12 p-0">Реферат</p>
-                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
-                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
-                  <i class="fas fa-comment mr-2"></i>
-                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
-                  <span class="messages mr-3 col-5 p-0">сообщения</span>
-                  <i class="counter col-1 p-0">3</i>
-                </a>
-                <div class="js-content js-chat col-12 p-0" style="display: none;">
-                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
-                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
-                      <span class="col-12 p-0">Свернуть чат</span>
-                      <i class="fas fa-chevron-up"></i>
-                    </a>
-                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
-                    <i class="fas fa-search"></i>
-                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
-                      <p class="chat-date col-2 text-center">1 июня</p>
-                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
-                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
-                        <div class="ml-3">
-                          <label class="ml-4">David 19:41</label>
-                          <div class="performer-msg">Привет! Начал работу!</div>
-                        </div>
-                      </div>
-                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
-                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
-                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
-                      </div>
-                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
-                    </div>
-                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
-                      <input type="text" class="col-11 form-control">
-                      <i class="far fa-smile"></i>
-                      <i class="icon icon-send col-1 p-0"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="js-content js-details col-12 p-0" style="display: none;">
-                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
-                    <i class="fas fa-chevron-up"></i>
-                  </a>
-                  <div class="parts-block d-flex flex-nowrap col-12 align-items-baseline">
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Ведется работа</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 border-bottom col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
-                        <i class="fas fa-paperclip mr-2"></i>
-                        <p class="part-txt">Прикрепить документ</p>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
-                      <hr class="bg-primary col-12 p-0">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
-              <hr class="bg-primary" style="width: 30%">
               <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
                 <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
-                <p class="title-2 col-1 p-0 text-right">30%</p>
+                <p class="title-2 col-1 p-0 text-right">74%</p>
                 <p class="title-3 col-12 p-0">Реферат</p>
                 <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
                 <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
                   <i class="fas fa-comment mr-2"></i>
                   <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
-                  <span class="messages mr-3 col-5 p-0">сообщения</span>
+                  <span class="messages mr-3 col-5 p-0 d-none d-sm-inline">сообщения</span>
                   <i class="counter col-1 p-0">3</i>
                 </a>
                 <div class="js-content js-chat col-12 p-0" style="display: none;">
@@ -354,23 +189,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="js-content js-details col-12 p-0" style="display: none;">
+                <div class="js-content js-details col-12 p-0 mt-5 mt-sm-0" style="display: none;">
                   <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
                     <i class="fas fa-chevron-up"></i>
                   </a>
-                  <div class="parts-block d-flex flex-nowrap col-12 align-items-baseline">
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                  <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-baseline">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">1 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Завершена</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
                       <hr class="bg-warning col-12 p-0">
                       <p class="mb-3">Ведется работа</p>
                       <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
@@ -383,15 +208,19 @@
                         <p class="part-txt">Прикрепить документ</p>
                       </div>
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
+                      <hr class="bg-primary col-12 p-0">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">3 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">4 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">5 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
@@ -401,267 +230,15 @@
             </div>
             <div class="order-list-item col-12 p-0 js-toggle-wrapper">
               <hr class="bg-primary" style="width: 74%">
-              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
-                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down" data-target=".js-details" data-static="true">Заказ первый</a>
-                <p class="title-2 col-1 p-0 text-right">74%</p>
-                <p class="title-3 col-12 p-0">Реферат</p>
-                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
-                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
-                  <i class="fas fa-comment mr-2"></i>
-                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
-                  <span class="messages mr-3 col-5 p-0">сообщения</span>
-                  <i class="counter col-1 p-0">3</i>
-                </a>
-                <div class="js-content js-chat col-12 p-0" style="display: none;">
-                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
-                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
-                      <span class="col-12 p-0">Свернуть чат</span>
-                      <i class="fas fa-chevron-up"></i>
-                    </a>
-                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
-                    <i class="fas fa-search"></i>
-                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
-                      <p class="chat-date col-2 text-center">1 июня</p>
-                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
-                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
-                        <div class="ml-3">
-                          <label class="ml-4">David 19:41</label>
-                          <div class="performer-msg">Привет! Начал работу!</div>
-                        </div>
-                      </div>
-                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
-                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
-                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
-                      </div>
-                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
-                    </div>
-                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
-                      <input type="text" class="col-11 form-control">
-                      <i class="far fa-smile"></i>
-                      <i class="icon icon-send col-1 p-0"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="js-content js-details col-12 p-0" style="display: none;">
-                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
-                    <i class="fas fa-chevron-up"></i>
-                  </a>
-                  <div class="parts-block d-flex flex-nowrap col-12 align-items-baseline">
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Ведется работа</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 border-bottom col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
-                        <i class="fas fa-paperclip mr-2"></i>
-                        <p class="part-txt">Прикрепить документ</p>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
-                      <hr class="bg-primary col-12 p-0">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
-              <hr class="bg-primary" style="width: 30%">
-              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
-                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down" data-target=".js-details" data-static="true">Заказ первый</a>
-                <p class="title-2 col-1 p-0 text-right">30%</p>
-                <p class="title-3 col-12 p-0">Реферат</p>
-                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
-                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
-                  <i class="fas fa-comment mr-2"></i>
-                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
-                  <span class="messages mr-3 col-5 p-0">сообщения</span>
-                  <i class="counter col-1 p-0">3</i>
-                </a>
-                <div class="js-content js-chat col-12 p-0" style="display: none;">
-                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
-                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
-                      <span class="col-12 p-0">Свернуть чат</span>
-                      <i class="fas fa-chevron-up"></i>
-                    </a>
-                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
-                    <i class="fas fa-search"></i>
-                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
-                      <p class="chat-date col-2 text-center">1 июня</p>
-                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
-                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
-                        <div class="ml-3">
-                          <label class="ml-4">David 19:41</label>
-                          <div class="performer-msg">Привет! Начал работу!</div>
-                        </div>
-                      </div>
-                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
-                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
-                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
-                      </div>
-                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
-                    </div>
-                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
-                      <input type="text" class="col-11 form-control">
-                      <i class="far fa-smile"></i>
-                      <i class="icon icon-send col-1 p-0"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="js-content js-details col-12 p-0" style="display: none;">
-                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
-                    <i class="fas fa-chevron-up"></i>
-                  </a>
-                  <div class="parts-block d-flex flex-nowrap col-12 align-items-baseline">
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Завершена</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Ведется работа</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 border-bottom col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
-                        <i class="fas fa-paperclip mr-2"></i>
-                        <p class="part-txt">Прикрепить документ</p>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
-              <hr class="bg-primary" style="width: 74%">
-              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
-                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down" data-target=".js-details" data-static="true">Заказ первый</a>
-                <p class="title-2 col-1 p-0 text-right">74%</p>
-                <p class="title-3 col-12 p-0">Реферат</p>
-                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
-                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
-                  <i class="fas fa-comment mr-2"></i>
-                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
-                  <span class="messages mr-3 col-5 p-0">сообщения</span>
-                  <i class="counter col-1 p-0">3</i>
-                </a>
-                <div class="js-content js-chat col-12 p-0" style="display: none;">
-                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
-                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
-                      <span class="col-12 p-0">Свернуть чат</span>
-                      <i class="fas fa-chevron-up"></i>
-                    </a>
-                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
-                    <i class="fas fa-search"></i>
-                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
-                      <p class="chat-date col-2 text-center">1 июня</p>
-                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
-                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
-                        <div class="ml-3">
-                          <label class="ml-4">David 19:41</label>
-                          <div class="performer-msg">Привет! Начал работу!</div>
-                        </div>
-                      </div>
-                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
-                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
-                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
-                      </div>
-                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
-                    </div>
-                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
-                      <input type="text" class="col-11 form-control">
-                      <i class="far fa-smile"></i>
-                      <i class="icon icon-send col-1 p-0"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="js-content js-details col-12 p-0" style="display: none;">
-                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
-                    <i class="fas fa-chevron-up"></i>
-                  </a>
-                  <div class="parts-block d-flex flex-nowrap col-12 align-items-baseline">
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Ведется работа</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 border-bottom col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
-                        <i class="fas fa-paperclip mr-2"></i>
-                        <p class="part-txt">Прикрепить документ</p>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
-                      <hr class="bg-primary col-12 p-0">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
-                      <hr class="bg-primary" style="width: 100%;">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
-              <hr class="bg-primary" style="width: 30%">
               <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
                 <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
-                <div class="title-2 col-1 p-0 text-right">30%</div>
+                <p class="title-2 col-1 p-0 text-right">74%</p>
                 <p class="title-3 col-12 p-0">Реферат</p>
                 <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
                 <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
                   <i class="fas fa-comment mr-2"></i>
                   <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
-                  <span class="messages mr-3 col-5 p-0">сообщения</span>
+                  <span class="messages mr-3 col-5 p-0 d-none d-sm-inline">сообщения</span>
                   <i class="counter col-1 p-0">3</i>
                 </a>
                 <div class="js-content js-chat col-12 p-0" style="display: none;">
@@ -694,23 +271,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="js-content js-details col-12 p-0" style="display: none;">
+                <div class="js-content js-details col-12 p-0 mt-5 mt-sm-0" style="display: none;">
                   <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
                     <i class="fas fa-chevron-up"></i>
                   </a>
-                  <div class="parts-block d-flex flex-nowrap col-12 align-items-baseline">
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                  <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-baseline">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">1 часть</label>
-                      <hr class="bg-warning col-12 p-0">
-                      <p class="mb-3">Завершена</p>
-                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
-                      <div class="d-flex pb-3 col-12 p-0">
-                        <i class="fas fa-file-alt text-primary"></i>
-                        <i class="fas fa-file-alt text-primary"></i>
-                      </div>
-                    </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
-                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
                       <hr class="bg-warning col-12 p-0">
                       <p class="mb-3">Ведется работа</p>
                       <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
@@ -723,15 +290,347 @@
                         <p class="part-txt">Прикрепить документ</p>
                       </div>
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
+                      <hr class="bg-primary col-12 p-0">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">3 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">4 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
-                    <div class="part d-flex flex-wrap col-4 p-0">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <hr class="bg-primary" style="width: 74%">
+              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
+                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
+                <p class="title-2 col-1 p-0 text-right">74%</p>
+                <p class="title-3 col-12 p-0">Реферат</p>
+                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
+                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
+                  <i class="fas fa-comment mr-2"></i>
+                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
+                  <span class="messages mr-3 col-5 p-0 d-none d-sm-inline">сообщения</span>
+                  <i class="counter col-1 p-0">3</i>
+                </a>
+                <div class="js-content js-chat col-12 p-0" style="display: none;">
+                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
+                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
+                      <span class="col-12 p-0">Свернуть чат</span>
+                      <i class="fas fa-chevron-up"></i>
+                    </a>
+                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
+                    <i class="fas fa-search"></i>
+                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
+                      <p class="chat-date col-2 text-center">1 июня</p>
+                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
+                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
+                        <div class="ml-3">
+                          <label class="ml-4">David 19:41</label>
+                          <div class="performer-msg">Привет! Начал работу!</div>
+                        </div>
+                      </div>
+                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
+                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
+                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
+                      </div>
+                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
+                    </div>
+                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
+                      <input type="text" class="col-11 form-control">
+                      <i class="far fa-smile"></i>
+                      <i class="icon icon-send col-1 p-0"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 p-0 mt-5 mt-sm-0" style="display: none;">
+                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
+                    <i class="fas fa-chevron-up"></i>
+                  </a>
+                  <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-baseline">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
+                      <hr class="bg-warning col-12 p-0">
+                      <p class="mb-3">Ведется работа</p>
+                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
+                      <div class="d-flex pb-3 border-bottom col-12 p-0">
+                        <i class="fas fa-file-alt text-primary"></i>
+                        <i class="fas fa-file-alt text-primary"></i>
+                      </div>
+                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
+                        <i class="fas fa-paperclip mr-2"></i>
+                        <p class="part-txt">Прикрепить документ</p>
+                      </div>
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
+                      <hr class="bg-primary col-12 p-0">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <hr class="bg-primary" style="width: 74%">
+              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
+                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
+                <p class="title-2 col-1 p-0 text-right">74%</p>
+                <p class="title-3 col-12 p-0">Реферат</p>
+                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
+                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
+                  <i class="fas fa-comment mr-2"></i>
+                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
+                  <span class="messages mr-3 col-5 p-0 d-none d-sm-inline">сообщения</span>
+                  <i class="counter col-1 p-0">3</i>
+                </a>
+                <div class="js-content js-chat col-12 p-0" style="display: none;">
+                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
+                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
+                      <span class="col-12 p-0">Свернуть чат</span>
+                      <i class="fas fa-chevron-up"></i>
+                    </a>
+                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
+                    <i class="fas fa-search"></i>
+                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
+                      <p class="chat-date col-2 text-center">1 июня</p>
+                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
+                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
+                        <div class="ml-3">
+                          <label class="ml-4">David 19:41</label>
+                          <div class="performer-msg">Привет! Начал работу!</div>
+                        </div>
+                      </div>
+                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
+                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
+                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
+                      </div>
+                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
+                    </div>
+                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
+                      <input type="text" class="col-11 form-control">
+                      <i class="far fa-smile"></i>
+                      <i class="icon icon-send col-1 p-0"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 p-0 mt-5 mt-sm-0" style="display: none;">
+                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
+                    <i class="fas fa-chevron-up"></i>
+                  </a>
+                  <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-baseline">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
+                      <hr class="bg-warning col-12 p-0">
+                      <p class="mb-3">Ведется работа</p>
+                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
+                      <div class="d-flex pb-3 border-bottom col-12 p-0">
+                        <i class="fas fa-file-alt text-primary"></i>
+                        <i class="fas fa-file-alt text-primary"></i>
+                      </div>
+                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
+                        <i class="fas fa-paperclip mr-2"></i>
+                        <p class="part-txt">Прикрепить документ</p>
+                      </div>
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
+                      <hr class="bg-primary col-12 p-0">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <hr class="bg-primary" style="width: 74%">
+              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
+                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
+                <p class="title-2 col-1 p-0 text-right">74%</p>
+                <p class="title-3 col-12 p-0">Реферат</p>
+                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
+                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
+                  <i class="fas fa-comment mr-2"></i>
+                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
+                  <span class="messages mr-3 col-5 p-0 d-none d-sm-inline">сообщения</span>
+                  <i class="counter col-1 p-0">3</i>
+                </a>
+                <div class="js-content js-chat col-12 p-0" style="display: none;">
+                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
+                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
+                      <span class="col-12 p-0">Свернуть чат</span>
+                      <i class="fas fa-chevron-up"></i>
+                    </a>
+                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
+                    <i class="fas fa-search"></i>
+                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
+                      <p class="chat-date col-2 text-center">1 июня</p>
+                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
+                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
+                        <div class="ml-3">
+                          <label class="ml-4">David 19:41</label>
+                          <div class="performer-msg">Привет! Начал работу!</div>
+                        </div>
+                      </div>
+                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
+                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
+                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
+                      </div>
+                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
+                    </div>
+                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
+                      <input type="text" class="col-11 form-control">
+                      <i class="far fa-smile"></i>
+                      <i class="icon icon-send col-1 p-0"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 p-0 mt-5 mt-sm-0" style="display: none;">
+                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
+                    <i class="fas fa-chevron-up"></i>
+                  </a>
+                  <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-baseline">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
+                      <hr class="bg-warning col-12 p-0">
+                      <p class="mb-3">Ведется работа</p>
+                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
+                      <div class="d-flex pb-3 border-bottom col-12 p-0">
+                        <i class="fas fa-file-alt text-primary"></i>
+                        <i class="fas fa-file-alt text-primary"></i>
+                      </div>
+                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
+                        <i class="fas fa-paperclip mr-2"></i>
+                        <p class="part-txt">Прикрепить документ</p>
+                      </div>
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
+                      <hr class="bg-primary col-12 p-0">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">5 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <hr class="bg-primary" style="width: 74%">
+              <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
+                <a href="javascript:void(0)" class="title-2 col-11 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
+                <p class="title-2 col-1 p-0 text-right">74%</p>
+                <p class="title-3 col-12 p-0">Реферат</p>
+                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
+                <a href="javascript:void(0)" class="js-toggle-down d-flex flex-wrap justify-content-end align-items-center col-3 p-0" data-target=".js-chat">
+                  <i class="fas fa-comment mr-2"></i>
+                  <!--                <i class="icon icon-message col-1 p-0 mr-2"></i>-->
+                  <span class="messages mr-3 col-5 p-0 d-none d-sm-inline">сообщения</span>
+                  <i class="counter col-1 p-0">3</i>
+                </a>
+                <div class="js-content js-chat col-12 p-0" style="display: none;">
+                  <div class="chat-wrapper d-flex flex-wrap  align-items-center justify-content-end">
+                    <a href="javascript:void(0)" class="js-toggle-up d-flex flex-wrap justify-content-center align-items-center col-5 p-0 text-center" data-target=".js-chat">
+                      <span class="col-12 p-0">Свернуть чат</span>
+                      <i class="fas fa-chevron-up"></i>
+                    </a>
+                    <input class="input-search form-control col-4" type="text" placeholder="Поиск по чату">
+                    <i class="fas fa-search"></i>
+                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end">
+                      <p class="chat-date col-2 text-center">1 июня</p>
+                      <div class="performer-block d-flex flex-wrap col-12 align-items-end">
+                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
+                        <div class="ml-3">
+                          <label class="ml-4">David 19:41</label>
+                          <div class="performer-msg">Привет! Начал работу!</div>
+                        </div>
+                      </div>
+                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
+                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
+                        <div class="self-msg">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
+                      </div>
+                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
+                    </div>
+                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
+                      <input type="text" class="col-11 form-control">
+                      <i class="far fa-smile"></i>
+                      <i class="icon icon-send col-1 p-0"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="js-content js-details col-12 p-0 mt-5 mt-sm-0" style="display: none;">
+                  <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
+                    <i class="fas fa-chevron-up"></i>
+                  </a>
+                  <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-baseline">
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">1 часть</label>
+                      <hr class="bg-warning col-12 p-0">
+                      <p class="mb-3">Ведется работа</p>
+                      <p class="part-txt mb-1 col-12 p-0">Отправленные документы</p>
+                      <div class="d-flex pb-3 border-bottom col-12 p-0">
+                        <i class="fas fa-file-alt text-primary"></i>
+                        <i class="fas fa-file-alt text-primary"></i>
+                      </div>
+                      <div class="d-flex flex-wrap col-12 p-0 mt-3">
+                        <i class="fas fa-paperclip mr-2"></i>
+                        <p class="part-txt">Прикрепить документ</p>
+                      </div>
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">2 часть</label>
+                      <hr class="bg-primary col-12 p-0">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">3 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
+                      <label class="col-12 p-0 text-center part-txt">4 часть</label>
+                      <hr class="bg-primary" style="width: 100%;">
+                    </div>
+                    <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                       <label class="col-12 p-0 text-center part-txt">5 часть</label>
                       <hr class="bg-primary" style="width: 100%;">
                     </div>
@@ -743,7 +642,34 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer d-block d-sm-none col-12 px-0">
+      <div class="container">
+        <div class="footer-nav d-flex flex-wrap justify-content-between">
+          <div href="#" class="nav-item text-center col-2 p-0">
+            <i class="fas fa-bars js-toggle_class" data-class="active"
+               data-target=".main-menu-wrapper">
+              <span class="counter-red">2</span>
+            </i>
+            <div class="nav-item-descr">Меню</div>
+          </div>
+          <div href="#" class="nav-item text-center col-2 p-0">
+            <i class="fas fa-envelope">
+              <span class="counter-red">2</span>
+            </i>
+            <div class="nav-item-descr">Активные</div>
+          </div>
+          <div href="#" class="nav-item text-center col-2 p-0">
+            <i class="fas fa-eye"></i>
+            <div class="nav-item-descr">Уточнения</div>
+          </div>
+          <div href="#" class="nav-item text-center col-2 p-0">
+            <i class="fas fa-book"></i>
+            <div class="nav-item-descr">Новый заказ</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer d-none d-sm-block">
       <div class="container">
         <div class="col-9 p-0">
           <form action="" class="d-flex flex-wrap col-8 p-0">
