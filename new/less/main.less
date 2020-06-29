@@ -1,15 +1,21 @@
 @import "icons.less";
 @import "colours.less";
+html {
+}
 html, body {
     margin:0;
     padding:0;
+    font-family: 'Proxima Nova Lt'!important;
+    font-size: 16px!important;
+    font-weight: 300!important;
+    font-style: normal;
 }
-body {
-  font-family: 'Proxima Nova Lt'!important;
-  font-size: 16px!important;
-  font-weight: 300!important;
-  font-style: normal;
-}
+//body {
+//  font-family: 'Proxima Nova Lt'!important;
+//  font-size: 16px!important;
+//  font-weight: 300!important;
+//  font-style: normal;
+//}
 
 a {
   &:hover {
@@ -32,24 +38,26 @@ input:focus,
         max-width:1165px!important;
         margin: 0 auto;
 }
-
+.form-group {
+  margin-bottom: unset!important;
+}
 .title-1 {
   font-family: 'Proxima Nova Lt';
-  font-size: 44px;
+  font-size: 2.75rem;
   font-weight: 300;
   font-style: normal;
   line-height: 1;
 }
 .title-1-2 {
   font-family: 'Proxima Nova Rg';
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
 }
 .title-2 {
   font-family: 'Proxima Nova Lt';
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
   font-style: normal;
   line-height: 1;
@@ -58,13 +66,13 @@ input:focus,
   font-family: 'Proxima Nova Lt';
   font-weight: 600;
   font-style: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1;
 }
 
 .title-3 {
   font-family: 'Proxima Nova Lt';
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   font-style: normal;
   line-height: 1;
@@ -72,7 +80,7 @@ input:focus,
 
 .title-4 {
   font-family: 'Proxima Nova Rg';
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -81,7 +89,7 @@ input:focus,
   font-family: 'Proxima Nova Lt';
   font-weight: 600;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1;
 }
 .text-grey {
@@ -98,7 +106,7 @@ input:focus,
 }
 .button-round {
   font-family: 'Proxima Nova Lt'!important;
-  font-size: 18px!important;
+  font-size: 1.125rem!important;
   font-weight: 600!important;
   font-style: normal!important;
   padding: 20px 25px!important;
@@ -116,16 +124,17 @@ input:focus,
   }
   .header-menu {
     .header-menu-item {
-      font-family: 'Proxima Nova Extrabold';
-      font-size: 14px;
+      font-family: 'Proxima Nova Th';
       font-weight: 800;
+      font-style: normal;
+      font-size: 0.875rem;
       color: @main-color;
 
     }
   }
   .header-login {
     font-family: 'Proxima Nova Rg';
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: -13px;
     // margin-left: 55px;
     padding: 13px 20px;
@@ -285,7 +294,7 @@ input:focus,
         margin-left: 0;
 
         i {
-          font-size: 21px;
+          font-size: 1.31rem;
         }
       }
     }
@@ -299,7 +308,7 @@ input:focus,
       color: #0074fb;
       font-family: 'Proxima Nova Lt';
       font-style: normal;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: 600;
     }
     .parts-block {
@@ -313,10 +322,10 @@ input:focus,
           margin-bottom: 10px;
         }
         .part-txt {
-          font-size: 14px;
+          font-size: 0.875rem;
         }
         .fa-paperclip {
-          font-size: 25px;
+          font-size: 1.56rem;
           color: #34495e;
         }
         .fa-file-alt + .fa-file-alt {
@@ -451,7 +460,7 @@ input:focus,
       right: 29%;
     }
     .fa-paperclip {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
   }
 
@@ -469,7 +478,7 @@ input:focus,
     &::placeholder {
       color: @base-text-color;
       font-family: 'Proxima Nova Lt';
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 300;
       font-style: normal;
     }
@@ -539,6 +548,7 @@ input:focus,
         padding: 11px 20px;
         border-radius: 30px;
         margin-bottom: 15px;
+        line-height: 1.2;
       }
     }
   }
@@ -553,7 +563,7 @@ input:focus,
     &.active{
       color: #000;
       font-family: 'Proxima Nova Rg';
-      font-size: 30px;
+      font-size: 1.875rem;
       font-weight: normal;
       font-style: normal;
       line-height: 1;
@@ -568,6 +578,22 @@ input:focus,
     .form-item {
       margin-bottom: 45px;
     }
+    .form-label {
+      position: absolute;
+      left: 26px;
+      top: 6px;
+      z-index: 10;
+      transition: transform 150ms ease-out, font-size 150ms ease-out;
+      color: @base-text-color;
+    }
+
+    .focused {
+
+      .form-label {
+        transform: translateY(-150%);
+        font-size: .75em;
+      }
+    }
 
     input {
       border: none;
@@ -581,7 +607,7 @@ input:focus,
     }
 
     i {
-      font-size: 30px;
+      font-size: 1.875rem;
       color: @main-color;
     }
 
@@ -602,10 +628,10 @@ input:focus,
   border: 8px solid #fff;
   position: fixed;
   border-radius: 100%;
-  bottom: 6%;
-  right: 2%;
+  bottom: 70px;
+  right: 150px;
   box-shadow: 0 0 20px 0 #c0bebe;
-  z-index: 2;
+  z-index: 30;
   padding: 10px;
 
   i {
@@ -621,48 +647,77 @@ input:focus,
   display: none;
   z-index: 1;
   position: fixed;
-  bottom: 14%;
-  right: -24%;
-  bottom: 19%;
-  right: -5%;
+  width: 12%;
+  bottom: 135px;
+  right: 152px;
 
   &.active{
     display: block;
   }
 
   i {
-    font-size: 25px;
+    font-size: 1.56rem;
     color: #fff;
     vertical-align: middle;
 
     &.fa-phone {
       transform: scale(-1, 1);
+      font-size: 2.25rem;
     }
+    &.fa-whatsapp {
+      font-size: 2.75rem;
+    }
+
   }
 
   button {
     padding: 10px 20px!important;
-    font-size: 9px!important;
+    font-size: 1rem!important;
     font-family: 'Proxima Nova Rg'!important;
   }
 }
+.fa-chevron-left {
+  color: @base-text-color;
+  margin-left: -33px;
+}
+
 .footer {
   background-color: @base-color;
   padding-bottom: 80px;
 
   form {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 
-    label {
+    .label-suscribe {
       font-family: 'Proxima Nova Rg';
-      font-size: 16px;
+      font-size: 1rem;
       margin-top: 60px;
+      line-height: 1;
+      margin-left: 29px;
     }
+    .form-label {
+      position: absolute;
+      left: 45px;
+      top: 21px;
+      z-index: 10;
+      transition: transform 150ms ease-out, font-size 150ms ease-out;
+      color: @base-text-color;
+    }
+
+    .focused {
+
+      .form-label {
+        transform: translateY(-90%);
+        font-size: .75em;
+      }
+    }
+
     input {
       border-radius: 50px;
-      padding: 20px 30px;
-    }
+      padding: 20px 30px!important;
+      border: none;
 
+    }
   }
   ul {
     list-style: none;

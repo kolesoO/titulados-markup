@@ -29,16 +29,12 @@ $(document).ready(function() {
     target.slideToggle( "fast");
     $(this).toggleClass("active");
   });
+
   //toggle class
   $("body").on("click", ".js-toggle_class", function(e){
     e.preventDefault();
     let $target,
-        className = $(this).attr("data-class"),
-        $counter = $(this).find(".counter-red");
-        // $headSet = $(this).parent(".help-block").find(".icon-headset"),
-        // $close = $(this).parent(".help-block").find(".fa-times");
-        // console.log($headSet);
-        // console.log($close);
+        className = $(this).attr("data-class");
 
     if ($(this).attr("data-is_parent") == "true") {
       $target = $(this).parents($(this).attr("data-target")).first();
@@ -48,20 +44,29 @@ $(document).ready(function() {
     if ($target.hasClass(className)) {
       $target.removeClass(className);
       $(this).removeClass(className);
-      $counter.removeClass("bg-primary");
-      $( ".icon.icon-headset" ).css( "display", "inline-block" );
-      $( ".fas.fa-times" ).css( "display", "none" );
-      // $close.addClass("d-none");
-      // $headSet.removeClass("d-none");
+
     } else {
       $target.addClass(className);
       $(this).addClass(className);
-      $counter.addClass("bg-primary");
-      $( ".icon.icon-headset" ).css( "display", "none" );
-      $( ".fas.fa-times" ).css( "display", "inline-block" );
-      // $close.removeClass("d-none");
-      // $headSet.addClass("d-none");
     }
   })
-  //end§
+  //end
+  //animate input
+  $('input')
+      .focusin(function(){
+        $(this).parents('.form-group').first().addClass('focused');
+      })
+      .focusout(function(){
+        var inputValue = $(this).val();
+        if ( inputValue == "" ) {
+          $(this).parents('.form-group').first().removeClass('focused');
+        }
+      });
+  $("body").find("input").each(function () {
+    if ($(this).val() !== "") {
+      $(this).parents('.form-group').first().addClass('focused');
+    }
+  })
+  //end
 });
+
