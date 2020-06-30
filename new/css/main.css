@@ -423,9 +423,6 @@ input:focus,
   border: none;
   margin-top: 40px;
 }
-.content .btn-primary + .btn-primary {
-  margin-left: 10px;
-}
 .content .check-list {
   margin-top: 35px;
 }
@@ -453,6 +450,9 @@ input:focus,
 }
 .content .check-list .check label {
   color: #cecece;
+}
+.content .button-block .btn-primary + .btn-primary {
+  margin-left: 10px;
 }
 .content .budget button .toggle-down {
   display: inline;
@@ -709,6 +709,9 @@ input:focus,
   .title-1 {
     font-size: 2rem;
   }
+  .title-1-2 {
+    font-size: 1.5rem;
+  }
   .title-2 {
     font-size: 1.6rem;
   }
@@ -817,7 +820,7 @@ input:focus,
     color: #cecece;
     margin-left: -5px;
   }
-  .content .doclist-block .btn + .btn {
+  .content .budget .order-list-item_txt {
     margin-left: unset;
   }
   .js-content {
@@ -890,6 +893,9 @@ input:focus,
   .chat-wrapper .chat-list {
     height: 480px;
     margin: unset;
+  }
+  .avaliable.order-list-item_descr {
+    padding: 15px;
   }
   .footer {
     position: fixed!important;

@@ -41,7 +41,7 @@
         </div>
     </header>
     <main>
-      <div class="container d-flex flex-wrap justify-content-between">
+        <div class="container d-flex flex-wrap justify-content-between">
         <ul class="nav-list p-0 d-none d-sm-block">
           <li>Главная</li>
           <li>Сделать заказ</li>
@@ -140,25 +140,31 @@
                     </div>
                 </div>
                 <div class="order-list-item col-12 p-0 js-toggle-wrapper">
-                    <hr class="bg-warning" style="width: 66%">
+                    <hr class="bg-warning" style="width: 33%">
                     <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
                         <a href="javascript:void(0)" class="title-2 col-8 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
-                        <p class="col-4 p-0 text-right">
+                        <p class="col-4 p-0 text-right d-none d-sm-block">
                             <span class="mr-2">Общая стоимость</span>
                             <span class="title-2-1">500&#8364;</span>
                         </p>
                         <p class="title-3 col-6 p-0">Реферат</p>
-                        <p class="title-3 col-4 p-0 text-right">
+                        <p class="title-3 col-4 p-0 text-right d-none d-sm-block">
                             <span class="mr-2">Оплачено</span>
-                            <span class="title-2-1">300&#8364;</span>
+                            <span class="title-2-1">150&#8364;</span>
                         </p>
                         <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
-                        <div class="js-content js-details col-12 p-0" style="display: none;">
+                        <div class="col-12 p-0 text-right mt-3 d-block d-sm-none">
+                            <span>Оплачено</span>
+                            <span class="title-2-1 mx-2">150&#8364;</span>
+                            <span>из</span>
+                            <span class="title-2-1 ml-2">500&#8364;</span>
+                        </div>
+                        <div class="js-content js-details col-12 p-0 mt-5 mt-sm-3" style="display: none;">
                             <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
                                 <i class="fas fa-chevron-up"></i>
                             </a>
-                            <div class="parts-block d-flex flex-nowrap col-12 align-items-stretch">
-                                <div class="part d-flex flex-wrap col-4 p-0">
+                            <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-stretch">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                                     <label class="col-12 p-0 text-center part-txt">1 часть</label>
                                     <hr class="bg-warning col-12 p-0">
                                     <div class="roller bg-warning">
@@ -173,29 +179,32 @@
                                         <p class="part-txt">Прикрепить чек</p>
                                     </div>
                                 </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0 align-content-between justify-content-end">
                                     <div class="col-12 p-0 text-center">
                                         <label class="part-txt">2 часть</label>
                                         <hr class="bg-primary col-12 p-0">
                                     </div>
+                                    <div class="align-self-end d-block d-sm-none">
+                                        <button class="btn btn-primary button-round">Оплатить</button>
+                                    </div>
                                 </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0 align-content-between">
                                     <div class="col-12 p-0 text-center">
                                         <label class="part-txt">3 часть</label>
                                         <hr class="bg-primary" style="width: 100%;">
                                     </div>
-                                    <div class="d-flex flex-wrap col-12 p-0 align-self-end align-items-center justify-content-end">
+                                    <div class="d-none d-sm-flex flex-wrap col-12 p-0 align-self-end align-items-center justify-content-end">
                                         <p class="mb-0 mr-3">2 часть</p>
                                         <button class="btn btn-primary button-round">Оплатить</button>
                                     </div>
                                 </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0 align-content-between">
                                     <div class="col-12 p-0 text-center">
                                         <label class="part-txt">4 часть</label>
                                         <hr class="bg-primary" style="width: 100%;">
                                     </div>
                                 </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0 align-content-between">
                                     <div class="col-12 p-0 text-center">
                                         <label class="part-txt">5 часть</label>
                                         <hr class="bg-primary" style="width: 100%;">
@@ -209,88 +218,28 @@
                     <hr class="bg-warning" style="width: 33%">
                     <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
                         <a href="javascript:void(0)" class="title-2 col-8 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
-                        <p class="col-4 p-0 text-right">
+                        <p class="col-4 p-0 text-right d-none d-sm-block">
                             <span class="mr-2">Общая стоимость</span>
                             <span class="title-2-1">500&#8364;</span>
                         </p>
                         <p class="title-3 col-6 p-0">Реферат</p>
-                        <p class="title-3 col-4 p-0 text-right">
+                        <p class="title-3 col-4 p-0 text-right d-none d-sm-block">
                             <span class="mr-2">Оплачено</span>
                             <span class="title-2-1">150&#8364;</span>
                         </p>
                         <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
-                        <div class="js-content js-details col-12 p-0" style="display: none;">
-                            <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
-                                <i class="fas fa-chevron-up"></i>
-                            </a>
-                            <div class="parts-block d-flex flex-nowrap col-12 align-items-stretch">
-                                <div class="part d-flex flex-wrap col-4 p-0">
-                                    <label class="col-12 p-0 text-center part-txt">1 часть</label>
-                                    <hr class="bg-warning col-12 p-0">
-                                    <div class="roller bg-warning">
-                                        <span class="title-5">150&#8364;</span>
-                                    </div>
-                                    <p>Оплачено</p>
-                                    <div class="d-flex col-12 p-0">
-                                        <i class="icon icon-bill"></i>
-                                    </div>
-                                    <div class="d-flex flex-wrap col-12 p-0 mt-5">
-                                        <i class="fas fa-paperclip mr-2"></i>
-                                        <p class="part-txt">Прикрепить чек</p>
-                                    </div>
-                                </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
-                                    <div class="col-12 p-0 text-center">
-                                        <label class="part-txt">2 часть</label>
-                                        <hr class="bg-primary col-12 p-0">
-                                    </div>
-                                </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
-                                    <div class="col-12 p-0 text-center">
-                                        <label class="part-txt">3 часть</label>
-                                        <hr class="bg-primary" style="width: 100%;">
-                                    </div>
-                                    <div class="d-flex flex-wrap col-12 p-0 align-self-end align-items-center justify-content-end">
-                                        <p class="mb-0 mr-3">2 часть</p>
-                                        <button class="btn btn-primary button-round">Оплатить</button>
-                                    </div>
-                                </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
-                                    <div class="col-12 p-0 text-center">
-                                        <label class="part-txt">4 часть</label>
-                                        <hr class="bg-primary" style="width: 100%;">
-                                    </div>
-                                </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
-                                    <div class="col-12 p-0 text-center">
-                                        <label class="part-txt">5 часть</label>
-                                        <hr class="bg-primary" style="width: 100%;">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="col-12 p-0 text-right mt-3 d-block d-sm-none">
+                            <span>Оплачено</span>
+                            <span class="title-2-1 mx-2">150&#8364;</span>
+                            <span>из</span>
+                            <span class="title-2-1 ml-2">500&#8364;</span>
                         </div>
-                    </div>
-                </div>
-                <div class="order-list-item col-12 p-0 js-toggle-wrapper">
-                    <hr class="bg-warning" style="width: 66%">
-                    <div class="d-flex flex-wrap justify-content-between order-list-item_descr" >
-                        <a href="javascript:void(0)" class="title-2 col-8 p-0 js-toggle-down mb-2" data-target=".js-details" data-static="true">Заказ первый</a>
-                        <p class="col-4 p-0 text-right">
-                            <span class="mr-2">Общая стоимость</span>
-                            <span class="title-2-1">500&#8364;</span>
-                        </p>
-                        <p class="title-3 col-6 p-0">Реферат</p>
-                        <p class="title-3 col-4 p-0 text-right">
-                            <span class="mr-2">Оплачено</span>
-                            <span class="title-2-1">300&#8364;</span>
-                        </p>
-                        <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
-                        <div class="js-content js-details col-12 p-0" style="display: none;">
+                        <div class="js-content js-details col-12 p-0 mt-5 mt-sm-3" style="display: none;">
                             <a href="javascript:void(0)" class="js-toggle-up justify-content-center col-5 p-0 text-center" data-target=".js-details">
                                 <i class="fas fa-chevron-up"></i>
                             </a>
-                            <div class="parts-block d-flex flex-nowrap col-12 align-items-stretch">
-                                <div class="part d-flex flex-wrap col-4 p-0">
+                            <div class="parts-block d-flex flex-nowrap col-12 p-0 align-items-stretch">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0">
                                     <label class="col-12 p-0 text-center part-txt">1 часть</label>
                                     <hr class="bg-warning col-12 p-0">
                                     <div class="roller bg-warning">
@@ -305,29 +254,32 @@
                                         <p class="part-txt">Прикрепить чек</p>
                                     </div>
                                 </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0 align-content-between justify-content-end">
                                     <div class="col-12 p-0 text-center">
                                         <label class="part-txt">2 часть</label>
                                         <hr class="bg-primary col-12 p-0">
                                     </div>
+                                    <div class="align-self-end d-block d-sm-none">
+                                        <button class="btn btn-primary button-round">Оплатить</button>
+                                    </div>
                                 </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0 align-content-between">
                                     <div class="col-12 p-0 text-center">
                                         <label class="part-txt">3 часть</label>
                                         <hr class="bg-primary" style="width: 100%;">
                                     </div>
-                                    <div class="d-flex flex-wrap col-12 p-0 align-self-end align-items-center justify-content-end">
+                                    <div class="d-none d-sm-flex flex-wrap col-12 p-0 align-self-end align-items-center justify-content-end">
                                         <p class="mb-0 mr-3">2 часть</p>
                                         <button class="btn btn-primary button-round">Оплатить</button>
                                     </div>
                                 </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0 align-content-between">
                                     <div class="col-12 p-0 text-center">
                                         <label class="part-txt">4 часть</label>
                                         <hr class="bg-primary" style="width: 100%;">
                                     </div>
                                 </div>
-                                <div class="part d-flex flex-wrap col-4 p-0 align-self-between">
+                                <div class="part d-flex flex-wrap col-6 col-lg-4 p-0 align-content-between">
                                     <div class="col-12 p-0 text-center">
                                         <label class="part-txt">5 часть</label>
                                         <hr class="bg-primary" style="width: 100%;">
@@ -340,6 +292,38 @@
             </div>
         </div>
       </div>
+        <div class="help-block bg-warning text-center js-toggle_class" data-class="active"
+             data-target=".help-wrapper">
+            <i class="icon icon-headset"></i>
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="help-wrapper">
+            <button class="btn btn-warning button-round col-12 mb-2">Позвонить<i class="fas fa-phone ml-2"></i></button>
+            <button class="btn btn-warning button-round col-12">WhatsApp<i class="fab fa-whatsapp ml-2"></i></button>
+        </div>
+        <div class="main-menu-wrapper d-sm-none">
+            <ul class="nav-list col-12">
+                <li>Главная</li>
+                <li>Сделать заказ</li>
+                <li class="d-flex justify-content-between align-items-center"><span>В обработке</span><i
+                        class="icon icon-counter">3</i></li>
+                <li class="d-flex justify-content-between align-items-center">
+                    <span>Активные</span>
+                    <div class="col-4 col-lg-6 d-flex p-0 justify-content-between">
+                        <i class="icon icon-counter-active">
+                            <!--                <span class="icon icon-msg"></span>-->
+                            <i class="fas fa-comment"></i>
+                            10
+                        </i>
+                        <i class="icon icon-counter">3</i>
+                    </div>
+                </li>
+                <li>Уточнения</li>
+                <li>Оплата</li>
+                <li>Выполненные работы</li>
+                <li>Мои данные</li>
+            </ul>
+        </div>
     </main>
     <footer class="footer d-block d-sm-none col-12 px-0">
         <div class="container">
