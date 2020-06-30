@@ -650,8 +650,17 @@ input:focus,
 .help-block i {
   color: #fff;
 }
-.help-block i.fa-times {
+.help-block .icon.icon-headset {
+  display: inline-block;
+}
+.help-block .fas.fa-times {
   display: none;
+}
+.help-block.active .icon.icon-headset {
+  display: none;
+}
+.help-block.active .fas.fa-times {
+  display: inline-block;
 }
 .help-wrapper {
   display: none;
