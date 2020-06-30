@@ -198,7 +198,6 @@ input:focus,
 }
 .header .logo {
   width: 152px;
-  height: 115px;
 }
 .header .header-menu .header-menu-item {
   font-family: 'Proxima Nova Th';
@@ -214,6 +213,33 @@ input:focus,
   padding: 13px 20px;
   background-color: #f5f5f5;
   border-radius: 30px;
+}
+.header hr + hr {
+  margin-top: 3px;
+}
+.header .menu-wrapper {
+  display: none;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+  right: 0;
+  width: 100%;
+}
+.header .menu-wrapper.active {
+  display: block;
+}
+.header .menu-wrapper-nav {
+  margin-top: 35px;
+  list-style: none;
+  font-size: 1.5rem;
+  font-family: 'Proxima Nova Th';
+  font-weight: 800;
+  font-style: normal;
+}
+.header .menu-wrapper-nav li + li {
+  margin-top: 35px;
 }
 .nav-list {
   width: 215px;
@@ -648,7 +674,7 @@ input:focus,
   font-size: 2.25rem;
 }
 .help-wrapper i.fa-whatsapp {
-  font-size: 2.75rem;
+  font-size: 2.3rem;
 }
 .help-wrapper button {
   padding: 10px 20px!important;
@@ -728,7 +754,6 @@ input:focus,
   }
   .header .logo {
     width: 85px;
-    height: 65px;
   }
   .header hr {
     margin: 0;
