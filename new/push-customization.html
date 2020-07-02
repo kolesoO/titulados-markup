@@ -43,7 +43,7 @@
     </header>
     <header class="header-secondary d-block d-sm-none">
   <div class="container">
-    <div class="header-title text-primary">Уточнения</div>
+    <div class="header-title text-primary">Оплата</div>
   </div>
 </header>
     <main>
@@ -79,23 +79,23 @@
             <span class="btn btn-primary button-round align-middle">Биология <i class="fas fa-times ml-1 ml-sm-2"></i></span>
           </div>
           <div class="check-list">
-            <div class="col-12 p-0">
-              <div class="check row align-items-center col-12 mb-3">
-                <input type="checkbox col-1">
-                <label class="form-check-label col-10 col-xl-11">Получать рассылки одним письмом все заказы (дайджест)</label>
+            <div class="col-12 p-0 mb-3">
+              <div class="check row align-items-center col-12">
+                <input type="checkbox" id="all_in_one">
+                <label class="form-check-label col-10 col-xl-11" for="all_in_one">Получать рассылки одним письмом все заказы (дайджест)</label>
               </div>
             </div>
             <div class="col-12 p-0 d-flex align-items-center mb-3">
-              <div class="check row align-items-center col-12 mb-3">
-                <input type="checkbox col-1">
-                <label class="form-check-label col-10 col-xl-11">Получать рассылки каждый заказ отдельным письмом</label>
+              <div class="check row align-items-center col-12">
+                <input type="checkbox" id="one_by_one">
+                <label class="form-check-label col-10 col-xl-11" for="one_by_one">Получать рассылки каждый заказ отдельным письмом</label>
               </div>
 
             </div>
             <div class="col-12 p-0 d-flex align-items-center mb-3">
-              <div class="check row align-items-center col-12 mb-3">
-                <input type="checkbox col-1">
-                <label class="form-check-label col-10 col-xl-11">Отписаться от всех рассылок по предложениям заказов</label>
+              <div class="check row align-items-center col-12">
+                <input type="checkbox" id="unsuscribe">
+                <label class="form-check-label col-10 col-xl-11" for="unsuscribe">Отписаться от всех рассылок по предложениям заказов</label>
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@
     <footer class="footer d-none d-sm-block">
       <div class="container">
         <div class="col-md-12 col-xl-9 p-0">
-          <form action="" class="d-flex flex-wrap col-md-12 col-xl-8 p-0 justify-content-center">
+          <form action="" class="d-flex flex-wrap col-md-12 col-xl-8 p-0">
             <div class="label-suscribe col-xl-12 mb-2">Suscríbete a promociones y bonos</div>
             <div class="form-group col-8">
               <label class="form-label" for="email">Email</label>
