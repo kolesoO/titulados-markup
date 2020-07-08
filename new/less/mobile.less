@@ -29,17 +29,18 @@
       // margin-right: 140px;
     }
     .menu-wrapper {
-      display: none;
       height: 100vh;
       background-color: #fff;
       z-index: 1;
-      position: absolute;
+      position: fixed;
       top: 0%;
-      right: 0;
-      width: 100%;
+      right: -100%;
+      transition: 0.3s right;
+
 
       &.active{
-        display: block;
+        right: 0%;
+        width: 100%;
       }
     }
     .header-login {
@@ -58,7 +59,13 @@
       }
     }
   }
-
+  .main-menu-wrapper {
+    right: -100%;
+    &.active{
+      width: 100%;
+      right: 0%;
+    }
+  }
   .main_slider {
 
     .main_slider-item {
