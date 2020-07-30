@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Чат</title>
+    <link rel="stylesheet" charset="utf-8" type="text/css" href="css/main.css">
+    <link rel="stylesheet" charset="utf-8" type="text/css" href="css/fonts/proxima_nova/stylesheet.css">
+  <link rel="stylesheet" charset="utf-8" type="text/css" href="libs/fontawesome/css/fontawesome-all.min.css">
+</head>
+<body>
+    <header class="header-secondary d-block d-sm-none">
+      <div class="container">
+        <div class="header-title text-primary">Чат</div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="content col-12 col-lg-9 p-0">
+          <div class="order-list">
+            <div class="order-list-item col-12 p-0 js-toggle-wrapper">
+              <hr class="bg-primary" style="width: 74%">
+              <div class="d-flex flex-wrap justify-content-between order-list-item_descr col-12" >
+                <div class="link-back col-11 p-0 d-flex flex-wrap align-items-center mb-3 row">
+                  <i class="fas fa-chevron-left mr-2"></i>
+                  <div>
+                    <div class="title-2">Заказ первый</div>
+                    <div class="title-3 col-12 p-0">Реферат</div>
+                  </div>
+                </div>
+                <p class="title-2 col-1 p-0 text-right">74%</p>
+                <div class="order-list-item_txt text-grey">Сдать до 12.08.2020</div>
+                <div class="js-content js-chat chat-mobile col-12 p-0">
+                  <div class="chat-wrapper d-flex flex-wrap align-items-center justify-content-end mt-3 row">
+                    <input class="input-search form-control col-6" type="text" placeholder="Поиск по чату">
+                    <i class="fas fa-search"></i>
+                    <div class="chat-list col-12 p-0 d-flex flex-wrap justify-content-center align-items-end align-content-end my-3">
+                      <p class="chat-date col-3 text-center">1 июня</p>
+                      <div class="performer-block d-flex flex-wrap col-12 p-0 align-items-end mb-3">
+                        <div class="performer-avatar" style="background-image: url('img/hat.png')"></div>
+                        <div class="ml-3">
+                          <label class="ml-4">David 19:41</label>
+                          <div class="performer-msg">Привет! Начал работу!</div>
+                        </div>
+                      </div>
+                      <div class="self-block col-12 p-0 d-flex flex-wrap text-right justify-content-end">
+                        <label class="mr-4 col-12 p-0">Никита 19:41</label>
+                        <div class="self-msg text-left">Привет! Хорошо! Какие темы еще можно затронуть на романтическом рандеву? </div>
+                      </div>
+                      <label class="col-12">David пишет...<i class="far fa-pen"></i></label>
+                    </div>
+                    <div class="d-flex flex-wrap col-12 p-0 align-items-center justify-content-between">
+                      <input type="text" class="col-11 form-control input-message" placeholder="Сообщение">
+                      <i class="far fa-smile"></i>
+                      <i class="icon icon-send col-1 p-0"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="help-block bg-warning text-center js-toggle_class" data-class="active"
+           data-target=".help-wrapper">
+        <i class="icon icon-headset"></i>
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="help-wrapper">
+        <button class="btn btn-warning button-round col-12 mb-2">Позвонить<i class="fas fa-phone ml-2"></i></button>
+        <button class="btn btn-warning button-round col-12">WhatsApp<i class="fab fa-whatsapp ml-2"></i></button>
+      </div>
+      <div class="main-menu-wrapper d-xl-none">
+        <ul class="nav-list col-12">
+          <li class="d-flex justify-content-between align-items-center"><span>Главная</span><i class="fas fa-times text-primary col-1 p-0 text-right js-toggle_class" data-class="active"
+                                                                                               data-target=".main-menu-wrapper"></i></li>
+          <li>Сделать заказ</li>
+          <li class="d-flex justify-content-between align-items-center"><span>В обработке</span><i
+                  class="icon icon-counter">3</i></li>
+          <li class="d-flex justify-content-between align-items-center">
+            <span>Активные</span>
+            <div class="col-5 col-md-4 col-lg-3 col-xl-6 d-flex p-0 justify-content-between">
+              <i class="icon icon-counter-active">
+                <!--                <span class="icon icon-msg"></span>-->
+                <i class="fas fa-comment"></i>
+                10
+              </i>
+              <i class="icon icon-counter">3</i>
+            </div>
+          </li>
+          <li>Уточнения</li>
+          <li>Оплата</li>
+          <li>Выполненные работы</li>
+          <li>Мои данные</li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer d-block d-sm-none col-12 px-0">
+      <div class="container">
+        <div class="footer-nav d-flex flex-wrap justify-content-between">
+          <div href="#" class="nav-item text-center col-2 p-0">
+            <i class="fas fa-bars js-toggle_class" data-class="active"
+               data-target=".main-menu-wrapper">
+              <span class="counter-red">2</span>
+            </i>
+            <div class="nav-item-descr">Меню</div>
+          </div>
+          <div href="#" class="nav-item text-center col-2 p-0">
+            <i class="fas fa-envelope">
+              <span class="counter-red">2</span>
+            </i>
+            <div class="nav-item-descr">Активные</div>
+          </div>
+          <div href="#" class="nav-item text-center col-2 p-0">
+            <i class="fas fa-eye"></i>
+            <div class="nav-item-descr">Уточнения</div>
+          </div>
+          <div href="#" class="nav-item text-center col-2 p-0">
+            <i class="fas fa-book"></i>
+            <div class="nav-item-descr">Новый заказ</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="libs/jquery1.12.4/script.js"></script>
+    <script type="text/javascript" src="dist/app.js"></script>
+  </body>
+</html>
