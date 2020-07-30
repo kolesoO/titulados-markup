@@ -141,6 +141,10 @@ input:focus,
     background-color: @base-color;
     border-radius: 30px;
     cursor: pointer;
+    transition: background-color .3s;
+    &:hover {
+        background-color: #efebeb
+    }
   }
   .dropdown_menu {
     display: none;
@@ -148,10 +152,10 @@ input:focus,
     bottom: -150px;
     right: 0px;
     z-index: 10;
-    box-shadow: 0 0px 3px 0px #c0bebe;
+    box-shadow: 0 0px 10px 0px #c0bebe;
     padding: 15px 38px;
-    background-color: #f5f5f5;
-    border-radius: 30px;
+    background-color: #fff;
+    border-radius: 20px;
 
     &.active {
       display: block;
