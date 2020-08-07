@@ -40,6 +40,13 @@ var obSlider = {
         obParams.slidesToShow = (!!$(self).attr("data-slidesToShow") ? parseInt($(self).attr("data-slidesToShow")) : this.slidesToShow);
         obParams.slidesToScroll = (!!$(self).attr("data-slidesToScroll") ? parseInt($(self).attr("data-slidesToScroll")) : this.slidesToScroll);
         obParams.centerMode = $(self).attr("data-centerMode") == "true";
+        obParams.focusOnSelect = $(self).attr("data-focusOnSelect") == "true";
+        obParams.fade = $(self).attr("data-fade") == "true";
+        obParams.variableWidth = $(self).attr("data-variableWidth") == "true";
+
+        if (!!$(self).attr("data-asNavFor")) {
+            obParams.asNavFor = $(self).attr("data-asNavFor");
+        }
 
         return obParams;
 
