@@ -121,10 +121,14 @@ section {
   padding-top: 110px;
   &.bg-blue {
     padding-top: 50px;
+    position: relative;
   }
 }
 .header {
   margin-bottom: 75px;
+  z-index: 2000;
+  position: inherit;
+
   .container {
     width: 92%;
     max-width: none!important;
@@ -233,29 +237,299 @@ section {
   background-color: #fff;
   border-radius: 35px;
 }
-.main-block {
-  padding-top: 115px;
-  padding-bottom: 185px;
-  position: relative;
 
-  .main-block-right,
-  .main-block-left {
-    color: #fff;
+.signin-form, .signup-form {
+  position: absolute;
+  top: 40%;
+  display: none;
+  width: 550px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10000;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 #c0bebe;
+  padding: 60px 90px;
 
-    .descr {
-      font-size: 1.125rem;
-    }
+
+  &.active {
+    display: flex;
   }
-  .main-block-right {
-    width: 20%;
+
+  .form-title {
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    font-style: normal;
+    font-size: 36px;
+    margin-bottom: 60px;
+    margin-top: 45px;
   }
-  img {
-    position: absolute;
-    top: 16%;
-    right: 22%;
-    width: 629px;
+  input {
+    border: none;
+    border-bottom: 1px solid #0078fb;
+    padding-bottom: 5px;
+  }
+  input + input {
+    margin-top: 55px;
   }
 }
+.signup-form {
+  padding-top: 130px;
+
+  .tabs {
+    position: relative;
+
+    .tab {
+      font-family: 'Proxima Nova Lt';
+      font-weight: 600;
+      font-style: normal;
+      font-size: 18px;
+      color: #000;
+
+      &.author {
+        padding: 20px 40px;
+      }
+      &.client {
+        padding: 20px 25px;
+      }
+
+
+      &.active {
+        border-radius: 50px;
+
+        &.author {
+          background-color: @main-color;
+          color: #fff;
+        }
+        &.client {
+          background-color: @sec-color;
+          color: #000;
+        }
+      }
+    }
+
+    .tab-header {
+      position: absolute;
+      top: -22%;
+      right: 40%;
+
+
+      .arrow-author, .arrow-client {
+        width: 152px;
+        height: 35px;
+        position: absolute;
+        top: 44%;
+        right: -108%;
+        z-index: -1;
+      }
+
+      .arrow-author {
+        background-image: url('../img/form-arrow-author.png');
+      }
+      .arrow-client {
+        background-image: url('../img/form-arrow-client.png');
+      }
+
+      .circle {
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        color: #fff;
+        font-family: 'Proxima Nova Lt';
+        font-size: 36px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 1;
+
+        span {
+          vertical-align: middle;
+        }
+
+        &.author {
+          background-color: @main-color;
+        }
+        &.client {
+          background-color: @sec-color;
+        }
+      }
+    }
+    .tab-data {
+      margin-bottom: 240px;
+    }
+    #author {
+      input {
+        border-bottom: 1px solid @main-color;
+      }
+    }
+    #client {
+      input {
+        border-bottom: 1px solid @sec-color;
+      }
+      .agreement {
+        input {
+          &:checked {
+            background-color: @sec-color;
+          }
+        }
+      }
+      button {
+        background-color: @sec-color;
+        color: #000;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+    .agreement {
+      margin: 55px 0;
+      label {
+        font-size: 12px;
+        vertical-align: middle;
+        margin: 0;
+      }
+    }
+  }
+  .form-tail {
+    width: 550px;
+    position: absolute;
+    bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 0 0 30px 30px;
+
+    &.bg-blue {
+      background: linear-gradient(to top, #004cff, #009cff);
+    }
+  }
+}
+.signin-form {
+  form {
+    margin-bottom: 240px;
+
+    button {
+      margin-top: 55px;
+    }
+  }
+  .form-tail {
+    width: 550px;
+    position: absolute;
+    bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 0 0 30px 30px;
+
+    &.bg-blue {
+      background: linear-gradient(to top, #004cff, #009cff);
+    }
+  }
+}
+.banner-wrapper {
+
+  .main-block {
+    padding-bottom: 185px;
+    position: relative;
+
+    .main-block-title {
+      margin-bottom: 115px;
+    }
+    .main-block-right,
+    .main-block-left {
+      color: #fff;
+
+      .descr {
+        font-size: 1.125rem;
+      }
+    }
+    .main-block-right {
+      width: 20%;
+    }
+    img {
+      position: absolute;
+      top: 26%;
+      right: 22%;
+      width: 629px;
+    }
+
+  }
+  .order-form {
+    display: none;
+    background: linear-gradient(to top right, #004cff, #009cff);
+    font-family: "Proxima Nova Lt";
+    font-size: 1.125rem;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+
+    .order-form-title {
+      font-family: 'Proxima Nova Lt';
+      font-weight: 600;
+      font-style: normal;
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 50px;
+    }
+    .underline-txt {
+      font-family: 'Proxima Nova Th';
+      font-weight: 100;
+      font-style: normal;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    select, input {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      border-bottom: 1px solid #fff;
+      //font-family: "Proxima Nova Lt";
+      //font-size: 1.125rem;
+      //font-weight: 300;
+      //font-style: normal;
+    }
+    select + select, select + input, input + input {
+      margin-top: 55px;
+    }
+    input {
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    button {
+      margin-top: 55px;
+      margin-bottom: 75px;
+    }
+
+    textarea {
+      &.project-descr {
+        padding: 40px 30px;
+        border-radius: 30px;
+      }
+    }
+    .fa-paperclip {
+      font-size: 1.6rem;
+    }
+  }
+  &.changed {
+    .main-block {
+      img{
+        display: none;
+      }
+    }
+    .order-form {
+        display: flex;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: 1000;
+        padding-top: 210px;
+    }
+  }
+}
+
 .main-menu-wrapper {
   //width: 100%;
   //display: none;
@@ -419,7 +693,9 @@ section {
     line-height: 1;
     font-size: 1.875rem;
     color: @main-color;
-    margin-top: -80px;
+    position: absolute;
+    top: 37%;
+    left: -11%;
   }
   .main_slider-item {
     height: 516px;
@@ -440,8 +716,8 @@ section {
   }
   .slider-nav{
     position: absolute;
-    top: 175px;
-    right: 38px;
+    top: 33%;
+    right: 10%;
     z-index: 1000;
 
     .slider-nav-item{
@@ -483,7 +759,126 @@ section {
     }
   }
 }
+.third_slider {
+  position: relative;
+  overflow-x: hidden;
+  position: relative;
+
+  .slick-track {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .slick-dots{
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    li {
+      flex-grow: 1;
+      list-style: none;
+
+      button {
+        display: block;
+        padding: 0;
+        padding-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid @base-text-color;
+        width: 100%;
+        overflow: hidden;
+        font-size: 2.25rem;
+        font-family: 'Proxima Nova Bl';
+        font-weight: 900;
+        font-style: normal;
+        line-height: 1;
+        color: @base-text-color;
+        background-color: transparent;
+
+      }
+
+      &.slick-active {
+        button {
+          border-bottom: 1px solid @main-color;
+          color: @main-color;
+        }
+      }
+    }
+
+  }
+  .slick-list {
+    margin-top: 40px;
+  }
+  .descr-title {
+    font-size: 2.25rem;
+  }
+  img {
+    width: 289px;
+    height: 201px;
+  }
+  .main_slider-item {
+    margin-top: 85px;
+  }
+}
+.percentage-block {
+  margin-top: 160px;
+  margin-bottom: 230px;
+  img {
+    position: relative;
+    width: 912px;
+    height: 579px;
+  }
+  .percentage-descr {
+    font-family: 'Proxima Nova Rg';
+    font-size: 3rem;
+    line-height: 1;
+    color: #fff;
+    position: absolute;
+    top: 42%;
+    right: 22%;
+  }
+}
+.final {
+  position: relative;
+  margin-bottom: 135px;
+
+  .slider-img {
+    position: absolute;
+    top: 16%;
+    left: 14%;
+    width: 381px;
+    height: 270px;
+  }
+
+  .slider-stage {
+    color: @main-color;
+    font-size: 24px;
+    margin-left: 200px;
+  }
+
+  .third_slider {
+
+    .slick-dots {
+      top: 0;
+      left: 16%;
+
+      li {
+        button {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
 .faq-block {
+  margin-top: 100px;
+
   .faq-block-item {
     background-color: @base-color;
     border-radius: 35px;
@@ -491,16 +886,41 @@ section {
 
     .faq-block-item-title {
       font-size: 1.44rem;
-    }
+      cursor: pointer;
 
+      .fa-minus {
+        display: none;
+      }
+      .fa-plus {
+        display: inline;
+      }
+
+      &.active {
+        .fa-plus {
+          display: none;
+        }
+        .fa-minus {
+          display: inline;
+        }
+      }
+    }
     .faq-block-item-descr {
+      display: none;
       font-size: 0.875rem;
+
+      &.active {
+        display: block;
+      }
     }
   }
   .fas {
     color: @base-text-color;
   }
+  .faq-block-item + .faq-block-item {
+    margin-top: 10px;
+  }
 }
+
 .right-block {
   height: 370px;
   background-color: @base-color;
@@ -857,72 +1277,6 @@ section {
   }
   .input-msg {
     padding: 25px;
-  }
-}
-.tabs {
-  .tab {
-    color: #acacac;
-
-    &.active{
-      color: #000;
-      font-family: 'Proxima Nova Rg';
-      font-size: 1.875rem;
-      font-weight: normal;
-      font-style: normal;
-      line-height: 1;
-    }
-  }
-  .tab + .tab {
-    margin-left: 65px;
-  }
-  .tab-data {
-    margin-top: 45px;
-
-    .form-item {
-      margin-bottom: 45px;
-    }
-    .form-label {
-      position: absolute;
-      left: 26px;
-      top: 6px;
-      z-index: 10;
-      transition: transform 150ms ease-out, font-size 150ms ease-out;
-      color: @base-text-color;
-    }
-
-    .focused {
-
-      .form-label {
-        transform: translateY(-150%);
-        font-size: .75em;
-      }
-    }
-
-    input {
-      border: none;
-      border-bottom: 1px solid @base-text-color;
-      padding-bottom: 5px;
-    }
-
-    input[disabled] {
-      border: none;
-      background: transparent;
-    }
-
-    i {
-      font-size: 1.875rem;
-      color: @main-color;
-    }
-
-    .fa-toggle-off {
-      color: @base-text-color;
-    }
-
-    //#password {
-    //  button {
-    //    margin-top: 45px;
-    //  }
-    //}
   }
 }
 .help-block {

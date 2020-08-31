@@ -27,9 +27,9 @@
                         <a href="#" class="header-menu-item">FAQ</a>
                     </nav>
                     <div class="sign col-sm-3 col-xl-4 text-center p-0 d-flex align-items-baseline justify-content-end">
-                        <div class="header-sign_up mr-5">Регистрация</div>
+                        <div class="header-sign_up mr-5 js-toggle_class" data-class="active" data-target=".signup-form">Регистрация</div>
                         <div class="header-sign_in">
-                            <span>Вход</span>
+                            <span class="js-toggle_class" data-class="active" data-target=".signin-form">Вход</span>
                             <i class="far fa-user ml-1"></i>
                         </div>
                     </div>
@@ -37,29 +37,146 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="d-flex justify-content-center align-items-center">
-            <i class="icon icon-coins mr-4"></i>
-            <div class="center-txt-block">Envita a tu amigo a recibe 10€ en la cuenta de Titulados</div>
-        </div>
-        <div class="main-block d-flex flex-wrap justify-content-between col-12 px-0">
-            <div class="main-block-left col-4 p-0">
-                <div class="title-1 mb-5">Solicita presupuesto sin compromiso!</div>
-                <div class="descr col-10 p-0">Nuestro equipo docente revisara la propuesta detenidamente, se asignará el proyecto al docente más cualificado, el cual disponga de los conocimientos y la experiencia redactando este tipo de proyectos.</div>
+    <div class="container d-flex flex-wrap justify-content-center">
+        <div class="signup-form flex-wrap justify-content-center">
+            <div class="tabs js-tabs d-flex flex-wrap justify-content-between col-12 p-0">
+                <a href="#" class="tab author" data-tab_target="#author">
+                    <span>Автор</span>
+                </a>
+                <a href="#" class="tab client" data-tab_target="#client">
+                    <span>Заказчик</span>
+                </a>
+                <div class="tab-data col-12 p-0" data-tab_content>
+                    <div id="author" data-tab_item>
+                        <div class="tab-header">
+                            <div class="circle author text-center"><span>я</span></div>
+                            <div class="arrow-author"></div>
+                        </div>
+                        <div class="form-title text-primary text-center">Регистрация как автор</div>
+                        <form action="" class="col-12 p-0 text-center">
+                            <input type="text" placeholder="Логин" class="col-12 p-0">
+                            <input type="email" placeholder="Email" class="col-12 p-0">
+                            <input type="password" placeholder="Пароль" class="col-12 p-0">
+                            <input type="password" placeholder="Пароль повторно" class="col-12 p-0">
+                            <div class="col-12 p-0 agreement">
+                                <input type="checkbox" id="agreement">
+                                <label for="agreement">Я принимаю <a href="">пользовательское соглашение</a></label>
+                            </div>
+                            <button class="btn btn-primary button-round">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                    <div id="client" data-tab_item>
+                        <div class="tab-header">
+                            <div class="circle client text-center"><span>я</span></div>
+                            <div class="arrow-client"></div>
+                        </div>
+                        <div class="form-title text-center">Регистрация как заказчик</div>
+                        <form action="" class="col-12 p-0 text-center">
+                            <input type="text" placeholder="Логин" class="col-12 p-0">
+                            <input type="email" placeholder="Email" class="col-12 p-0">
+                            <input type="password" placeholder="Пароль" class="col-12 p-0">
+                            <input type="password" placeholder="Пароль повторно" class="col-12 p-0">
+                            <div class="col-12 p-0 agreement">
+                                <input type="checkbox" id="agreement">
+                                <label for="agreement">Я принимаю <a href="" class="text-warning">пользовательское соглашение</a></label>
+                            </div>
+                            <button class="btn button-round">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="main-block-right">
-                <div class="title-1 mb-5">Узнайте стоимость работы в один клик</div>
-                <button class="btn button-round btn-warning">Аveriguar el costo</button>
+            <div class="form-tail bg-blue text-center">
+                <div class="mb-4">Уже зарегистрированы?</div>
+                <button class="btn bg-light button-round text-primary col-4">Войти</button>
             </div>
-            <img src="img/main-image.png" alt="">
         </div>
+        <div class="signin-form flex-wrap justify-content-center">
+            <div class="form-title text-primary text-center col-12 p-0">Вход</div>
+            <form action="" class="col-12 p-0 text-center">
+                <input type="text" placeholder="Логин" class="col-12 p-0">
+                <input type="email" placeholder="Email" class="col-12 p-0">
+                <button class="btn btn-primary button-round col-5">Войти</button>
+            </form>
+            <div class="form-tail bg-blue text-center">
+                <div class="mb-4">Уже зарегистрированы?</div>
+                <button class="btn bg-light button-round text-primary col-4">Войти</button>
+            </div>
+        </div>
+        <div class="banner-wrapper d-flex align-items-stretch">
+            <div class="main-block d-flex flex-wrap justify-content-between col-12 px-0 js-">
+                <div class="main-block-title d-flex justify-content-center align-items-center col-12 p-0">
+                    <i class="icon icon-coins mr-4"></i>
+                    <div class="center-txt-block">Envita a tu amigo a recibe 10€ en la cuenta de Titulados</div>
+                </div>
+                <div class="main-block-left col-4 p-0">
+                    <div class="title-1 mb-5">Solicita presupuesto sin compromiso!</div>
+                    <div class="descr col-10 p-0">Nuestro equipo docente revisara la propuesta detenidamente, se asignará el proyecto al docente más cualificado, el cual disponga de los conocimientos y la experiencia redactando este tipo de proyectos.</div>
+                </div>
+                <div class="main-block-right">
+                    <div class="title-1 mb-5">Узнайте стоимость работы в один клик</div>
+                    <button class="btn button-round btn-warning js-toggle_class" data-class="changed"
+                            data-target=".banner-wrapper">Аveriguar el costo</button>
+                </div>
+                <img src="img/main-image.png" alt="">
+            </div>
+            <div class="order-form col-12 px-0 flex-wrap justify-content-center">
+                <div class="order-form-title col-12 p-0 text-center">Форма заказа учебной работы</div>
+                <form class="d-flex flex-wrap col-8 p-0 justify-content-between">
+                    <div class="col-5 p-0">
+                        <select name="faculty" class="col-12 p-0">
+                            <option value="0" selected disabled>Ваш факультет</option>
+                            <option value="value1">факультет 1</option>
+                            <option value="value2" >факультет 2</option>
+                            <option value="value3">факультет 3</option>
+                        </select>
+                        <select name="type" class="col-12 p-0">
+                            <option value="0" selected disabled>Тип работы</option>
+                            <option value="value1">тип 1</option>
+                            <option value="value2" >тип 2</option>
+                            <option value="value3">тип 3</option>
+                        </select>
+                        <select name="speciality" class="col-12 p-0">
+                            <option value="0" selected disabled>Специальность</option>
+                            <option value="value1">Специальность 1</option>
+                            <option value="value2" >Специальность 2</option>
+                            <option value="value3">Специальность 3</option>
+                        </select>
+                        <input type="text" placeholder="Тип проекта" class="col-12 p-0">
+                        <input type="text" placeholder="Тема работы" class="col-12 p-0">
+                        <div class="underline-txt col-12 p-0">Si no tiene un tema pensado, debe especificar “de libre elección”</div>
+                    </div>
+                    <div class="col-5 p-0 d-flex flex-wrap justify-content-between">
+                        <div class="col-5 p-0">
+                            <input type="text" placeholder="Дата сдачи работы" class="col-12 p-0 js-toggle-type" data-from="text" data-to="date">
+                            <div class="underline-txt col-12 p-0">Si no tiene un tema pensado, debe especificar “de libre elección”</div>
+                        </div>
+                        <div class="col-5 p-0">
+                            <input type="number" placeholder="Количество страниц" class="col-12 p-0">
+                            <div class="underline-txt col-12 p-0">Si no tiene un tema pensado, debe especificar “de libre elección”</div>
+                        </div>
+                        <textarea class="project-descr form-control col-12 mt-5" name="project-descr" rows="1" placeholder="Описание проекта"></textarea>
+                        <div class="underline-txt col-12 mb-5 p-0">Se debe especificar claramente como quiere enfocar y llevar a cabo el proyecto,<br>el formato en el cual debe de estar redactado, tipo de bibliografía, etc...</div>
+                        <div class="d-flex flex-wrap col-12 p-0">
+                            <i class="fas fa-paperclip mr-2"></i>
+                            <span class="part-txt">Прикрепить файлы</span>
+                            <div class="underline-txt col-12 p-0">Muy importante en este apartado, debe aparecerles un aviso importante)<br>ES NECESARIO QUE ADJUNTE TODOS LOS DOCUMENTOS QUE CONSIDERE RELEVANTES PARA LA CORRECTA VALORACIÓN DEL PROYECTO Y SU POSTERIOR ELABORACIÓN. (GUÍA DOCENTE, GUÍA DE PROYECTO, ENUNCIADOS, ETC…</div>
+                        </div>
+                        <input type="file" class="col-12" hidden>
+                    </div>
+                    <div class="col-12 p-0 text-center">
+                        <button class="btn button-round btn-warning">Узнать стоимость</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
 </section>
 <section>
     <div class="container px-0 d-flex flex-wrap justify-content-center">
         <div class="title-1 mb-5 col-12 p-0 text-center">El modelo de actuación</div>
         <div class="main_slider clearfix js-slider col-7 p-0 mx-auto my-0" data-autoplay="false"
-             data-autoplaySpeed="5000" data-infinite="false" data-speed="1000" data-arrows="false" data-dots="true">
+             data-infinite="false" data-speed="1000" data-arrows="false" data-dots="true">
             <div class="main_slider-item">
                 <div class="col-xl-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
                     <img src="img/slider-image.png" alt="" class="mr-5">
@@ -113,7 +230,7 @@
                     data-fade="true"
                     data-asNavFor=".slider-nav"
             >
-                <div class="d-flex flex-wrap">
+                <div class="d-flex flex-wrap justify-content-center">
                     <div class="sec_slider-title align-self-center col-4">Виртуальная платформа</div>
                     <div class="main_slider-footer col-xl-7 p-0 d-flex flex-wrap justify-content-center">
                     <div class="circle d-flex align-items-center justify-content-center">
@@ -122,7 +239,7 @@
                     <button class="btn button-round btn-warning">Pide el presupuesto del proyecto</button>
                         </div>
                 </div>
-                <div class="d-flex flex-wrap">
+                <div class="d-flex flex-wrap justify-content-center">
                     <div class="sec_slider-title align-self-center col-4">Rsldkjfskjf платформа</div>
                     <div class="main_slider-footer col-xl-7 p-0 d-flex flex-wrap justify-content-center">
                         <div class="circle d-flex align-items-center justify-content-center bg-success">
@@ -131,8 +248,8 @@
                         <button class="btn button-round btn-warning">Pide el presupuesto del proyecto</button>
                     </div>
                 </div>
-                <div class="d-flex flex-wrap">
-                    <div class="sec_slider-title align-self-center col-4">;ldskskf платформа</div>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="sec_slider-title align-self-center col-4">Виртуальная платформа</div>
                     <div class="main_slider-footer col-xl-7 p-0 d-flex flex-wrap justify-content-center">
                         <div class="circle d-flex align-items-center justify-content-center bg-danger">
                             <span class="col-8">Plataforma virtual: aula virtual de última generación, accesible, intuitiva, comunicación fluida y sin intermediarios con el profesor, comparte todo tipo de archivos.</span>
@@ -140,7 +257,7 @@
                         <button class="btn button-round btn-warning">Pide el presupuesto del proyecto</button>
                     </div>
                 </div>
-                <div class="d-flex flex-wrap">
+                <div class="d-flex flex-wrap justify-content-center">
                     <div class="sec_slider-title align-self-center col-4">Виртуальная платформа</div>
                     <div class="main_slider-footer col-xl-7 p-0 d-flex flex-wrap justify-content-center">
                         <div class="circle d-flex align-items-center justify-content-center">
@@ -149,7 +266,7 @@
                         <button class="btn button-round btn-warning">Pide el presupuesto del proyecto</button>
                     </div>
                 </div>
-                <div class="d-flex flex-wrap">
+                <div class="d-flex flex-wrap justify-content-center">
                     <div class="sec_slider-title align-self-center col-4">Виртуальная платформа</div>
                     <div class="main_slider-footer col-xl-7 p-0 d-flex flex-wrap justify-content-center">
                         <div class="circle d-flex align-items-center justify-content-center">
@@ -183,14 +300,111 @@
                 </div>
             </div>
         </div>
-        <div class="faq-block col-12 p-0">
-            <div class="faq-block-item">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-minus" style="display: none"></i>
-                <span class="faq-block-item-title">¿Las correcciones del proyecto se paganaparte?</span>
+        <div class="faq-block col-12 p-0 d-flex flex-wrap justify-content-center">
+            <div class="faq-block-item col-7 js-toggle-wrapper">
+                <div class="faq-block-item-title js-toggle" data-target=".faq-block-item-descr">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                    <span class="ml-3">¿Las correcciones del proyecto se paganaparte?</span>
+                </div>
+                <div class="faq-block-item-descr">Plataforma virtual: aula virtual de última generación, accesible, intuitiva, comunicación fluida y sin intermediarios con el profesor, comparte todo tipo de archivos. </div>
+            </div>
+            <div class="faq-block-item col-7 js-toggle-wrapper">
+                <div class="faq-block-item-title js-toggle" data-target=".faq-block-item-descr">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                    <span class="ml-3">¿El presupuesto se paga en un solo pago?</span>
+                </div>
+                <div class="faq-block-item-descr">Plataforma virtual: aula virtual de última generación, accesible, intuitiva, comunicación fluida y sin intermediarios con el profesor, comparte todo tipo de archivos. </div>
+            </div>
+            <div class="faq-block-item col-7 js-toggle-wrapper">
+                <div class="faq-block-item-title js-toggle" data-target=".faq-block-item-descr">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                    <span class="ml-3">¿Las correcciones del proyecto se paganaparte?</span>
+                </div>
+                <div class="faq-block-item-descr">Plataforma virtual: aula virtual de última generación, accesible, intuitiva, comunicación fluida y sin intermediarios con el profesor, comparte todo tipo de archivos. </div>
+            </div>
+            <div class="faq-block-item col-7 js-toggle-wrapper">
+                <div class="faq-block-item-title js-toggle" data-target=".faq-block-item-descr">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                    <span class="ml-3">¿Las correcciones del proyecto se paganaparte?</span>
+                </div>
                 <div class="faq-block-item-descr">Plataforma virtual: aula virtual de última generación, accesible, intuitiva, comunicación fluida y sin intermediarios con el profesor, comparte todo tipo de archivos. </div>
             </div>
         </div>
+    </div>
+</section>
+<section>
+    <div class="container px-0">
+        <div class="title-1 mb-5 col-12 p-0 text-center">¿Qué podemos garantizarle?</div>
+        <div class="third_slider clearfix js-slider col-12 p-0 mx-auto my-0" data-autoplay="false"
+             data-autoplaySpeed="5000" data-infinite="false" data-speed="1000" data-arrows="false" data-dots="true">
+            <div class="main_slider-item">
+                <div class="col-xl-12 p-0 main_slider-description d-flex flex-wrap align-content-between justify-content-center">
+                    <img src="img/third_slider-img.png" alt="" class="mr-5">
+                    <div class="main_slider-footer col-xl-7 p-0 d-flex flex-wrap">
+                        <div class="descr-title">Проекты высокого качества и их описание</div>
+                        <div class="col-10 p-0">Proyecto de alta calidad: Indiferentemente del proyecto que se solicite, (TFG, TFM, TESIS DOCTORAL, ARTICULO, ETC..) o la tipología del proyecto que se debe desarrollar, se desarrollara siguiendo estrictamente las directrices previamente establecidas en la solicitud de presupuesto, lo llevara a cabo un profesor experto en la materia, el cual dedicara el tiempo necesario para desarrollar un contenido profesional y de calidad. “nos regimos por la calidad del contenido y no en su extensión”</div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_slider-item">
+                <div class="col-xl-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
+                    <img src="img/slider-image.png" alt="" class="mr-5">
+                    <div class="main_slider-footer col-xl-6 p-0 d-flex flex-wrap">
+                        <div class="col-12 p-0">Nuestros asesores contactaran con alumno para dar el presupuesto y dejar elegir la forma de pago ( puede ser fraccionada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_slider-item">
+                <div class="col-xl-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
+                    <img src="img/slider-image.png" alt="" class="mr-5">
+                    <div class="main_slider-footer col-xl-6 p-0 d-flex flex-wrap">
+                        <div class="col-12 p-0">Nuestros asesores contactaran con alumno para dar el presupuesto y dejar elegir la forma de pago ( puede ser fraccionada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 p-0 percentage-block d-flex justify-content-center">
+            <img src="img/%25.png" alt="">
+            <span class="percentage-descr">Descuento para<br>su primer<br>pedido 5%</span>
+        </div>
+    </div>
+</section>
+<section class="final">
+    <div class="container px-0">
+        <div class="title-1 mb-5 col-12 p-0 text-center">¿Qué afecta al precio final<br>de un proyecto?</div>
+        <div class="third_slider clearfix js-slider col-12 p-0 mx-auto my-0" data-autoplay="false"
+             data-autoplaySpeed="5000" data-infinite="false" data-speed="1000" data-arrows="false" data-dots="true">
+            <div class="main_slider-item">
+                <div class="col-xl-12 p-0 main_slider-description d-flex flex-wrap">
+                    <div class="col-4 p-0 slider-txt">
+                        Llevamos más de 5 años dedicándonos a la ayuda universitaria de forma profesional, en XXX únicamente contamos con profesionales del sector con amplia experiencia redactando proyectos académicos, por supuesto están avalados por el nombre de la empresa, nuestra dilatada experiencia, nuestros profesores y nuestra metodología de trabajo, nos permite proclamarnos líderes del sector, nuestros resultados nos avalan.
+                        ¿Quién estará a cargo de mi proyecto?
+                    </div>
+                    <div class="slider-stage">- COMPLEJIDAD.</div>
+                </div>
+            </div>
+            <div class="main_slider-item">
+                <div class="col-xl-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
+                    <img src="img/slider-image.png" alt="" class="mr-5">
+                    <div class="main_slider-footer col-xl-6 p-0 d-flex flex-wrap">
+                        <div class="col-12 p-0">Nuestros asesores contactaran con alumno para dar el presupuesto y dejar elegir la forma de pago ( puede ser fraccionada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_slider-item">
+                <div class="col-xl-12 p-0 main_slider-description d-flex flex-wrap align-content-between">
+                    <img src="img/slider-image.png" alt="" class="mr-5">
+                    <div class="main_slider-footer col-xl-6 p-0 d-flex flex-wrap">
+                        <div class="col-12 p-0">Nuestros asesores contactaran con alumno para dar el presupuesto y dejar elegir la forma de pago ( puede ser fraccionada</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="img/paper.png" alt="" class="slider-img">
     </div>
 </section>
 <footer class="footer d-block d-sm-none col-12 px-0">
@@ -267,6 +481,7 @@
 <script src="libs/jquery1.12.4/script.js"></script>
 <script src="libs/slick/script.js"></script>
 <script src="js/modules/slider/script.js"></script>
+<script src="js/modules/tabs/script.js"></script>
 <script type="text/javascript" src="dist/app.js"></script>
 </body>
 </html>
