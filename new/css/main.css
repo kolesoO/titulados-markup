@@ -773,6 +773,30 @@ input:focus,
 .footer .socials {
   margin-top: 60px;
 }
+.loading {
+  position: relative;
+}
+.loading:before,
+.loading:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.loading:before {
+  z-index: 998;
+  opacity: 0.5;
+  background-color: #f5f5f5;
+}
+.loading:after {
+  background-image: url('../img/spinner.gif');
+  background-position: 50% 50%;
+  background-size: auto 80px;
+  background-repeat: no-repeat;
+  z-index: 999;
+}
 @media (min-width: 320px) and (max-width: 767px) {
   html {
     font-size: 12px!important;
@@ -785,6 +809,9 @@ input:focus,
   }
   .title-2 {
     font-size: 1.6rem;
+  }
+  .fa-chevron-left {
+    margin-left: -24px;
   }
   .header-secondary {
     padding: 20px 15px;
@@ -869,9 +896,6 @@ input:focus,
   }
   .content .budget .order-list-item_txt {
     margin-left: unset;
-  }
-  .content .add-block .added-doc {
-    margin-left: -10px;
   }
   .js-content {
     font-size: 1rem;
