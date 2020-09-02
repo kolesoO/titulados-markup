@@ -60,6 +60,19 @@ $(document).ready(function() {
     });
   })
   //end
+
+  //toggle type
+  $( ".js-toggle-type")
+      .focusin( function () {
+        var typeto = $(this).attr("data-to");
+        $(this).prop('type', typeto);
+      })
+      .focusout(function () {
+        var typefrom = $(this).attr("data-from");
+        $(this).prop('type', typefrom);
+      });
+  //end
+
   //animate input
   $('input')
       .focusin(function(){

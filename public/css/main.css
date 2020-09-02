@@ -11,6 +11,11 @@
   height: 20px;
   background-image: url('../img/icons/user.png');
 }
+.icon.icon-coins {
+  width: 30px;
+  height: 35px;
+  background-image: url('../img/icons/coins.png');
+}
 .icon.icon-counter {
   color: #0074fb;
   font-family: 'Proxima Nova Lt';
@@ -117,18 +122,22 @@ input:focus,
   outline: none!important;
 }
 .container {
-  max-width: 1165px!important;
+  width: 92%;
+  max-width: 1340px!important;
   margin: 0 auto;
+}
+.bg-blue {
+  background: linear-gradient(to top right, #004cff, #009cff);
 }
 .form-group {
   margin-bottom: unset!important;
 }
 .title-1 {
-  font-family: 'Proxima Nova Lt';
-  font-size: 2.75rem;
-  font-weight: 300;
+  font-family: 'Proxima Nova Bl';
+  font-weight: 900;
   font-style: normal;
   line-height: 1;
+  font-size: 3rem;
 }
 .title-1-2 {
   font-family: 'Proxima Nova Rg';
@@ -192,42 +201,56 @@ input:focus,
   border-radius: 50px!important;
   line-height: 1!important;
 }
+section {
+  padding-top: 110px;
+}
+section.bg-blue {
+  padding-top: 50px;
+  position: relative;
+}
 .header {
-  margin-top: 50px;
   margin-bottom: 75px;
+  z-index: 2000;
+  position: inherit;
+}
+.header .container {
+  width: 92%;
+  max-width: none!important;
 }
 .header .logo {
   width: 152px;
 }
 .header .header-menu .header-menu-item {
-  font-family: 'Proxima Nova Th';
-  font-weight: 800;
+  font-family: 'Proxima Nova Lt';
+  font-weight: 600;
   font-style: normal;
-  font-size: 0.875rem;
-  color: #0078fb;
-}
-.header .header-login {
-  font-family: 'Proxima Nova Rg';
   font-size: 1rem;
-  margin-bottom: -13px;
-  padding: 13px 20px;
-  background-color: #f5f5f5;
-  border-radius: 30px;
+  color: #fff;
+}
+.header .header-menu .header-menu-item.active {
+  background-color: #ffda47;
+  border-radius: 35px;
+  color: #000;
+  font-size: 1.125rem;
+  padding: 20px 30px;
+}
+.header .sign {
+  font-family: 'Proxima Nova Lt';
+  font-weight: 600;
+  font-style: normal;
+  color: #fff;
+  font-size: 1.125rem;
   cursor: pointer;
 }
-.header .dropdown_menu {
-  display: none;
-  position: absolute;
-  bottom: -150px;
-  right: 0px;
-  z-index: 10;
-  box-shadow: 0 0px 3px 0px #c0bebe;
-  padding: 15px 38px;
-  background-color: #f5f5f5;
-  border-radius: 30px;
+.header .sign .header-sign_up {
+  padding: 20px 30px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 35px;
 }
-.header .dropdown_menu.active {
-  display: block;
+.header .sign .header-sign_in .fa-user {
+  font-size: 2rem;
+  color: #fff;
 }
 .header hr + hr {
   margin-top: 3px;
@@ -247,6 +270,265 @@ input:focus,
 }
 .header hr + hr {
   margin-top: 3px;
+}
+.center-txt-block {
+  color: #0078fb;
+  font-family: 'Proxima Nova Lt';
+  font-weight: 600;
+  font-style: normal;
+  padding: 20px 25px;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border-radius: 35px;
+}
+.signin-form,
+.signup-form {
+  top: 40%;
+  display: none;
+  width: 550px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 10000;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 0 #c0bebe;
+  padding: 60px 90px;
+}
+.signin-form.active,
+.signup-form.active {
+  display: flex;
+}
+.signin-form .form-title,
+.signup-form .form-title {
+  font-family: 'Proxima Nova Lt';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  margin-bottom: 60px;
+  margin-top: 45px;
+}
+.signin-form input,
+.signup-form input {
+  border: none;
+  border-bottom: 1px solid #0078fb;
+  padding-bottom: 5px;
+}
+.signin-form input + input,
+.signup-form input + input {
+  margin-top: 55px;
+}
+.signup-form {
+  padding-top: 130px;
+}
+.signup-form .tabs {
+  position: relative;
+}
+.signup-form .tabs .tab {
+  font-family: 'Proxima Nova Lt';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  color: #000;
+}
+.signup-form .tabs .tab.author {
+  padding: 20px 40px;
+}
+.signup-form .tabs .tab.client {
+  padding: 20px 25px;
+}
+.signup-form .tabs .tab.active {
+  border-radius: 50px;
+}
+.signup-form .tabs .tab.active.author {
+  background-color: #0078fb;
+  color: #fff;
+}
+.signup-form .tabs .tab.active.client {
+  background-color: #ffda47;
+  color: #000;
+}
+.signup-form .tabs .tab-header {
+  position: absolute;
+  top: -22%;
+  right: 40%;
+}
+.signup-form .tabs .tab-header .arrow-author,
+.signup-form .tabs .tab-header .arrow-client {
+  width: 152px;
+  height: 35px;
+  position: absolute;
+  top: 44%;
+  right: -108%;
+  z-index: -1;
+}
+.signup-form .tabs .tab-header .arrow-author {
+  background-image: url('../img/form-arrow-author.png');
+}
+.signup-form .tabs .tab-header .arrow-client {
+  background-image: url('../img/form-arrow-client.png');
+}
+.signup-form .tabs .tab-header .circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  color: #fff;
+  font-family: 'Proxima Nova Lt';
+  font-size: 36px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+}
+.signup-form .tabs .tab-header .circle span {
+  vertical-align: middle;
+}
+.signup-form .tabs .tab-header .circle.author {
+  background-color: #0078fb;
+}
+.signup-form .tabs .tab-header .circle.client {
+  background-color: #ffda47;
+}
+.signup-form .tabs .tab-data {
+  margin-bottom: 240px;
+}
+.signup-form .tabs #author input {
+  border-bottom: 1px solid #0078fb;
+}
+.signup-form .tabs #client input {
+  border-bottom: 1px solid #ffda47;
+}
+.signup-form .tabs #client .agreement input:checked {
+  background-color: #ffda47;
+}
+.signup-form .tabs #client button {
+  background-color: #ffda47;
+  color: #000;
+}
+.signup-form .tabs #client button:hover {
+  opacity: 0.5;
+}
+.signup-form .tabs .agreement {
+  margin: 55px 0;
+}
+.signup-form .tabs .agreement label {
+  font-size: 12px;
+  vertical-align: middle;
+  margin: 0;
+}
+.signup-form .form-tail {
+  width: 550px;
+  position: absolute;
+  bottom: 0;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 0 0 30px 30px;
+}
+.signup-form .form-tail.bg-blue {
+  background: linear-gradient(to top, #004cff, #009cff);
+}
+.signin-form form {
+  margin-bottom: 240px;
+}
+.signin-form form button {
+  margin-top: 55px;
+}
+.signin-form .form-tail {
+  width: 550px;
+  position: absolute;
+  bottom: 0;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 0 0 30px 30px;
+}
+.signin-form .form-tail.bg-blue {
+  background: linear-gradient(to top, #004cff, #009cff);
+}
+.banner-wrapper .main-block {
+  padding-bottom: 185px;
+  position: relative;
+}
+.banner-wrapper .main-block .main-block-title {
+  margin-bottom: 115px;
+}
+.banner-wrapper .main-block .main-block-right,
+.banner-wrapper .main-block .main-block-left {
+  color: #fff;
+}
+.banner-wrapper .main-block .main-block-right .descr,
+.banner-wrapper .main-block .main-block-left .descr {
+  font-size: 1.125rem;
+}
+.banner-wrapper .main-block .main-block-right {
+  width: 20%;
+}
+.banner-wrapper .main-block img {
+  position: absolute;
+  top: 26%;
+  right: 22%;
+  width: 629px;
+}
+.banner-wrapper .order-form {
+  display: none;
+  background: linear-gradient(to top right, #004cff, #009cff);
+  font-family: "Proxima Nova Lt";
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+}
+.banner-wrapper .order-form .order-form-title {
+  font-family: 'Proxima Nova Lt';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 50px;
+}
+.banner-wrapper .order-form .underline-txt {
+  font-family: 'Proxima Nova Th';
+  font-weight: 100;
+  font-style: normal;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.banner-wrapper .order-form select,
+.banner-wrapper .order-form input {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+.banner-wrapper .order-form select + select,
+.banner-wrapper .order-form select + input,
+.banner-wrapper .order-form input + input {
+  margin-top: 55px;
+}
+.banner-wrapper .order-form input::placeholder {
+  color: #fff;
+}
+.banner-wrapper .order-form button {
+  margin-top: 55px;
+  margin-bottom: 75px;
+}
+.banner-wrapper .order-form textarea.project-descr {
+  padding: 40px 30px;
+  border-radius: 30px;
+}
+.banner-wrapper .order-form .fa-paperclip {
+  font-size: 1.6rem;
+}
+.banner-wrapper.changed .main-block img {
+  display: none;
+}
+.banner-wrapper.changed .order-form {
+  display: flex;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1000;
+  padding-top: 210px;
 }
 .main-menu-wrapper {
   transition: 0.3s right;
@@ -280,39 +562,61 @@ input:focus,
   content: " ";
   clear: both;
 }
-.main_slider {
+.main_slider,
+.second_slider {
   position: relative;
   overflow-x: hidden;
 }
-.main_slider .slick-track {
+.main_slider .slick-track,
+.second_slider .slick-track {
   display: flex;
   flex-wrap: wrap;
 }
-.main_slider .slick-dots {
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-.main_slider .slick-dots li {
-  flex-grow: 1;
+.main_slider .slick-dots,
+.second_slider .slick-dots {
+  position: absolute;
   list-style: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0px;
+  width: 65%;
+  top: 0;
+  right: 0;
 }
-.main_slider .slick-dots li button {
-  display: block;
-  padding: 0;
-  border: 0;
-  text-indent: -999px;
-  height: 1px;
-  background: #f5f5f5;
-  width: 100%;
-  overflow: hidden;
+.main_slider .slick-dots li,
+.second_slider .slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0px 5px;
+  padding: 0px;
+  cursor: pointer;
 }
-.main_slider .slick-dots li.slick-active button {
-  background: #0078fb;
+.main_slider .slick-dots li button,
+.second_slider .slick-dots li button {
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  font-size: 30px;
+  border-radius: 100%;
+  background-color: #cecece;
+  border: none;
 }
-.main_slider .main_slider-item {
+.main_slider .slick-dots li.slick-active button,
+.second_slider .slick-dots li.slick-active button {
+  background-color: #ffda47;
+  display: inline-flex;
+  width: 90px;
+  height: 90px;
+  font-family: 'Proxima Nova Lt';
+  font-size: 2.875rem;
+  font-weight: 300;
+  font-style: normal;
+}
+.main_slider .main_slider-item,
+.second_slider .main_slider-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,9 +626,221 @@ input:focus,
   position: relative;
   outline: none;
 }
-.main_slider .main_slider-item .main_slider-description {
+.main_slider .main_slider-item .main_slider-description,
+.second_slider .main_slider-item .main_slider-description {
   position: absolute;
   height: 100%;
+}
+.main_slider .main_slider-item .main_slider-description img,
+.second_slider .main_slider-item .main_slider-description img {
+  width: 248px;
+}
+.main_slider .main_slider-item .main_slider-description .main_slider-footer,
+.second_slider .main_slider-item .main_slider-description .main_slider-footer {
+  margin-top: 135px;
+  font-size: 1.125rem;
+}
+.second_slider {
+  height: 516px;
+}
+.second_slider .sec_slider-title {
+  font-family: 'Proxima Nova Bl';
+  font-weight: 900;
+  font-style: normal;
+  line-height: 1;
+  font-size: 1.875rem;
+  color: #0078fb;
+  position: absolute;
+  top: 37%;
+  left: -11%;
+}
+.second_slider .main_slider-item {
+  height: 516px;
+}
+.second_slider .main_slider-item .main_slider-description .main_slider-footer {
+  margin-top: 0;
+}
+.second_slider .circle {
+  width: 416px;
+  height: 416px;
+  border-radius: 100%;
+  color: #fff;
+  background-color: #0078fb;
+  font-size: 1.125rem;
+  margin-bottom: 40px;
+}
+.second_slider .slider-nav {
+  position: absolute;
+  top: 33%;
+  right: 10%;
+  z-index: 1000;
+}
+.second_slider .slider-nav .slider-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.second_slider .slider-nav .slider-nav-item:focus {
+  outline: none;
+}
+.second_slider .slider-nav .slider-nav-item span {
+  color: #000;
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  font-size: 30px;
+  border-radius: 100%;
+  background-color: #cecece;
+  border: none;
+  line-height: 1;
+  padding: 15px;
+}
+.second_slider .slider-nav .slider-nav-item.slick-current {
+  justify-content: flex-start;
+}
+.second_slider .slider-nav .slider-nav-item.slick-current span {
+  background-color: #ffda47;
+  width: 90px;
+  height: 90px;
+  font-family: 'Proxima Nova Lt';
+  font-size: 2.875rem;
+  font-weight: 300;
+  font-style: normal;
+  padding: 23px;
+}
+.third_slider {
+  overflow-x: hidden;
+  position: relative;
+}
+.third_slider .slick-track {
+  display: flex;
+  flex-wrap: wrap;
+}
+.third_slider .slick-dots {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.third_slider .slick-dots li {
+  flex-grow: 1;
+  list-style: none;
+}
+.third_slider .slick-dots li button {
+  display: block;
+  padding: 0;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #cecece;
+  width: 100%;
+  overflow: hidden;
+  font-size: 2.25rem;
+  font-family: 'Proxima Nova Bl';
+  font-weight: 900;
+  font-style: normal;
+  line-height: 1;
+  color: #cecece;
+  background-color: transparent;
+}
+.third_slider .slick-dots li.slick-active button {
+  border-bottom: 1px solid #0078fb;
+  color: #0078fb;
+}
+.third_slider .slick-list {
+  margin-top: 40px;
+}
+.third_slider .descr-title {
+  font-size: 2.25rem;
+}
+.third_slider img {
+  width: 289px;
+  height: 201px;
+}
+.third_slider .main_slider-item {
+  margin-top: 85px;
+}
+.percentage-block {
+  margin-top: 160px;
+  margin-bottom: 230px;
+}
+.percentage-block img {
+  position: relative;
+  width: 912px;
+  height: 579px;
+}
+.percentage-block .percentage-descr {
+  font-family: 'Proxima Nova Rg';
+  font-size: 3rem;
+  line-height: 1;
+  color: #fff;
+  position: absolute;
+  top: 42%;
+  right: 22%;
+}
+.final {
+  position: relative;
+  margin-bottom: 135px;
+}
+.final .slider-img {
+  position: absolute;
+  top: 16%;
+  left: 14%;
+  width: 381px;
+  height: 270px;
+}
+.final .slider-stage {
+  color: #0078fb;
+  font-size: 24px;
+  margin-left: 200px;
+}
+.final .third_slider .slick-dots {
+  top: 0;
+  left: 16%;
+}
+.final .third_slider .slick-dots li button {
+  text-align: right;
+}
+.faq-block {
+  margin-top: 100px;
+}
+.faq-block .faq-block-item {
+  background-color: #f5f5f5;
+  border-radius: 35px;
+  padding: 20px 30px;
+}
+.faq-block .faq-block-item .faq-block-item-title {
+  font-size: 1.44rem;
+  cursor: pointer;
+}
+.faq-block .faq-block-item .faq-block-item-title .fa-minus {
+  display: none;
+}
+.faq-block .faq-block-item .faq-block-item-title .fa-plus {
+  display: inline;
+}
+.faq-block .faq-block-item .faq-block-item-title.active .fa-plus {
+  display: none;
+}
+.faq-block .faq-block-item .faq-block-item-title.active .fa-minus {
+  display: inline;
+}
+.faq-block .faq-block-item .faq-block-item-descr {
+  display: none;
+  font-size: 0.875rem;
+}
+.faq-block .faq-block-item .faq-block-item-descr.active {
+  display: block;
+}
+.faq-block .fas {
+  color: #cecece;
+}
+.faq-block .faq-block-item + .faq-block-item {
+  margin-top: 10px;
 }
 .right-block {
   height: 370px;
@@ -335,6 +851,7 @@ input:focus,
 .descr-block {
   margin-top: 85px;
   margin-bottom: 65px;
+  font-size: 1.125rem;
 }
 .descr-block .descr-block-item img {
   width: auto;
@@ -618,54 +1135,6 @@ input:focus,
 }
 .chat-wrapper .input-msg {
   padding: 25px;
-}
-.tabs .tab {
-  color: #acacac;
-}
-.tabs .tab.active {
-  color: #000;
-  font-family: 'Proxima Nova Rg';
-  font-size: 1.875rem;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1;
-}
-.tabs .tab + .tab {
-  margin-left: 65px;
-}
-.tabs .tab-data {
-  margin-top: 45px;
-}
-.tabs .tab-data .form-item {
-  margin-bottom: 45px;
-}
-.tabs .tab-data .form-label {
-  position: absolute;
-  left: 26px;
-  top: 6px;
-  z-index: 10;
-  transition: transform 150ms ease-out, font-size 150ms ease-out;
-  color: #cecece;
-}
-.tabs .tab-data .focused .form-label {
-  transform: translateY(-150%);
-  font-size: 0.75em;
-}
-.tabs .tab-data input {
-  border: none;
-  border-bottom: 1px solid #cecece;
-  padding-bottom: 5px;
-}
-.tabs .tab-data input[disabled] {
-  border: none;
-  background: transparent;
-}
-.tabs .tab-data i {
-  font-size: 1.875rem;
-  color: #0078fb;
-}
-.tabs .tab-data .fa-toggle-off {
-  color: #cecece;
 }
 .help-block {
   width: 60px;
