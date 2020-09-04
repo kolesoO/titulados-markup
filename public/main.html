@@ -27,9 +27,9 @@
                         <a href="#" class="header-menu-item">FAQ</a>
                     </nav>
                     <div class="sign col-sm-3 col-xl-4 text-center p-0 d-flex align-items-baseline justify-content-end">
-                        <div class="header-sign_up mr-5 js-toggle_class" data-class="active" data-target=".signup-form">Регистрация</div>
+                        <div class="header-sign_up mr-5" data-popup-open="#signup-form">Регистрация</div>
                         <div class="header-sign_in">
-                            <span class="js-toggle_class" data-class="active" data-target=".signin-form">Вход</span>
+                            <span data-popup-open="#signin-form">Вход</span>
                             <i class="far fa-user ml-1"></i>
                         </div>
                     </div>
@@ -38,68 +38,80 @@
         </div>
     </header>
     <div class="container d-flex flex-wrap justify-content-center">
-        <div class="signup-form flex-wrap justify-content-center">
-            <div class="tabs js-tabs d-flex flex-wrap justify-content-between col-12 p-0">
-                <a href="#" class="tab author" data-tab_target="#author">
-                    <span>Автор</span>
-                </a>
-                <a href="#" class="tab client" data-tab_target="#client">
-                    <span>Заказчик</span>
-                </a>
-                <div class="tab-data col-12 p-0" data-tab_content>
-                    <div id="author" data-tab_item>
-                        <div class="tab-header">
-                            <div class="circle author text-center"><span>я</span></div>
-                            <div class="arrow-author"></div>
-                        </div>
-                        <div class="form-title text-primary text-center">Регистрация как автор</div>
-                        <form action="" class="col-12 p-0 text-center">
-                            <input type="text" placeholder="Логин" class="col-12 p-0">
-                            <input type="email" placeholder="Email" class="col-12 p-0">
-                            <input type="password" placeholder="Пароль" class="col-12 p-0">
-                            <input type="password" placeholder="Пароль повторно" class="col-12 p-0">
-                            <div class="col-12 p-0 agreement">
-                                <input type="checkbox" id="agreement">
-                                <label for="agreement">Я принимаю <a href="">пользовательское соглашение</a></label>
+        <div id="signup-form" class="popup">
+            <div class="popup_wrapper">
+                <div class="popup_content js-popup_content">
+                    <div class="signup-form flex-wrap justify-content-center">
+                        <div class="tabs js-tabs d-flex flex-wrap justify-content-between col-12 p-0">
+                            <a href="#" class="tab author" data-tab_target="#author">
+                                <span>Автор</span>
+                            </a>
+                            <a href="#" class="tab client" data-tab_target="#client">
+                                <span>Заказчик</span>
+                            </a>
+                            <div class="tab-data col-12 p-0" data-tab_content>
+                                <div id="author" data-tab_item>
+                                    <div class="tab-header">
+                                        <div class="circle author text-center"><span>я</span></div>
+                                        <div class="arrow-author"></div>
+                                    </div>
+                                    <div class="form-title text-primary text-center">Регистрация как автор</div>
+                                    <form action="" class="col-12 p-0 text-center">
+                                        <input type="text" placeholder="Логин" class="col-12 p-0">
+                                        <input type="email" placeholder="Email" class="col-12 p-0">
+                                        <input type="password" placeholder="Пароль" class="col-12 p-0">
+                                        <input type="password" placeholder="Пароль повторно" class="col-12 p-0">
+                                        <div class="col-12 p-0 agreement">
+                                            <input type="checkbox" id="agreement">
+                                            <label for="agreement">Я принимаю <a href="">пользовательское соглашение</a></label>
+                                        </div>
+                                        <button class="btn btn-primary button-round">Зарегистрироваться</button>
+                                    </form>
+                                </div>
+                                <div id="client" data-tab_item>
+                                    <div class="tab-header">
+                                        <div class="circle client text-center"><span>я</span></div>
+                                        <div class="arrow-client"></div>
+                                    </div>
+                                    <div class="form-title text-center">Регистрация как заказчик</div>
+                                    <form action="" class="col-12 p-0 text-center">
+                                        <input type="text" placeholder="Логин" class="col-12 p-0">
+                                        <input type="email" placeholder="Email" class="col-12 p-0">
+                                        <input type="password" placeholder="Пароль" class="col-12 p-0">
+                                        <input type="password" placeholder="Пароль повторно" class="col-12 p-0">
+                                        <div class="col-12 p-0 agreement">
+                                            <input type="checkbox" id="agreement">
+                                            <label for="agreement">Я принимаю <a href="" class="text-warning">пользовательское соглашение</a></label>
+                                        </div>
+                                        <button class="btn button-round">Зарегистрироваться</button>
+                                    </form>
+                                </div>
                             </div>
-                            <button class="btn btn-primary button-round">Зарегистрироваться</button>
-                        </form>
-                    </div>
-                    <div id="client" data-tab_item>
-                        <div class="tab-header">
-                            <div class="circle client text-center"><span>я</span></div>
-                            <div class="arrow-client"></div>
                         </div>
-                        <div class="form-title text-center">Регистрация как заказчик</div>
-                        <form action="" class="col-12 p-0 text-center">
-                            <input type="text" placeholder="Логин" class="col-12 p-0">
-                            <input type="email" placeholder="Email" class="col-12 p-0">
-                            <input type="password" placeholder="Пароль" class="col-12 p-0">
-                            <input type="password" placeholder="Пароль повторно" class="col-12 p-0">
-                            <div class="col-12 p-0 agreement">
-                                <input type="checkbox" id="agreement">
-                                <label for="agreement">Я принимаю <a href="" class="text-warning">пользовательское соглашение</a></label>
-                            </div>
-                            <button class="btn button-round">Зарегистрироваться</button>
-                        </form>
+                        <div class="form-tail bg-blue text-center">
+                            <div class="mb-4">Уже зарегистрированы?</div>
+                            <button class="btn bg-light button-round text-primary col-4" data-popup-open="#signin-form">Войти</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="form-tail bg-blue text-center">
-                <div class="mb-4">Уже зарегистрированы?</div>
-                <button class="btn bg-light button-round text-primary col-4">Войти</button>
-            </div>
         </div>
-        <div class="signin-form flex-wrap justify-content-center">
-            <div class="form-title text-primary text-center col-12 p-0">Вход</div>
-            <form action="" class="col-12 p-0 text-center">
-                <input type="text" placeholder="Логин" class="col-12 p-0">
-                <input type="email" placeholder="Email" class="col-12 p-0">
-                <button class="btn btn-primary button-round col-5">Войти</button>
-            </form>
-            <div class="form-tail bg-blue text-center">
-                <div class="mb-4">Уже зарегистрированы?</div>
-                <button class="btn bg-light button-round text-primary col-4">Войти</button>
+        <div id="signin-form" class="popup">
+            <div class="popup_wrapper">
+                <div class="popup_content js-popup_content">
+                    <div class="signin-form flex-wrap justify-content-center">
+                        <div class="form-title text-primary text-center col-12 p-0">Вход</div>
+                        <form action="" class="col-12 p-0 text-center">
+                            <input type="text" placeholder="Логин" class="col-12 p-0">
+                            <input type="email" placeholder="Email" class="col-12 p-0">
+                            <button class="btn btn-primary button-round col-5">Войти</button>
+                        </form>
+                        <div class="form-tail bg-blue text-center">
+                            <div class="mb-4">Ещё не зарегистрированы?</div>
+                            <button class="btn bg-light button-round text-primary" data-popup-open="#signup-form">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="banner-wrapper d-flex align-items-stretch">

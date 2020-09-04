@@ -60,6 +60,44 @@ $(document).ready(function() {
     });
   })
   //end
+    // popup
+        $("body").on("click", "[data-popup-open]", function(e){
+            e.preventDefault();
+            var $target = $($(this).attr("data-popup-open"));
+            if($target.length > 0){
+                $(".popup").hide();
+                $("body").css("overflow", "hidden");
+                $target.fadeIn();
+                if($target[0].hasAttribute("data-animate")){
+                    $target.find(".popup-content").addClass("animate");
+                }
+                //dropdown init
+                $target.find(".js-drop_down").each(function(){
+                    $(this).find(".js-drop_down-content").each(function(){
+                        if (!$(this)[0].hasAttribute("data-height")) {
+                            $(this).attr("data-height", $(this).outerHeight());
+                            $(this).height(0);
+                        }
+                    })
+                })
+                //end
+            }
+        })
+        $("body").on("click", "[data-popup-close]", function(e){
+            e.preventDefault();
+            var $popup = $(this).parents(".popup").first();
+            $("body").css("overflow", "auto");
+            $popup.hide();
+            $popup.find(".popup-content").removeClass("animate");
+        })
+        $("body").on("click touchstart", function(e){
+            if($(e.target).closest(".js-popup_content").length > 0) return;
+            if($(e.target).closest("[data-popup-open]").length > 0) return;
+            $("body").css("overflow", "auto");
+            $(".popup .popup-content").removeClass("animate");
+            $(".popup").hide();
+        })
+        //end
 
   //toggle type
   $( ".js-toggle-type")
